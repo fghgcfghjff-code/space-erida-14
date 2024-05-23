@@ -42,16 +42,6 @@
     - type: BlackAndWhiteOverlay
 
 - type: trait
-  id: Deuteranopia
-  name: trait-deuteranopia-name
-  description: trait-deuteranopia-desc
-  category: Disabilities
-  effects:
-  - !type:AddCompsEffect
-    components:
-    - type: DogVision
-
-- type: trait
   id: ImpairedMobility
   name: trait-impaired-mobility-name
   description: trait-impaired-mobility-desc
@@ -81,7 +71,7 @@
   effects:
   - !type:AddCompsEffect
     components:
-    - type: PainNumbness
+    - type: PainNumbnessStatusEffect
 
 - type: trait
   id: Hemophilia
@@ -91,4 +81,4 @@
   effects:
   - !type:AddCompsEffect
     components:
-    - type: Hemophilia
+    - type: HemophiliaStatusEffect

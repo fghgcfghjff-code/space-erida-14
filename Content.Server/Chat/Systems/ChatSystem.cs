@@ -46,6 +46,7 @@ using Robust.Shared.Utility;
 using Content.Server.Speech.EntitySystems;
 using Content.Shared.Station.Components;
 using Content.Shared._Erida.TTS;
+using Content.Shared.Speech.Hushing;
 
 namespace Content.Server.Chat.Systems;
 
@@ -217,6 +218,15 @@ public sealed partial class ChatSystem : SharedChatSystem
             checkRadioPrefix = false;
             message = message[1..];
         }
+
+        // DeltaV - Hushed trait logic
+        // This needs to happen after prefix removal to avoid bug
+        if (desiredType == InGameICChatType.Speak && HasComp<HushedComponent>(source))
+        {
+            // hushed players cannot speak on local chat so will be sent as whisper instead
+            desiredType = InGameICChatType.Whisper;
+        }
+        // DeltaV - End hushed trait logic
 
         var language = languageOverride ?? _language.GetLanguage(source);
 

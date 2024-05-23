@@ -80,6 +80,14 @@
           reagent: Desoxyephedrine
           min: 5
 
+      - !type:Addicting # Delta-V - Addictive
+        probability: 0.6 # Chance of Addiction rising per tick
+        conditions:
+        - !type:ReagentCondition
+          reagent: Desoxyephedrine
+          min: 0.25
+      - !type:SuppressAddiction
+
 - type: reagent
   id: Ephedrine
   name: reagent-name-ephedrine
@@ -260,6 +268,19 @@
         effectProto: StatusEffectSeeingRainbow
         time: 16
         type: Add
+      # Delta-V - Addictive
+      - !type:Addicting
+        probability: 0.4 # Chance of Addiction rising per tick
+        conditions:
+        - !type:ReagentCondition
+          reagent: THC
+          min: 0.25
+      - !type:SuppressAddiction
+      - !type:ModifyStatusEffect # suppresses chronic pain mildly
+        effectProto: StatusEffectChronicPainSuppressed
+        time: 25 # 4.16 minutes of pain suppression per 5u (5u / 0.5 * 25 / 60)
+        type: Add
+      # END DeltaV
 
 - type: reagent
   id: Nicotine
@@ -301,6 +322,13 @@
         probability: 0.05
       - !type:Drunk # Headaches and slurring are major symptoms of brain damage, this is close enough
         boozePower: 5
+      - !type:Addicting # Delta-V - Addictive
+        probability: 0.4 # Chance of Addiction rising per tick
+        conditions:
+        - !type:ReagentCondition
+          reagent: Impedrezene
+          min: 0.25
+      - !type:SuppressAddiction
 
 - type: reagent
   id: SpaceDrugs
@@ -317,6 +345,15 @@
         effectProto: StatusEffectSeeingRainbow
         type: Add
         time: 5
+      # DeltaV Additions
+      - !type:Addicting # Delta-V - Addictive
+        probability: 0.4 # Chance of Addiction rising per tick
+        conditions:
+        - !type:ReagentCondition
+          reagent: SpaceDrugs
+          min: 0.25
+      - !type:SuppressAddiction
+      # END DeltaV
 
 - type: reagent
   id: Bananadine

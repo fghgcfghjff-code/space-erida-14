@@ -54,6 +54,10 @@
   - SouthernAccent
   - SpanishAccent
   - StutteringAccent
+  # Begin DeltaV Additions
+  - Addicted
+  - ChronicPain
+  # End DeltaV Addition
 
 # for job-specific traits etc.
 - type: cloningSettings

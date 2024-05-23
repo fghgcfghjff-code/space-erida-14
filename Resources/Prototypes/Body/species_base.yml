@@ -86,6 +86,12 @@
     - Flashed
     - RadiationProtection
     - Adrenaline
+    # Begin DeltaV additions
+    - Addicted # Psych med addictions system
+    - SuppressAddiction # Psych med addictions system
+    - ChronicPain # Pain system
+    - PainNumbness # Pain numbness status effect
+    # End DeltaV additions
   - type: Identity
   - type: IdExaminable
   - type: Internals
