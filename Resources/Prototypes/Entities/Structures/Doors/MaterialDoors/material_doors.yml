@@ -291,6 +291,7 @@
             max: 5
 
 - type: entity
+  parent: BaseMaterialDoorNavMap
   id: WebDoor
   name: web door
   description: A door, leading to the lands of the spiders... or a spaced room.
