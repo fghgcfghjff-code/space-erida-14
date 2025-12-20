@@ -24,23 +24,6 @@
   equipment:
     jumpsuit: ClothingUniformJumpskirtJanitor
 
-# Erida start
-- type: loadout
-  id: MaidsuitBlack
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitmaidblack
-
-- type: loadout
-  id: MaidsuitBlue
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitmaidblue
-
-- type: loadout
-  id: MaidsuitPink
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitmaidpink
-# Erida end
-
 # Gloves
 - type: loadout
   id: JanitorRubberGloves
