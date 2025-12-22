@@ -114,6 +114,12 @@ namespace Content.Shared.Preferences
         // Erida-start
         [DataField]
         public string CustomSpecies { get; set; } = string.Empty;
+
+        [DataField]
+        public float Height { get; set; } = 1f;
+
+        [DataField]
+        public float Width { get; set; } = 1f;
         // Erida end
 
         [DataField]
@@ -186,7 +192,11 @@ namespace Content.Shared.Preferences
             string nsfwtagsflavortext,
             // Erida end
             string species,
-            string customspecies, // Erida
+            // Erida-start
+            string customspecies,
+            float height,
+            float width,
+            // Erida-end
             string voice, // Corvax-TTS
             int age,
             Sex sex,
@@ -217,7 +227,11 @@ namespace Content.Shared.Preferences
             NSFWTagsFlavorText = nsfwtagsflavortext;
             // Erida end
             Species = species;
-            CustomSpecies = customspecies; // Erida
+            // Erida-start
+            CustomSpecies = customspecies;
+            Height = height;
+            Width = width;
+            // Erida-end
             Voice = voice; // Corvax-TTS
             Age = age;
             Sex = sex;
@@ -265,7 +279,11 @@ namespace Content.Shared.Preferences
                 other.NSFWTagsFlavorText,
                 // Erida ends
                 other.Species,
-                other.CustomSpecies, // Erida
+                // Erida-start
+                other.CustomSpecies,
+                other.Height,
+                other.Width,
+                // Erida-end
                 other.Voice, // Corvax-TTS
                 other.Age,
                 other.Sex,
@@ -460,6 +478,16 @@ namespace Content.Shared.Preferences
         public HumanoidCharacterProfile WithCustomSpecies(string customspecies)
         {
             return new(this) { CustomSpecies = customspecies };
+        }
+
+        public HumanoidCharacterProfile WithHeight(float height)
+        {
+            return new(this) { Height = height };
+        }
+
+        public HumanoidCharacterProfile WithWidth(float width)
+        {
+            return new(this) { Width = width };
         }
         // Erida-end
 

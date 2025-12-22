@@ -27,7 +27,7 @@
       types:
         Asphyxiation: -1.0
   - type: ScaleVisuals
-    scale: 1, 0.8
+    # scale: 1, 0.8 # Erida
   - type: Body
     prototype: Dwarf
     requiredLegs: 2
@@ -73,7 +73,10 @@
           32:
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
-
+  # Erida-start
+  - type: ScaleOnSpawn
+    scale: 1, 0.8
+  # Erida-end
 - type: entity
   parent: BaseSpeciesDummy
   id: MobDwarfDummy

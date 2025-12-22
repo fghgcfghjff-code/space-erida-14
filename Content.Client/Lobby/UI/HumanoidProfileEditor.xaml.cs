@@ -262,6 +262,16 @@ namespace Content.Client.Lobby.UI
                 if (!string.IsNullOrEmpty(formattedMessage))
                     SetCustomSpecies(formattedMessage);
             };
+
+            HeightSlider.OnValueChanged += _ =>
+            {
+                OnHeightValueChanged();
+            };
+
+            WidthSlider.OnValueChanged += _ =>
+            {
+                OnWidthValueChanged();
+            };
             // Erida-end
 
             #region Skin
@@ -1053,7 +1063,10 @@ namespace Content.Client.Lobby.UI
             UpdateSkinColor();
             UpdateSpawnPriorityControls();
             UpdateAgeEdit();
-            UpdateCustomSpeciesEdit(); // Erida
+            // Erida-start
+            UpdateCustomSpeciesEdit();
+            UpdateSize();
+            // Erida-end
             UpdateEyePickers();
             UpdateSaveButton();
             UpdateMarkings();
@@ -1111,13 +1124,6 @@ namespace Content.Client.Lobby.UI
                 guidebookController.OpenGuidebook(dict, includeChildren:true, selected: page);
             }
         }
-        // Erida-start
-        private void SetCustomSpecies(string newSpecies)
-        {
-            Profile = Profile?.WithCustomSpecies(newSpecies);
-            IsDirty = true;
-        }
-        // Erida-end
 
         /// <summary>
         /// Refreshes all job selectors.
@@ -1553,6 +1559,24 @@ namespace Content.Client.Lobby.UI
             ReloadProfilePreview();
         }
 
+        // Erida-start
+        private void OnHeightValueChanged()
+        {
+            Profile = Profile?.WithHeight(HeightSlider.Value / 100);
+            HeightLabel.Text = $"{(int)HeightSlider.Value}%";
+
+            IsDirty = true;
+        }
+
+        private void OnWidthValueChanged()
+        {
+            Profile = Profile?.WithWidth(WidthSlider.Value / 100);
+            WidthLabel.Text = $"{(int)WidthSlider.Value}%";
+
+            IsDirty = true;
+        }
+        // Erida-end
+
         protected override void Dispose(bool disposing)
         {
             base.Dispose(disposing);
@@ -1632,6 +1656,14 @@ namespace Content.Client.Lobby.UI
             UpdateSpeciesGuidebookIcon();
             ReloadPreview();
         }
+
+        // Erida-start
+        private void SetCustomSpecies(string newSpecies)
+        {
+            Profile = Profile?.WithCustomSpecies(newSpecies);
+            IsDirty = true;
+        }
+        // Erida-end
 
         private void SetName(string newName)
         {
@@ -1749,6 +1781,21 @@ namespace Content.Client.Lobby.UI
                 IsCustomSpecies.Pressed = true;
                 CustomSpeciesContainer.Visible = true;
             }
+        }
+
+        private void UpdateSize()
+        {
+            if (Profile?.Height is null || Profile?.Width is null)
+                return;
+
+            float profileHeight = Profile.Height;
+            float profileWidth = Profile.Width;
+
+            HeightLabel.Text = $"{(int)(profileHeight * 100)}%";
+            WidthLabel.Text = $"{(int)(profileWidth * 100)}%";
+
+            HeightSlider.Value = profileHeight * 100;
+            WidthSlider.Value = profileWidth * 100;
         }
         // Erida-end
 

@@ -15,7 +15,6 @@
     - TauCetiBasic
     - Nekomimetic
   - type: Sprite
-    scale: 0.8, 0.8
   - type: HumanoidAppearance
     species: Felinid
   - type: Fixtures
@@ -78,7 +77,10 @@
     interactSuccessSound: /Audio/Effects/thudswoosh.ogg
     messagePerceivedByOthers: hugging-success-generic-others
   - type: CannotCarry
-
+  # Erida-start
+  - type: ScaleOnSpawn
+    scale: 0.8, 0.8
+  # Erida-end
 
 - type: entity
   save: false

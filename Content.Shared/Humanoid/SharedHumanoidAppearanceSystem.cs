@@ -21,6 +21,7 @@ using Robust.Shared.Serialization.Manager;
 using Robust.Shared.Serialization.Markdown;
 using Robust.Shared.Utility;
 using YamlDotNet.RepresentationModel;
+using Content.Shared.Sprite;
 
 namespace Content.Shared.Humanoid;
 
@@ -42,6 +43,8 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
     [Dependency] private readonly MarkingManager _markingManager = default!;
     [Dependency] private readonly GrammarSystem _grammarSystem = default!;
     [Dependency] private readonly IdentitySystem _identity = default!;
+
+    [Dependency] private readonly SharedScaleVisualsSystem _scaleVisuals = default!; // Erida
 
     public static readonly ProtoId<SpeciesPrototype> DefaultSpecies = "Human";
 
@@ -165,7 +168,11 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
             return;
 
         targetHumanoid.Species = sourceHumanoid.Species;
-        targetHumanoid.CustomSpecies = sourceHumanoid.CustomSpecies; // Erida
+        // Erida-start
+        targetHumanoid.CustomSpecies = sourceHumanoid.CustomSpecies;
+        targetHumanoid.Height = sourceHumanoid.Height;
+        targetHumanoid.Width = sourceHumanoid.Width;
+        // Erida-end
         targetHumanoid.SkinColor = sourceHumanoid.SkinColor;
         targetHumanoid.EyeColor = sourceHumanoid.EyeColor;
         targetHumanoid.Age = sourceHumanoid.Age;
@@ -286,6 +293,20 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         }
 
         humanoid.CustomSpecies = customspecies;
+
+        if (sync)
+            Dirty(uid, humanoid);
+    }
+
+    public void SetSizes(EntityUid uid, float height, float width, bool sync = true, HumanoidAppearanceComponent? humanoid = null)
+    {
+        if (!Resolve(uid, ref humanoid))
+        {
+            return;
+        }
+
+        var baseScale = _scaleVisuals.GetSpriteScale(uid);
+        _scaleVisuals.SetSpriteScale(uid, new Vector2(width * baseScale.X, height * baseScale.Y));
 
         if (sync)
             Dirty(uid, humanoid);
@@ -425,7 +446,10 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         }
 
         SetSpecies(uid, profile.Species, false, humanoid);
-        SetCustomSpecies(uid, profile.CustomSpecies, false, humanoid); // Erida
+        // Erida-start
+        SetCustomSpecies(uid, profile.CustomSpecies, false, humanoid);
+        SetSizes(uid, profile.Height, profile.Width);
+        // Erida-end
         SetSex(uid, profile.Sex, false, humanoid);
         humanoid.EyeColor = profile.Appearance.EyeColor;
 

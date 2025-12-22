@@ -221,7 +221,11 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         humanoid.Gender = profile.Gender;
         humanoid.Age = profile.Age;
         humanoid.Species = profile.Species;
-        humanoid.CustomSpecies = profile.CustomSpecies; // Erida
+        // Erida-start
+        humanoid.CustomSpecies = profile.CustomSpecies;
+        humanoid.Height = profile.Height;
+        humanoid.Width = profile.Width;
+        // Erida-end
         humanoid.SkinColor = profile.Appearance.SkinColor;
         humanoid.EyeColor = profile.Appearance.EyeColor;
 
