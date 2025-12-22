@@ -1791,8 +1791,8 @@ namespace Content.Client.Lobby.UI
             float profileHeight = Profile.Height;
             float profileWidth = Profile.Width;
 
-            HeightLabel.Text = $"{(int)(profileHeight * 100)}%";
-            WidthLabel.Text = $"{(int)(profileWidth * 100)}%";
+            HeightLabel.Text = $"{(int)(Profile.Height == 0 ? 100 : profileHeight * 100)}%";
+            WidthLabel.Text = $"{(int)(Profile.Width == 0 ? 100 : profileWidth * 100)}%";
 
             HeightSlider.Value = Profile.Height == 0 ? 100 : profileHeight * 100;
             WidthSlider.Value = Profile.Width == 0 ? 100 : profileWidth * 100;
