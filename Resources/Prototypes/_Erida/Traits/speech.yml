@@ -10,7 +10,7 @@
 - type: trait
   id: Roar
   name: trait-roar-name
-  description: trait-roar-description
+  description: trait-roar-desc
   category: SpeechTraits
   cost: 1
   components:
