@@ -10,7 +10,7 @@ namespace Content.Server.Speech.EntitySystems
         [Dependency] private readonly IRobustRandom _random = default!;
 
         private static readonly IReadOnlyList<string> Barks = new List<string>{
-            " Woof!", " WOOF", " wof-wof"
+            " Вуф!", " ГАВ", " вуф-вуф", " гав-гав"
         }.AsReadOnly();
 
         private static readonly IReadOnlyDictionary<string, string> SpecialWords = new Dictionary<string, string>()
@@ -19,6 +19,12 @@ namespace Content.Server.Speech.EntitySystems
             { "Ah", "Arf" },
             { "oh", "oof" },
             { "Oh", "Oof" },
+            // Erida-Loc-Start
+            { "га", "гаф" },
+            { "Га", "Гаф" },
+            { "угу", "вуф" },
+            { "Угу", "Вуф" },
+            // Erida-Loc-End
         };
 
         public override void Initialize()
@@ -35,7 +41,8 @@ namespace Content.Server.Speech.EntitySystems
             }
 
             return message.Replace("!", _random.Pick(Barks))
-                .Replace("l", "r").Replace("L", "R");
+                .Replace("l", "r").Replace("L", "R")
+                .Replace("л", "Л").Replace("Л", "Р"); // Erida-Loc
         }
 
         private void OnAccent(Entity<BarkAccentComponent> entity, ref AccentGetEvent args)

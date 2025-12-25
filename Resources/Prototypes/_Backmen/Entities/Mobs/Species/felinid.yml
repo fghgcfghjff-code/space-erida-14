@@ -45,6 +45,7 @@
       types:
         Blunt: 1
         Slash: 5
+  - type: OwOAccent
   - type: Speech
     allowedEmotes: [ 'Mews', 'Meows', 'Purrs', 'Hiss' ]
     speechSounds: Alto

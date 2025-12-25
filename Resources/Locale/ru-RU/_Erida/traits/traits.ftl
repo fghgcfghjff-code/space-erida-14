@@ -12,3 +12,6 @@ trait-masochism-hardcore-desc = Вы получаете удовольствие
 
 trait-street-rebel-name = Акцент уличного бунтаря
 trait-street-rebel-desc = Вероятно, вы выросли в большом городе и не в лучшей компании
+
+trait-roar-name = Рычащий акцент
+trait-roar-desc = Голос, не признающий полутонов.
