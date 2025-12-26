@@ -21,9 +21,9 @@
   - type: EmitSoundOnTrigger
     sound: *BasePlushieSound
   - type: UseDelay
-    delay: 3.0
+    delay: 1.5 # Erida
   - type: MeleeWeapon
-    attackRate: 0.333
+    attackRate: 1 # Erida
     wideAnimationRotation: 180
     soundHit: *BasePlushieSound
     damage:
