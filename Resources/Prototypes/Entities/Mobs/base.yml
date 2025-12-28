@@ -124,10 +124,10 @@
   - type: StunVisuals
   - type: MobState
   - type: MobThresholds
-    thresholds:
+    thresholds: # Erida decrased
       0: Alive
-      60: Critical
-      160: Dead
+      70: Critical
+      170: Dead
   - type: MobStateActions
     actions:
       Critical:
