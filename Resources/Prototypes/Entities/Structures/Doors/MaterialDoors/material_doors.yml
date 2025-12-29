@@ -1,6 +1,6 @@
 ﻿- type: entity
   abstract: true
-  parent: BaseStructure
+  parent: [BaseStructure, BaseDeltaPressureBasic] # Erida
   id: BaseMaterialDoor
   name: door
   description: A door, where will it lead?
