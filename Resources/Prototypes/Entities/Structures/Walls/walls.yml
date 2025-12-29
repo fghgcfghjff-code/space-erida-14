@@ -515,7 +515,7 @@
       resistance: 5
 
 - type: entity
-  parent: [BaseWall, BaseDeltaPressureReinforced] # Erida
+  parent: [WallPlastitaniumIndestructible, BaseDeltaPressureReinforced] # Erida
   id: WallPlastitanium
   name: plastitanium wall
   suffix: ""
