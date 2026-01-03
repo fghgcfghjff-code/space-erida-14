@@ -6,11 +6,6 @@
   startingGear: ChaplainGear
   icon: "JobIconChaplain"
   supervisors: job-supervisors-hop
-  # Erida-start
-  requirements:
-    - !type:OverallPlaytimeRequirement
-      time: 5h
-  # Erida-end
   access:
   - Chapel
   - Maintenance

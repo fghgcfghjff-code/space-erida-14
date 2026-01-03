@@ -5,9 +5,7 @@
   playTimeTracker: JobMime
   requirements:
     - !type:OverallPlaytimeRequirement
-      # Erida-start
-      time: 5h #4h
-      # Erida-end
+      time: 4h
   startingGear: MimeGear
   icon: "JobIconMime"
   supervisors: job-supervisors-hop

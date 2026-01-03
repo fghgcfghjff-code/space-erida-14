@@ -7,10 +7,6 @@
     - !type:DepartmentTimeRequirement
       department: Civilian
       time: 0.5h
-    # Erida-start
-    - !type:OverallPlaytimeRequirement
-      time: 5h
-    # Erida-end
   startingGear: ChefGear
   icon: "JobIconChef"
   supervisors: job-supervisors-hop

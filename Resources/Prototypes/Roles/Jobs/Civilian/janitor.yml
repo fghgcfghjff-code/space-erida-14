@@ -6,11 +6,6 @@
   startingGear: JanitorGear
   icon: "JobIconJanitor"
   supervisors: job-supervisors-hop
-  # Erida-start
-  requirements:
-    - !type:OverallPlaytimeRequirement
-      time: 5h
-  # Erida-end
   access:
   - Service
   - Janitor

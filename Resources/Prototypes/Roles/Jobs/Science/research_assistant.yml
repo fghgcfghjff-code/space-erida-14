@@ -3,11 +3,6 @@
   name: job-name-research-assistant
   description: job-description-research-assistant
   playTimeTracker: JobResearchAssistant
-  # Erida-start
-  requirements:
-    - !type:OverallPlaytimeRequirement
-      time: 5h
-  # Erida-end
       # Erida-start
   # requirements:
   #   - !type:DepartmentTimeRequirement

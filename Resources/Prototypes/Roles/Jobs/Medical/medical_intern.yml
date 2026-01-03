@@ -3,11 +3,6 @@
   name: job-name-intern
   description: job-description-intern
   playTimeTracker: JobMedicalIntern
-  # Erida-start
-  requirements:
-    - !type:OverallPlaytimeRequirement
-      time: 5h
-  # Erida-end
       # Erida-start
   # requirements:
   #   - !type:DepartmentTimeRequirement
