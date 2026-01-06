@@ -92,14 +92,13 @@
   id: WarCrimes
   name: research-technology-war-crimes
   icon:
-    sprite: Clothing/Back/Backpacks/electropack.rsi
-    state: icon
+    sprite: Objects/Weapons/Guns/Battery/particle_decelerator.rsi
+    state: base
   discipline: Security
   tier: 1
   cost: 7500
   recipeUnlocks:
   - ClothingBackpackElectropack
-  - WeaponParticleDecelerator
   technologyPrerequisites:
   - RiotControlAdvanced
   position: 2,-3

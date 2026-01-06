@@ -48,6 +48,7 @@ research-technology-alternative-research = Alternative Research
 research-technology-magnets-tech = Localized Magnetism
 research-technology-advanced-parts = Advanced Parts
 research-technology-anomaly-harnessing = Anomaly Core Harnessing
+research-technology-means-eliminate-catastrophic-threats = Means of eliminating catastrophic threats
 research-technology-abnormal-artifact-manipulation = Artifact Recycling
 research-technology-gravity-manipulation = Gravity Manipulation
 research-technology-quantum-leaping = Quantum Leaping

@@ -89,6 +89,21 @@
   position: 0,3
 
 - type: technology
+  id: MeansEliminatingCatastrophicThreats
+  name: research-technology-means-eliminate-catastrophic-threats
+  icon:
+    sprite: Objects/Weapons/Guns/Battery/particle_decelerator.rsi
+    state: base
+  discipline: Scientific
+  tier: 1
+  cost: 12500
+  recipeUnlocks:
+  - WeaponParticleDecelerator
+  technologyPrerequisites:
+  - QuantumLeaping
+  position: 1,3
+
+- type: technology
   id: QuantumLeaping
   name: research-technology-quantum-leaping
   icon:
