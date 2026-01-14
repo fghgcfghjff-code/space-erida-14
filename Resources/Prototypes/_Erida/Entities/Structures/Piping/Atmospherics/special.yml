@@ -26,16 +26,12 @@
     tags:
       - SpreaderIgnore
    # ERIDA-start
-  - type: Battery
-    maxCharge: 2000
-    startingCharge: 2000
-    pricePerJoule: 0.05
-  - type: ApcPowerReceiverBattery
-    idleLoad: 45
-    batteryRechargeRate: 200
-    batteryRechargeEfficiency: 0.0 # temporarily no power draw because this was causing potentially SEIZURE inducing light flickering
+  - type: PowerCharge
+    windowTitle: gravity-generator-window-title  # Костыль, но зато какой
+    idlePower: 40
+    activePower: 1000
   - type: ApcPowerReceiver
-    powerLoad: 45
+    powerLoad: 100
   - type: ExtensionCableReceiver
   - type: AirtightRequiresPower
   - type: Machine
@@ -102,16 +98,12 @@
     tags:
       - SpreaderIgnore
 # ERIDA-start
-  - type: Battery
-    maxCharge: 2000
-    startingCharge: 2000
-    pricePerJoule: 0.05
-  - type: ApcPowerReceiverBattery
-    idleLoad: 45
-    batteryRechargeRate: 200
-    batteryRechargeEfficiency: 0.0 # temporarily no power draw because this was causing potentially SEIZURE inducing light flickering
+  - type: PowerCharge
+    windowTitle: gravity-generator-window-title # Костыль, но зато какой
+    idlePower: 40
+    activePower: 1000
   - type: ApcPowerReceiver
-    powerLoad: 45
+    powerLoad: 100
   - type: ExtensionCableReceiver
   - type: AirtightRequiresPower
   - type: Machine

@@ -58,8 +58,6 @@
   physicalDesc: reagent-physical-desc-nondescript
   allowedDepartments:
   - Medical
-  allowedJobs:
-  - Zookeeper
   metabolisms:
     Poison:
       effects:
@@ -567,16 +565,23 @@
         probability: 0.1
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Animal, Vox, Shadowkin ] # Erida
+          type: [ Animal, Vox, Plant, Shadowkin ] # Erida
           inverted: true
       - !type:HealthChange
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Animal, Vox, Shadowkin ] # Erida
+          type: [ Animal, Vox, Plant, Shadowkin ] # Erida
           inverted: true
         damage:
           types:
             Poison: 1
+      - !type:HealthChange
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Plant ]
+        damage:
+          types:
+            Poison: .25
       - !type:AdjustReagent
         conditions:
         - !type:MetabolizerTypeCondition
@@ -622,8 +627,6 @@
   allowedDepartments:
   - Security
   - Medical
-  allowedJobs:
-  - Zookeeper
   color: "#AAAAAA"
   metabolisms:
     Poison:
@@ -706,6 +709,9 @@
   contrabandSeverity: Syndicate
   flavor: medicine
   color: "#435166"
+  plantMetabolism:
+  - !type:PlantMutateChemicals
+    randomPickBotanyReagent: EvilRandomFillSolution
   metabolisms:
     Poison:
       effects:
@@ -834,3 +840,22 @@
         conditions:
         - !type:MetabolizerTypeCondition
           type: [Vox]
+
+- type: reagent
+  id: Hemorrhinol
+  name: reagent-name-hemorrhinol
+  group: Toxins
+  desc: reagent-desc-hemorrhinol
+  physicalDesc: reagent-physical-desc-thin
+  contrabandSeverity: Major
+  flavor: sharp
+  color: "#96424f"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectHemorrhage
+        time: 21 # 7 bleed ticks, you bleed every 3 seconds by default.
+        type: Update
+      - !type:ModifyBleed
+        amount: 0.5

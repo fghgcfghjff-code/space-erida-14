@@ -44,7 +44,6 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 0
     baseSprintSpeed: 0
-  - type: InputMover
   - type: GhostOnMove
 
 - type: entity

@@ -1,3 +1,4 @@
+door-remote-toggle-eletrify-text = Переключить напряжённость
 door-remote-switch-state-open-close = Вы настраиваете пульт на открытие и закрытие дверей
 door-remote-open-close-text = Открытие и закрытие шлюзов
 door-remote-toggle-bolt-text = Переключение болтов
