@@ -1,5 +1,7 @@
+using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Numerics;
+using System.Reflection.Metadata;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Actions;
 using Content.Shared.Administration.Logs;
@@ -10,6 +12,7 @@ using Content.Shared.Damage;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Examine;
 using Content.Shared.Hands;
+using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Popups;
 using Content.Shared.Projectiles;
@@ -141,22 +144,42 @@ public abstract partial class SharedGunSystem : EntitySystem
         {
             return;
         }
-
         if (ent != GetEntity(msg.Gun))
             return;
 
-        gun.ShootCoordinates = GetCoordinates(msg.Coordinates);
-        gun.Target = GetEntity(msg.Target);
-        AttemptShoot(user.Value, ent, gun);
+        if (!GetAllGuns(user.Value, ent, out var otherGuns))
+        {
+            gun.ShootCoordinates = GetCoordinates(msg.Coordinates);
+            gun.Target = GetEntity(msg.Target);
+            AttemptShoot(user.Value, ent, gun);
+        }
+        else
+        {
+            //Entity<GunComponent> activeWeapon = (ent, gun);
+            //weaponsList.Insert(0, activeWeapon);
+            var weaponsList = new List<Entity<GunComponent>>
+            {
+                (ent, gun)
+            };
+            weaponsList.AddRange(otherGuns);
+            foreach (var weapon in weaponsList)
+            {
+                weapon.Comp.ShootCoordinates = GetCoordinates(msg.Coordinates);
+                weapon.Comp.Target = GetEntity(msg.Target);
+                AttemptShoot(user.Value, weapon.Owner, weapon.Comp);
+            }
+        }
     }
 
     private void OnStopShootRequest(RequestStopShootEvent ev, EntitySessionEventArgs args)
     {
+        var user = args.SenderSession.AttachedEntity;
+
         var gunUid = GetEntity(ev.Gun);
 
-        if (args.SenderSession.AttachedEntity == null ||
+        if (user == null ||
             !TryComp<GunComponent>(gunUid, out var gun) ||
-            !TryGetGun(args.SenderSession.AttachedEntity.Value, out _, out var userGun))
+            !TryGetGun(user.Value, out var ent, out var userGun))
         {
             return;
         }
@@ -164,7 +187,22 @@ public abstract partial class SharedGunSystem : EntitySystem
         if (userGun != gun)
             return;
 
-        StopShooting(gunUid, gun);
+        if (!GetAllGuns(user.Value, ent, out var otherGuns))
+        {
+            StopShooting(gunUid, gun);
+        }
+        else
+        {
+            var weaponsList = new List<Entity<GunComponent>>
+            {
+                (ent, gun)
+            };
+            weaponsList.AddRange(otherGuns);
+            foreach (var weapon in weaponsList)
+            {
+                StopShooting(weapon.Owner, weapon.Comp);
+            }
+        }
     }
 
     public bool CanShoot(GunComponent component)
@@ -173,6 +211,28 @@ public abstract partial class SharedGunSystem : EntitySystem
             return false;
 
         return true;
+    }
+
+    private bool GetAllGuns(EntityUid entity, EntityUid activeGun, out List<Entity<GunComponent>> weaponsList)
+    {
+        weaponsList = new List<Entity<GunComponent>>();
+
+        if (!TryComp<HandsComponent>(entity, out var handsComp))
+            return false;
+
+        foreach (var (handString, handClass) in handsComp.Hands)
+        {
+            if (!_hands.TryGetHeldItem(entity, handString, out var heldItem))
+                continue;
+            if (heldItem == activeGun || heldItem == null)
+                continue;
+            if (TryComp<GunComponent>(heldItem.Value, out var gunComp))
+            {
+                weaponsList.Add((heldItem.Value, gunComp));
+            }
+        }
+
+        return weaponsList.Count > 0;
     }
 
     public bool TryGetGun(EntityUid entity, out EntityUid gunEntity, [NotNullWhen(true)] out GunComponent? gunComp)
@@ -242,12 +302,10 @@ public abstract partial class SharedGunSystem : EntitySystem
         {
             return false;
         }
-
         var toCoordinates = gun.ShootCoordinates;
 
         if (toCoordinates == null)
             return false;
-
         var curTime = Timing.CurTime;
 
         // check if anything wants to prevent shooting
@@ -259,16 +317,13 @@ public abstract partial class SharedGunSystem : EntitySystem
         RaiseLocalEvent(gunUid, ref prevention);
         if (prevention.Cancelled)
             return false;
-
         RaiseLocalEvent(user, ref prevention);
         if (prevention.Cancelled)
             return false;
-
         // Need to do this to play the clicking sound for empty automatic weapons
         // but not play anything for burst fire.
         if (gun.NextFire > curTime)
             return false;
-
         var fireRate = TimeSpan.FromSeconds(1f / gun.FireRateModified);
 
         if (gun.SelectedMode == SelectiveFire.Burst || gun.BurstActivated)
@@ -288,10 +343,8 @@ public abstract partial class SharedGunSystem : EntitySystem
             gun.NextFire += fireRate;
             shots++;
         }
-
         // NextFire has been touched regardless so need to dirty the gun.
         DirtyField(gunUid, gun, nameof(GunComponent.NextFire));
-
         // Get how many shots we're actually allowed to make, due to clip size or otherwise.
         // Don't do this in the loop so we still reset NextFire.
         if (!gun.BurstActivated)
@@ -313,7 +366,6 @@ public abstract partial class SharedGunSystem : EntitySystem
         {
             shots = Math.Min(shots, gun.ShotsPerBurstModified - gun.ShotCounter);
         }
-
         var attemptEv = new AttemptShootEvent(user, null);
         RaiseLocalEvent(gunUid, ref attemptEv);
 
@@ -328,7 +380,6 @@ public abstract partial class SharedGunSystem : EntitySystem
             gun.NextFire = TimeSpan.FromSeconds(Math.Max(lastFire.TotalSeconds + SafetyNextFire, gun.NextFire.TotalSeconds));
             return false;
         }
-
         var fromCoordinates = Transform(user).Coordinates;
         // Remove ammo
         var ev = new TakeAmmoEvent(shots, new List<(EntityUid? Entity, IShootable Shootable)>(), fromCoordinates, user);
@@ -336,7 +387,6 @@ public abstract partial class SharedGunSystem : EntitySystem
         // Listen it just makes the other code around it easier if shots == 0 to do this.
         if (shots > 0)
             RaiseLocalEvent(gunUid, ev);
-
         DebugTools.Assert(ev.Ammo.Count <= shots);
         DebugTools.Assert(shots >= 0);
         UpdateAmmoCount(gunUid);
@@ -345,7 +395,6 @@ public abstract partial class SharedGunSystem : EntitySystem
         // where the gun may be SemiAuto or Burst.
         gun.ShotCounter += shots;
         DirtyField(gunUid, gun, nameof(GunComponent.ShotCounter));
-
         if (ev.Ammo.Count <= 0)
         {
             // triggers effects on the gun if it's empty
@@ -368,10 +417,8 @@ public abstract partial class SharedGunSystem : EntitySystem
                 Audio.PlayPredicted(gun.SoundEmpty, gunUid, user);
                 return false;
             }
-
             return false;
         }
-
         // Handle burstfire
         if (gun.SelectedMode == SelectiveFire.Burst)
         {
