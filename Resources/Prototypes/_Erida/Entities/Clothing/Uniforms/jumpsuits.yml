@@ -118,3 +118,36 @@
     sprite: _Erida/Clothing/Uniforms/Jumpsuit/oso_jumpsuit.rsi
   - type: Clothing
     sprite: _Erida/Clothing/Uniforms/Jumpsuit/oso_jumpsuit.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitEnglishRed
+  name: red english costume
+  description:
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Uniforms/Jumpsuit/redenglishcostume.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Uniforms/Jumpsuit/redenglishcostume.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitEnglishBlue
+  name: blue english costume
+  description:
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Uniforms/Jumpsuit/blueenglishcostume.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Uniforms/Jumpsuit/blueenglishcostume.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitEnglishViolet
+  name: violet english costume
+  description:
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Uniforms/Jumpsuit/violetenglishcostume.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Uniforms/Jumpsuit/violetenglishcostume.rsi

@@ -37,7 +37,7 @@
   components:
     - type: Sprite
       sprite: _Erida/Clothing/Neck/Cloaks/white_captain_mantle.rsi
-      
+
 - type: entity
   parent: ClothingNeckBase
   id: ClothingNeckCloakArbiter
@@ -127,3 +127,30 @@
   components:
     - type: Sprite
       sprite: _Erida/Clothing/Neck/Cloaks/oso_cloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakEnglishBlue
+  name: blue english cape
+  description:
+  components:
+    - type: Sprite
+      sprite: _Erida/Clothing/Neck/Cloaks/blueenglishcape.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakEnglishViolet
+  name: violet english cape
+  description:
+  components:
+    - type: Sprite
+      sprite: _Erida/Clothing/Neck/Cloaks/violetenglishcape.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakEnglishRed
+  name: red english cape
+  description:
+  components:
+    - type: Sprite
+      sprite: _Erida/Clothing/Neck/Cloaks/redenglishcape.rsi

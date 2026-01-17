@@ -8,7 +8,7 @@
     sprite: _Erida/Clothing/Uniforms/Jumpskirt/white_captain.rsi
   - type: Clothing
     sprite: _Erida/Clothing/Uniforms/Jumpskirt/white_captain.rsi
-    
+
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitmaidblack
@@ -76,3 +76,113 @@
     sprite: _Erida/Clothing/Uniforms/Jumpskirt/centcom_turtleneck_jumpskirt.rsi
   - type: Clothing
     sprite: _Erida/Clothing/Uniforms/Jumpskirt/centcom_turtleneck_jumpskirt.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtYukataAquamarine
+  name: aquamarine yukata
+  description:
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Uniforms/Jumpskirt/yukataaquamarine.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Uniforms/Jumpskirt/yukataaquamarine.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtYukataBlack
+  name: black yukata
+  description:
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Uniforms/Jumpskirt/yukatablack.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Uniforms/Jumpskirt/yukatablack.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtYukataBlue
+  name: blue yukata
+  description:
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Uniforms/Jumpskirt/yukatablue.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Uniforms/Jumpskirt/yukatablue.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtYukataGreen
+  name: green yukata
+  description:
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Uniforms/Jumpskirt/yukatagreen.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Uniforms/Jumpskirt/yukatagreen.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtYukataLightblue
+  name: lightblue yukata
+  description:
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Uniforms/Jumpskirt/yukatalightblue.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Uniforms/Jumpskirt/yukatalightblue.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtYukataOrange
+  name: orange yukata
+  description:
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Uniforms/Jumpskirt/yukataorange.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Uniforms/Jumpskirt/yukataorange.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtYukataPink
+  name: pink yukata
+  description:
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Uniforms/Jumpskirt/yukatapink.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Uniforms/Jumpskirt/yukatapink.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtYukataRed
+  name: red yukata
+  description:
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Uniforms/Jumpskirt/yukatared.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Uniforms/Jumpskirt/yukatared.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtYukataViolet
+  name: violet yukata
+  description:
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Uniforms/Jumpskirt/yukataviolet.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Uniforms/Jumpskirt/yukataviolet.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtYukataYellow
+  name: yellow yukata
+  description:
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Uniforms/Jumpskirt/yukatayellow.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Uniforms/Jumpskirt/yukatayellow.rsi

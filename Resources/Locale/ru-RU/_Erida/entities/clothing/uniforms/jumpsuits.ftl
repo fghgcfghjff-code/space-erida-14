@@ -22,3 +22,6 @@ ent-ClothingKimonoGreen = зелёное кимоно
 ent-ClothingKimonoSky = голубое кимоно
     .desc = Напоминает о Нацу Мацури.
 ent-ClothingKimonoBlue = синее кимоно
+ent-ClothingUniformJumpsuitEnglishRed = красный английский костюм
+ent-ClothingUniformJumpsuitEnglishViolet = фиолетовый английский костюм
+ent-ClothingUniformJumpsuitEnglishBlue = синий английский костюм
