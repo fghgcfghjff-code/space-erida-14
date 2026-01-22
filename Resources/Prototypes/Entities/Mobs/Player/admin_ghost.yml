@@ -112,7 +112,13 @@
   - type: ExplosionResistance
     damageCoefficient: 0
   - type: BkmSupermatterImmune # supermatter
-  - type: DirectionalEmoteTarget # Erida
+  # Erida-start
+  - type: DirectionalEmoteTarget
+  - type: ShowMindShieldIcons
+  - type: ShowJobIcons
+  - type: ShowHealthBars
+  - type: ShowCriminalRecordIcons
+  # Erida-end
 
 - type: entity
   abstract: true
