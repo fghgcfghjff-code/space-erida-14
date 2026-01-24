@@ -7,7 +7,6 @@ public sealed partial class DualWeaponsSystem : EntitySystem
     public override void Initialize()
     {
         base.Initialize();
-
         SubscribeLocalEvent<DualWeaponsBonusComponent, GunRefreshModifiersEvent>(OnGunRefreshModifiers);
     }
 

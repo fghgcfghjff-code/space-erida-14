@@ -1,11 +1,12 @@
 using Robust.Shared.GameStates;
+using Content.Shared.Weapons.Ranged.Systems;
 
 namespace Content.Shared.Weapons.Ranged.Components;
 
-[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState, Access(typeof(DualWeaponsSystem), typeof(SharedGunSystem))]
 public sealed partial class DualWeaponsBonusComponent : Component
 {
-    [ViewVariables(VVAccess.ReadWrite), DataField("minAngle"), AutoNetworkedField, Access(typeof(DualWeaponsSystem))]
+    [ViewVariables(VVAccess.ReadWrite), DataField("minAngle"), AutoNetworkedField]
     public Angle MinAngle = Angle.FromDegrees(45);
 
     /// <summary>
@@ -30,6 +31,6 @@ public sealed partial class DualWeaponsBonusComponent : Component
     [DataField, AutoNetworkedField]
     public Angle AngleIncrease = Angle.FromDegrees(5);
 
-    [AutoNetworkedField]
+    [AutoNetworkedField, DataField]
     public bool DualCurrent = false;
 }
