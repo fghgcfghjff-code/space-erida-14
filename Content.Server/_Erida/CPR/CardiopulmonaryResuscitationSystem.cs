@@ -1,7 +1,11 @@
 using System.Runtime.CompilerServices;
 using System.Threading;
-//using Content.Server.DoAfter;
+using Content.Server.DoAfter;
+using Content.Shared.CRP;
+using Content.Shared.Damage;
+using Content.Shared.Damage.Components;
 using Content.Shared.DoAfter;
+using Content.Shared.FixedPoint;
 using Content.Shared.Interaction.Components;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Mobs.Components;
@@ -18,10 +22,12 @@ public sealed class CardiopulmonaryResuscitationSystem : EntitySystem
     [Dependency] private readonly InteractionPopupSystem _interactionPopupSystem = default!;
     [Dependency] private readonly MobStateSystem _mobStateSystem = default!;
     [Dependency] private readonly DoAfterSystem _doAfterSystem = default!;
+    [Dependency] private readonly Damage.Systems.DamageableSystem _damageable = default!;
 
     public override void Initialize()
     {
         base.Initialize();
+        SubscribeLocalEvent<CardiopulmonaryResuscitationComponent, GetVerbsEvent<AlternativeVerb>>(AddCRPVerb);
         SubscribeLocalEvent<CardiopulmonaryResuscitationComponent, InteractHandEvent>(OnInteractHand); // InteractUsingEvent InteractHandEvent
         SubscribeLocalEvent<CardiopulmonaryResuscitationComponent, CRPDoAfterEvent>(CRPDoAfter);
     }
@@ -31,10 +37,10 @@ public sealed class CardiopulmonaryResuscitationSystem : EntitySystem
         if (!args.CanInteract || !args.CanAccess)
             return;
 
-        if (!_mobStateSystem.IsCritical(args.User))
+        if (!_mobStateSystem.IsCritical(args.Target))
             return;
 
-        if (!HasComp<CardiopulmonaryResuscitationComponent>(args.User))
+        if (!HasComp<CardiopulmonaryResuscitationComponent>(args.Target))
         {
             return;
         }
@@ -76,6 +82,7 @@ public sealed class CardiopulmonaryResuscitationSystem : EntitySystem
         var args = new DoAfterArgs(EntityManager, CRPer, length, ev, CRPied, target: CRPied)
         {
             BreakOnMove = true,
+            BreakOnDamage = true,
             //NeedHand = true
         };
 
@@ -88,17 +95,27 @@ public sealed class CardiopulmonaryResuscitationSystem : EntitySystem
             return;
 
         CRP(args.Args.User, uid);
+        args.Repeat = true;
+        args.Args.Event.Repeat = args.Repeat;
         args.Handled = true;
     }
 
     private void CRP(EntityUid CRPer, EntityUid CRPied)
     {
+        if (!TryComp<DamageableComponent>(CRPied, out var DCcomp))
+            return;
 
+        var damageSpec = new DamageSpecifier();
+        damageSpec.DamageDict = new Dictionary<string, FixedPoint2>()
+        {
+            { "Asphyxiation", FixedPoint2.New(-5) }
+        };
+
+        _damageable.TryChangeDamage(
+            (CRPied, DCcomp),
+            damageSpec,
+            ignoreResistances: true,
+            interruptsDoAfters: true
+        );
     }
-}
-
-[Serializable, NetSerializable]
-public sealed partial class CRPDoAfterEvent : SimpleDoAfterEvent
-{
-
 }
