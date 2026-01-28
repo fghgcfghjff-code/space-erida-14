@@ -78,10 +78,7 @@ public sealed class CardiopulmonaryResuscitationSystem : EntitySystem
     }
     private void CRPDoAfter(EntityUid uid, CardiopulmonaryResuscitationComponent component, CRPDoAfterEvent args)
     {
-        if (args.Handled || args.Cancelled)
-            return;
-
-        if (!CheckMouth(args.Args.User, uid))
+        if (args.Handled || args.Cancelled || !CheckMouth(args.Args.User, uid) || !_mobStateSystem.IsCritical(uid))
             return;
 
         CRP(uid, component.CRPAsphyxiationAmount);
