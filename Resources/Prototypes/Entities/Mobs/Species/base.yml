@@ -299,6 +299,7 @@
   - type: FireVisuals
     alternateState: Standing
   - type: StunVisuals
+  - type: CardiopulmonaryResuscitation # Erida-edit
 
 - type: entity
   save: false
