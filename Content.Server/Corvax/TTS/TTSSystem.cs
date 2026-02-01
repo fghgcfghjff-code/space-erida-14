@@ -254,15 +254,3 @@ public sealed class EntitySpokeLanguageEvent: EntityEventArgs
         ObfuscatedMessage = obfuscatedMessage;
     }
 }
-
-public sealed class TransformSpeakerVoiceEvent : EntityEventArgs
-{
-    public EntityUid Sender;
-    public string VoiceId;
-
-    public TransformSpeakerVoiceEvent(EntityUid sender, string voiceId)
-    {
-        Sender = sender;
-        VoiceId = voiceId;
-    }
-}
