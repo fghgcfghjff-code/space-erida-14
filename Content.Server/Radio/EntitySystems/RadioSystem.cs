@@ -133,15 +133,6 @@ public sealed class RadioSystem : EntitySystem
             ? FormattedMessage.EscapeText(message)
             : message;
 
-        // var wrappedMessage = Loc.GetString(speech.Bold ? "chat-radio-message-wrap-bold" : "chat-radio-message-wrap",
-        //     ("color", channel.Color),
-        //     ("fontType", speech.FontId),
-        //     ("fontSize", speech.FontSize),
-        //     ("verb", Loc.GetString(_random.Pick(speech.SpeechVerbStrings))),
-        //     ("channel", $"\\[{channel.LocalizedName}\\]"),
-        //     ("name", name),
-        //     ("message", content));
-
         var wrappedMessage = WrapRadioMessage(messageSource, speech, channel, name, content, language); // backmen: language
 
         // most radios are relayed to chat, so lets parse the chat message beforehand
