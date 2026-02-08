@@ -38,6 +38,7 @@
   - BoozeDispenserMachineCircuitboard
   - SodaDispenserMachineCircuitboard
   - SmartFridgeCircuitboard
+  - PrinterDocMachineCircuitboard # DS-14
 
 ## Dynamic
 

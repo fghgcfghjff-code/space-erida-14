@@ -136,6 +136,7 @@
     - id: ClothingEyesHudCommand
     - id: PlushieLizardJobHeadofpersonnel
       prob: 0.02
+    - id: BoxPhotocopierToners # DS14
 
 - type: entity
   id: LockerHeadOfPersonnelFilled

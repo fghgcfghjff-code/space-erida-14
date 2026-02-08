@@ -1,0 +1,8 @@
+- type: entity
+  id: CrateServicePhotocopierToners
+  parent: CrateGenericSteel
+  components:
+  - type: StorageFill
+    contents:
+    - id: BoxPhotocopierToners
+      amount: 2
