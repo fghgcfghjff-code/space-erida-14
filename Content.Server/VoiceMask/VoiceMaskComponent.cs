@@ -55,5 +55,11 @@ public sealed partial class VoiceMaskComponent : Component
     /// </summary>
     [DataField]
     public bool AccentHide = true;
+
+    // Corvax-TTS-Start
+    [DataField]
+    [ViewVariables(VVAccess.ReadWrite)]
+    public string VoiceId = "Announcer"; // TODO сделать тут привязку в дефолт в компаче ттса
+    // Corvax-TTS-End
 }
 

@@ -19,7 +19,7 @@ public sealed partial class SpeakOperator : HTNOperator
     [Dependency] private readonly IRobustRandom _random = default!;
 
     [DataField(required: true)]
-    public SpeakOperatorSpeech Speech;
+    public SpeakOperatorSpeech Speech = default!;
 
     /// <summary>
     /// Whether to hide message from chat window and logs.
@@ -88,7 +88,7 @@ public sealed partial class SpeakOperator : HTNOperator
         public sealed partial class SingleSpeakOperatorSpeech : SpeakOperatorSpeech
         {
             [DataField(required: true)]
-            public string Line;
+            public string Line = default!;
         }
 
         public sealed partial class LocalizedSetSpeakOperatorSpeech : SpeakOperatorSpeech

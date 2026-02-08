@@ -1,3 +1,4 @@
+using Content.Server.Backmen.Language;
 using Content.Shared.Chat;
 using Content.Shared.Inventory.Events;
 using Content.Shared.Radio;
@@ -12,7 +13,7 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
 {
     [Dependency] private readonly INetManager _netMan = default!;
     [Dependency] private readonly RadioSystem _radio = default!;
-
+    [Dependency] private readonly LanguageSystem _language = default!;
     public override void Initialize()
     {
         base.Initialize();
@@ -48,7 +49,7 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
             && TryComp(component.Headset, out EncryptionKeyHolderComponent? keys)
             && keys.Channels.Contains(args.Channel.ID))
         {
-            _radio.SendRadioMessage(uid, args.Message, args.Channel, component.Headset);
+            _radio.SendRadioMessage(uid, args.Message, args.Channel, component.Headset, language: args.Language); // Backmen
             args.Channel = null; // prevent duplicate messages from other listeners.
         }
     }
@@ -110,6 +111,16 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
         }
 
         if (TryComp(parent, out ActorComponent? actor))
-            _netMan.ServerSendMessage(args.ChatMsg, actor.PlayerSession.Channel);
+        {
+            // start-backmen: language
+            var msg = args.ChatMsg;
+            if (args.Language != null
+                && args.LanguageObfuscatedChatMsg != null
+                && !_language.CanUnderstand(parent, args.Language.ID))
+                msg = args.LanguageObfuscatedChatMsg;
+            // end-backmen: language
+
+            _netMan.ServerSendMessage(msg, actor.PlayerSession.Channel); // backmen
+        }
     }
 }

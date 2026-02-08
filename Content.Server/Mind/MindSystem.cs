@@ -351,4 +351,30 @@ public sealed class MindSystem : SharedMindSystem
         MakeSentient(target);
         TransferTo(mindId, target, ghostCheckOverride: true, mind: mind);
     }
+
+    // Erida-start
+    public bool TryGetSession(MindComponent mind, [NotNullWhen(true)]out ICommonSession? session)
+    {
+        session = null;
+        if (!mind.UserId.HasValue) return false;
+        try //because in test no users
+        {
+            session = _players.GetSessionById(mind.UserId.Value);
+        }
+        catch (KeyNotFoundException ex)
+        {
+            session = null;
+            return false;
+        }
+        return true;
+    }
+
+    public bool TryGetSession(EntityUid? mindId, [NotNullWhen(true)]out ICommonSession? session)
+    {
+        session = null;
+        if (!mindId.HasValue || !TryGetMind(mindId!.Value, out _, out var mind))
+            return false;
+        return TryGetSession(mind, out session);
+    }
+    // Erida-end
 }
