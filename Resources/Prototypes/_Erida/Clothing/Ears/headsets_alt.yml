@@ -1,0 +1,12 @@
+# Syndicate ERT
+- type: entity
+  parent: ClothingHeadsetAltSyndicate
+  id: ClothingHeadsetAltSyndicateERT
+  name: blood-red over-ear ERT headset
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeySyndie
+      - EncryptionKeyStationMaster
+      - EncryptionKeyCentCom

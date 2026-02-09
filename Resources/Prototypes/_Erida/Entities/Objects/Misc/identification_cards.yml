@@ -229,3 +229,60 @@
   - type: Access
     tags:
     - InteQVanguard
+
+# Syndicate ERT
+- type: entity
+  parent: [IDCardStandard, BaseSyndicateContraband]
+  id: SyndicateERTOperativeIDCard
+  name: Syndicate ERT operative ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: black
+    - state: stripe_top
+      color: "#e80c0c"
+    - state: stripe_bottom
+      color: "#960606"
+    - sprite: Interface/Misc/job_icons.rsi
+      offset: -0.15375, 0.0325
+      state: SyndicateOperative
+  - type: Item
+    heldPrefix: black
+  - type: PresetIdCard
+    job: SyndicateERTOperative
+
+- type: entity
+  parent: SyndicateERTOperativeIDCard
+  id: SyndicateERTMedicalIDCard
+  name: Syndicate ERT medical ID card
+  components:
+  - type: PresetIdCard
+    job: SyndicateERTMedical
+  - type: Sprite
+    layers:
+    - state: black
+    - state: stripe_top
+      color: "#e80c0c"
+    - state: stripe_bottom
+      color: "#960606"
+    - sprite: Interface/Misc/job_icons.rsi
+      offset: -0.15375, 0.0325
+      state: SyndicateCorpsman
+
+- type: entity
+  parent: SyndicateERTOperativeIDCard
+  id: SyndicateERTLiderIDCard
+  name: Syndicate ERT lider ID card
+  components:
+  - type: PresetIdCard
+    job: SyndicateERTLider
+  - type: Sprite
+    layers:
+    - state: black
+    - state: stripe_top
+      color: "#e80c0c"
+    - state: stripe_bottom
+      color: "#960606"
+    - sprite: Interface/Misc/job_icons.rsi
+      offset: -0.15375, 0.0325
+      state: SyndicateCommander

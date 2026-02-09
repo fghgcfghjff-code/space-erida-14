@@ -27,3 +27,12 @@
 
 - type: playTimeTracker
   id: JobMilitia
+
+- type: playTimeTracker
+  id: JobSyndicateERTSecurity
+
+- type: playTimeTracker
+  id: JobSyndicateERTMedical
+
+- type: playTimeTracker
+  id: JobSyndicateERTLider

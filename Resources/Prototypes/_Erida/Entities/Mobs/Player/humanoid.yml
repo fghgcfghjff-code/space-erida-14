@@ -302,3 +302,113 @@
       prototypes: [ CentcomSecGear ]
       roleLoadout: [ RoleSurvivalStandard ]
 
+## Syndicate ERT
+- type: randomHumanoidSettings
+  id: EventHumanoidSyndiERT
+  parent: EventHumanoidMindShielded
+  randomizeName: false
+  components:
+  - type: AutoImplant
+    implants:
+    - DeathRattleImplant
+    - MindShieldImplant
+    - DeathRattleImplantCentcomm
+
+# Operative
+- type: entity
+  id: RandomHumanoidSpawnerSyndicateERTOperative
+  name: Syndicate ERT operative
+  suffix: ERTRole, Syndicate
+  components:
+    - type: Sprite
+      sprite: _Erida/Markers/jobs.rsi
+      state: operative
+    - type: RandomHumanoidSpawner
+      settings: SyndicateERTOperative
+    - type: RandomMetadata
+      nameSegments:
+      - NamesMilitaryFirstLeader
+      - NamesMilitaryLast
+      nameFormat: name-format-ert
+
+- type: randomHumanoidSettings
+  id: SyndicateERTOperative
+  parent: EventHumanoidSyndiERT
+  components:
+    - type: GhostRole
+      name: job-name-syndicate-ert-operative
+      description: ghost-role-information-ert-security-description
+      rules: ghost-role-information-nonantagonist-rules
+      raffle:
+        settings: short
+    - type: Loadout
+      prototypes: [ SyndicateERTOperativeGear ]
+      roleLoadout: [ RoleSurvivalExtended ]
+
+# Medic
+- type: entity
+  id: RandomHumanoidSpawnerSyndicateERTMedical
+  name: Syndicate ERT medic
+  suffix: ERTRole, Syndicate
+  components:
+    - type: Sprite
+      sprite: _Erida/Markers/jobs.rsi
+      state: medic
+    - type: RandomHumanoidSpawner
+      settings: SyndicateERTMedical
+    - type: RandomMetadata
+      nameSegments:
+      - NamesMilitaryFirstLeader
+      - NamesMilitaryLast
+      nameFormat: name-format-ert
+
+- type: randomHumanoidSettings
+  id: SyndicateERTMedical
+  parent: EventHumanoidSyndiERT
+  components:
+    - type: GhostRole
+      name: job-name-syndicate-ert-medic
+      description: ghost-role-information-ert-medical-description
+      rules: ghost-role-information-nonantagonist-rules
+      raffle:
+        settings: short
+      job: SyndicateERTMedical
+    - type: Loadout
+      prototypes: [ SyndicateERTMedicalGear ]
+      roleLoadout: [ RoleSurvivalExtended ]
+
+# Lider
+- type: entity
+  id: RandomHumanoidSpawnerSyndicateERTLider
+  name: Syndicate ERT lider
+  suffix: ERTRole, Syndicate
+  components:
+    - type: Sprite
+      sprite: _Erida/Markers/jobs.rsi
+      state: commander
+    - type: RandomHumanoidSpawner
+      settings: SyndicateERTLider
+    - type: RandomMetadata
+      nameSegments:
+      - NamesMilitaryFirstLeader
+      - NamesMilitaryLast
+      nameFormat: name-format-ert
+
+- type: randomHumanoidSettings
+  id: SyndicateERTLider
+  parent: EventHumanoidSyndiERT
+  components:
+    - type: GhostRole
+      name: job-name-syndicate-ert-lider
+      description: ghost-role-information-ert-leader-description
+      rules: ghost-role-information-nonantagonist-rules
+      raffle:
+        settings: short
+    - type: Loadout
+      prototypes: [ SyndicateERTLiderGear ]
+      roleLoadout: [ RoleSurvivalExtended ]
+    - type: RandomMetadata
+      nameSegments:
+      - NamesMilitaryFirstLeader
+      - NamesMilitaryLast
+      nameFormat: name-format-ert

@@ -179,3 +179,50 @@
           inteq-lead
     - type: Icon
       state: inteq-lead
+
+# Syndicate ERT
+- type: entity
+  parent: [SyndiOperativePDA, BaseSyndicateContraband]
+  id: SyndiERTOperativePDA
+  name: Syndicate ERT operative PDA
+  components:
+    - type: Pda
+      id: SyndicateERTOperativeIDCard
+    - type: CartridgeLoader
+      uiKey: enum.PdaUiKey.Key
+      preinstalled:
+        - CrewManifestCartridge
+        - NotekeeperCartridge
+        - NanoTaskCartridge
+        - NewsReaderCartridge
+
+- type: entity
+  parent: [SyndiCorpsmanPDA, BaseSyndicateContraband]
+  id: SyndiERTMedicalPDA
+  name: Syndicate ERT medic PDA
+  components:
+    - type: Pda
+      id: SyndicateERTMedicalIDCard
+    - type: CartridgeLoader
+      uiKey: enum.PdaUiKey.Key
+      preinstalled:
+        - CrewManifestCartridge
+        - NotekeeperCartridge
+        - NanoTaskCartridge
+        - NewsReaderCartridge
+        - MedTekCartridge
+
+- type: entity
+  parent: [SyndiCommanderPDA, BaseSyndicateContraband]
+  id: SyndiERTLiderPDA
+  name: Syndicate ERT lider PDA
+  components:
+    - type: Pda
+      id: SyndicateERTLiderIDCard
+    - type: CartridgeLoader
+      uiKey: enum.PdaUiKey.Key
+      preinstalled:
+        - CrewManifestCartridge
+        - NotekeeperCartridge
+        - NanoTaskCartridge
+        - NewsReaderCartridge
