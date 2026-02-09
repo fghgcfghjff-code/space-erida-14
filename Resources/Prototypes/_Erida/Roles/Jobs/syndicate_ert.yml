@@ -13,7 +13,6 @@
   - AllAccess
   access:
   - CentralCommand
-  - Syndicate
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant, DeathRattleImplant, DeathRattleImplantCentcomm ]
@@ -49,7 +48,7 @@
   description: job-description-syndicate-ert-medical
   playTimeTracker: JobSyndicateERTMedical
   setPreference: false
-  startingGear: SyndicateERTMedicGear
+  startingGear: SyndicateERTMedicalGear
   icon: "JobIconSyndicate"
   supervisors: job-supervisors-centcom
   canBeAntag: false
@@ -57,7 +56,6 @@
   - AllAccess
   access:
   - CentralCommand
-  - Syndicate
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant, DeathRattleImplant, DeathRattleImplantCentcomm ]
@@ -101,7 +99,6 @@
   - AllAccess
   access:
   - CentralCommand
-  - Syndicate
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant, DeathRattleImplant, DeathRattleImplantCentcomm ]
