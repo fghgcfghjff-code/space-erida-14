@@ -1,0 +1,11 @@
+- type: shader
+  id: NightVision
+  kind: source
+  path: "/Textures/_White/Shaders/nightvision.swsl"
+
+- type: shader
+  id: ThermalVision
+  kind: source
+  path: "/Textures/_Goobstation/Shaders/thermal.swsl"
+  params:
+    pixelSize: 32.0

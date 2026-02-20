@@ -3,7 +3,7 @@ using Robust.Shared.GameStates;
 
 namespace Content.Shared.Body;
 
-[RegisterComponent, NetworkedComponent]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 [Access(typeof(BodySystem))]
 public sealed partial class BodyComponent : Component
 {
@@ -14,6 +14,11 @@ public sealed partial class BodyComponent : Component
     /// </summary>
     [ViewVariables]
     public Container? Organs;
+
+    // WD EDIT START
+    [DataField, AutoNetworkedField]
+    public bool ThermalVisibility = true;
+    // WD EDIT END
 }
 
 /// <summary>
