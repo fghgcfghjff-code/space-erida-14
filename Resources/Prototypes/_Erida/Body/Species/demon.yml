@@ -56,7 +56,7 @@
       jumpsuit:
         sizeMaps:
           32:
-            sprite: Mobs/Species/Demon/displacement.rsi
+            sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
   - type: InitialBody
     organs:
@@ -106,7 +106,7 @@
   abstract: true
   components:
   - type: Metabolizer
-    metabolizerTypes: [ Demon ]
+    metabolizerTypes: [ Human ]
 
 - type: entity
   parent: OrganDemon
