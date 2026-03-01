@@ -5,9 +5,9 @@
   description: A jumpskirt specifically for a Blueshield officers.
   components:
   - type: Sprite
-    sprite: Backmen/Clothing/Uniforms/Jumpskirt/blueskirt.rsi
+    sprite: _Backmen/Clothing/Uniforms/Jumpskirt/blueskirt.rsi
   - type: Clothing
-    sprite: Backmen/Clothing/Uniforms/Jumpskirt/blueskirt.rsi
+    sprite: _Backmen/Clothing/Uniforms/Jumpskirt/blueskirt.rsi
 
 - type: entity
   parent: [ClothingUniformSkirtBase, BaseBlueShieldContraband]
@@ -16,9 +16,9 @@
   description: A turtleneck specifically for a Blueshield officers.
   components:
   - type: Sprite
-    sprite: Backmen/Clothing/Uniforms/Jumpskirt/blueskirt-alt.rsi
+    sprite: _Backmen/Clothing/Uniforms/Jumpskirt/blueskirt-alt.rsi
   - type: Clothing
-    sprite: Backmen/Clothing/Uniforms/Jumpskirt/blueskirt-alt.rsi
+    sprite: _Backmen/Clothing/Uniforms/Jumpskirt/blueskirt-alt.rsi
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -27,9 +27,9 @@
   description: A sturdy jumpskirt, issued to members of the Cargo department for postal work.
   components:
   - type: Sprite
-    sprite: Backmen/Clothing/Uniforms/Jumpskirt/cargopostal.rsi
+    sprite: _Backmen/Clothing/Uniforms/Jumpskirt/cargopostal.rsi
   - type: Clothing
-    sprite: Backmen/Clothing/Uniforms/Jumpskirt/cargopostal.rsi
+    sprite: _Backmen/Clothing/Uniforms/Jumpskirt/cargopostal.rsi
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -38,9 +38,9 @@
   description: Вот прелесть карпоративной жизни, стильные костюмы с юбкой в тему!
   components:
   - type: Sprite
-    sprite: Backmen/Clothing/Uniforms/Jumpskirt/centcom-official.rsi
+    sprite: _Backmen/Clothing/Uniforms/Jumpskirt/centcom-official.rsi
   - type: Clothing
-    sprite: Backmen/Clothing/Uniforms/Jumpskirt/centcom-official.rsi
+    sprite: _Backmen/Clothing/Uniforms/Jumpskirt/centcom-official.rsi
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -49,9 +49,9 @@
   description: Одежда, вышитая из ласкутных тканей, сделанные из животных. Выглядит тряпично.
   components:
   - type: Sprite
-    sprite: Backmen/Clothing/Uniforms/Jumpskirt/jute.rsi
+    sprite: _Backmen/Clothing/Uniforms/Jumpskirt/jute.rsi
   - type: Clothing
-    sprite: Backmen/Clothing/Uniforms/Jumpskirt/jute.rsi
+    sprite: _Backmen/Clothing/Uniforms/Jumpskirt/jute.rsi
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -60,9 +60,9 @@
   description: Платье, которые держат парочку ниток от самопроизвольного раздевания. Выглядит надёжно.
   components:
   - type: Sprite
-    sprite: Backmen/Clothing/Uniforms/Jumpskirt/blackunderwear.rsi
+    sprite: _Backmen/Clothing/Uniforms/Jumpskirt/blackunderwear.rsi
   - type: Clothing
-    sprite: Backmen/Clothing/Uniforms/Jumpskirt/blackunderwear.rsi
+    sprite: _Backmen/Clothing/Uniforms/Jumpskirt/blackunderwear.rsi
 
 - type: entity # Backmen
   parent: ClothingUniformSkirtBase
@@ -71,9 +71,9 @@
   description: серая юбка с рубашкой, тахнет тайной!
   components:
   - type: Sprite
-    sprite: Backmen/Clothing/Uniforms/Jumpskirt/dec.rsi
+    sprite: _Backmen/Clothing/Uniforms/Jumpskirt/dec.rsi
   - type: Clothing
-    sprite: Backmen/Clothing/Uniforms/Jumpskirt/dec.rsi
+    sprite: _Backmen/Clothing/Uniforms/Jumpskirt/dec.rsi
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -82,9 +82,9 @@
   description: Платье, которые держат парочку ниток от самопроизвольного раздевания. Выглядит надёжно.
   components:
   - type: Sprite
-    sprite: Backmen/Clothing/Uniforms/Jumpskirt/redunderwear.rsi
+    sprite: _Backmen/Clothing/Uniforms/Jumpskirt/redunderwear.rsi
   - type: Clothing
-    sprite: Backmen/Clothing/Uniforms/Jumpskirt/redunderwear.rsi
+    sprite: _Backmen/Clothing/Uniforms/Jumpskirt/redunderwear.rsi
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -93,9 +93,9 @@
   description: Платье, которые держат парочку ниток от самопроизвольного раздевания. Выглядит надёжно.
   components:
   - type: Sprite
-    sprite: Backmen/Clothing/Uniforms/Jumpskirt/underwear.rsi
+    sprite: _Backmen/Clothing/Uniforms/Jumpskirt/underwear.rsi
   - type: Clothing
-    sprite: Backmen/Clothing/Uniforms/Jumpskirt/underwear.rsi
+    sprite: _Backmen/Clothing/Uniforms/Jumpskirt/underwear.rsi
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -104,9 +104,9 @@
   description: Нижнее белье для дам, используется для получения +10 к харизме.
   components:
   - type: Sprite
-    sprite: Backmen/Clothing/Uniforms/Jumpskirt/pinktutu.rsi
+    sprite: _Backmen/Clothing/Uniforms/Jumpskirt/pinktutu.rsi
   - type: Clothing
-    sprite: Backmen/Clothing/Uniforms/Jumpskirt/pinktutu.rsi
+    sprite: _Backmen/Clothing/Uniforms/Jumpskirt/pinktutu.rsi
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -115,6 +115,6 @@
   description: There are some red spots on this skirt...
   components:
   - type: Sprite
-    sprite: Backmen/Clothing/Uniforms/Jumpskirt/surgeon_jumpskirt.rsi
+    sprite: _Backmen/Clothing/Uniforms/Jumpskirt/surgeon_jumpskirt.rsi
   - type: Clothing
-    sprite: Backmen/Clothing/Uniforms/Jumpskirt/surgeon_jumpskirt.rsi
+    sprite: _Backmen/Clothing/Uniforms/Jumpskirt/surgeon_jumpskirt.rsi

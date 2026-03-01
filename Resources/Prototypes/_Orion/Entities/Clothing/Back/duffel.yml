@@ -24,3 +24,7 @@
   components:
   - type: Sprite
     sprite: _Orion/Clothing/Back/Duffels/inteq_duffel_med.rsi
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,8,4

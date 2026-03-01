@@ -22,10 +22,6 @@
     CaptainGunStealObjective: 0.5
     CaptainJetpackStealObjective: 0.5
     HandTeleporterStealObjective: 0.5
-    #Erida-start
-    CMOAdvancedDefibStealObjective: 1
-    CEProfessionalRCDStealObjective: 1
-    #Erida-End
     EnergyMagnumStealObjective: 0.5
 
 - type: weightedRandom
@@ -46,13 +42,6 @@
   weights:
 #    RandomTraitorAliveObjective: 1 - Removed because the objective was boring and didn't progress the round.
     RandomTraitorProgressObjective: 1
-    # Erida-start
-    HumiliateRandomObjective: 1
-    ExcuseRandomObjective: 1
-    ResignRandomObjective: 1
-    BackstabRandomObjective: 1
-    RecruitingRandomObjective: 1
-    # Erida-start
 
 #Thief groups
 - type: weightedRandom
@@ -96,11 +85,9 @@
     AmePartFlatpackStealObjective: 1
     ExpeditionsCircuitboardStealObjective: 1            #sup
     CargoShuttleCircuitboardStealObjective: 1
-    ClothingEyesHudBeerStealObjective: 0.5              #srv, beer goggles less common cause its so easy
     BibleStealObjective: 1
     ClothingNeckGoldmedalStealObjective: 1              #other
     ClothingNeckClownmedalStealObjective: 0.5
-    CMOMedChemHUDStealObjective: 1                      #Erida-Edit
 
 - type: weightedRandom
   id: ThiefObjectiveGroupStructure

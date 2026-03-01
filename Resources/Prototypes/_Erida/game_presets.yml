@@ -6,7 +6,6 @@
   rules:
   - BasicCalmStationEventScheduler
   - MeteorSwarmScheduler
-  - SpaceTrafficControlFriendlyEventScheduler
   - BasicRoundstartVariation
 
 - type: gamePreset
@@ -16,7 +15,6 @@
   description: light-dynamic-description
   rules:
   - MeteorSwarmScheduler
-  - SpaceTrafficControlFriendlyEventScheduler
   - BasicRoundstartVariation
   - LightDynamicScheduler
 

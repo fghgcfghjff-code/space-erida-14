@@ -13,10 +13,6 @@
       - On
       - Off
       - Toggle
-  - type: Vibrator
-    isTogglable: true
-    jitterProbablity: 70
-    vibrationSound: /Audio/_Erida/Effects/ERP/vibration_loop.ogg
   - type: ItemToggle
   - type: Clothing
     equipDelay: 2

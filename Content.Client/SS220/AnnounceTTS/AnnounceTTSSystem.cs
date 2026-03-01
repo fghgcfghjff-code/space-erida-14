@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.IO;
-using Content.Shared.Corvax.CCCVars;
+using Content.Shared.CCVar;
 using Content.Shared.GameTicking;
 using Content.Shared.SS220.AnnounceTTS;
 using Robust.Client.Audio;
@@ -39,7 +39,7 @@ public sealed class AnnounceTTSSystem : EntitySystem
         _prefix = ResPath.Root / $"TTSAnon{_shareIdx++}";
         _resourceCache.AddRoot(_prefix, _contentRoot);
         _sawmill = Logger.GetSawmill("AnnounceTTSSystem");
-        _cfg.OnValueChanged(CCCVars.TTSAnnounceVolume, OnTtsVolumeChanged, true);
+        _cfg.OnValueChanged(CCVars.TTSAnnounceVolume, OnTtsVolumeChanged, true);
         SubscribeNetworkEvent<AnnounceTTSEvent>(OnAnnounceTTSPlay);
         SubscribeNetworkEvent<RoundRestartCleanupEvent>(OnCleanup);
     }
@@ -79,7 +79,7 @@ public sealed class AnnounceTTSSystem : EntitySystem
     /// <inheritdoc />
     public override void Shutdown()
     {
-        _cfg.UnsubValueChanged(CCCVars.TTSAnnounceVolume, OnTtsVolumeChanged);
+        _cfg.UnsubValueChanged(CCVars.TTSAnnounceVolume, OnTtsVolumeChanged);
         EndStreams();
         _contentRoot.Dispose();
     }

@@ -13,16 +13,10 @@
     - !type:PlantAdjustWater
       amount: 0.9
   metabolisms:
-    Drink:
+    Digestion:
       effects:
         - !type:SatiateThirst
           factor: 4
-    Medicine:
-      effects:
-      - !type:HealthChange
-        damage:
-          groups:
-            Brute: -0.2
 
 - type: reagent
   id: Soju
@@ -33,10 +27,10 @@
   flavor: soju
   color: "#DDDDDD"
   metamorphicSprite:
-    sprite: Backmen/Objects/Consumable/Drinks/sojuglass.rsi
+    sprite: _Backmen/Objects/Consumable/Drinks/sojuglass.rsi
     state: icon
   metabolisms:
-    Drink:
+    Digestion:
       effects:
       - !type:SatiateThirst
         factor: 2

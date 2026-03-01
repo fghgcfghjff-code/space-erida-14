@@ -126,16 +126,17 @@
   - type: ClothingSpeedModifier
     walkModifier: 0.9
     sprintModifier: 0.9
+    requireActivated: false
   - type: HeldSpeedModifier
   - type: TemperatureProtection
     heatingCoefficient: 0.1
     coolingCoefficient: 0.1
   - type: Armor
     modifiers:
-      coefficients: # Erida
-        Heat: 0.80
-        Radiation: 0.65
-        Caustic: 0.4
+      coefficients:
+        Heat: 0.90
+        Radiation: 0.75
+        Caustic: 0.5
   - type: GroupExamine
   - type: StealTarget
     stealGroup: ClothingOuterHardsuitVoidParamed

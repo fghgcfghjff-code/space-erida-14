@@ -2,6 +2,7 @@ using Content.Server.Body.Systems;
 using Content.Server.Chat.Systems;
 using Content.Server.Explosion.EntitySystems;
 using Content.Shared.Chat;
+using Content.Shared.Gibbing;
 using Content.Shared.Interaction.Components;
 using Content.Shared.Inventory.Events;
 using Robust.Shared.Audio.Systems;
@@ -13,7 +14,7 @@ public sealed partial class CkeyCodeSystem : EntitySystem
 {
     [Dependency] private readonly ChatSystem _chatSystem = default!;
     [Dependency] private readonly ExplosionSystem _explosionSystem = default!;
-    [Dependency] private readonly BodySystem _bodySystem = default!;
+    [Dependency] private readonly GibbingSystem _gibbingSystem = default!;
     [Dependency] private readonly SharedAudioSystem _audioSystem = default!;
 
     public override void Initialize()
@@ -74,7 +75,7 @@ public sealed partial class CkeyCodeSystem : EntitySystem
             if (ckeyCode.ExplosionTime <= 0)
             {
                 _explosionSystem.QueueExplosion(uid, "Default", 10, 4, 1, 0);
-                _bodySystem.GibBody(ckeyCode.Wearer);
+                _gibbingSystem.Gib(ckeyCode.Wearer);
             }
         }
     }

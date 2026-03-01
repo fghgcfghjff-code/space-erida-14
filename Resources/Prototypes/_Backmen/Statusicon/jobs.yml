@@ -2,5 +2,5 @@
   parent: JobIcon
   id: JobIconBlueShield
   icon:
-    sprite: /Textures/Backmen/Icons/jobicon.rsi
+    sprite: /Textures/_Backmen/Icons/jobicon.rsi
     state: blueshield

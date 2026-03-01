@@ -1,16 +1,4 @@
 - type: entity
-  id: SpawnPointBrigmedic # Corvax
-  parent: SpawnPointJobBase
-  name: brigmedic
-  components:
-  - type: SpawnPoint
-    job_id: Brigmedic
-  - type: Sprite
-    layers:
-      - state: green
-      - state: brigmedic
-
-- type: entity
   id: SpawnPointPilot # Corvax
   parent: SpawnPointJobBase
   name: pilot

@@ -262,8 +262,7 @@ stack-goliath-hide =
         [few] пластины
        *[other] пластин
     } голиафа
-stack-telecrystalRed = красный телекристалл
-stack-telecrystalOrange = оранжевый телекристалл
+stack-telecrystal = красный телекристалл
 stack-gold-ore = золотая руда
 stack-rough-diamond = сырой алмаз
 stack-iron-ore = железная руда

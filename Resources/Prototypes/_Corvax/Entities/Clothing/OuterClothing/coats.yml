@@ -5,9 +5,9 @@
   description: A greatcoat enhanced with a special alloy for some extra protection and style for those with a commanding presence.
   components:
     - type: Sprite
-      sprite: Corvax/Clothing/OuterClothing/Coats/hos_greatcoat.rsi
+      sprite: _Corvax/Clothing/OuterClothing/Coats/hos_greatcoat.rsi
     - type: Clothing
-      sprite: Corvax/Clothing/OuterClothing/Coats/hos_greatcoat.rsi
+      sprite: _Corvax/Clothing/OuterClothing/Coats/hos_greatcoat.rsi
 #    - type: Armor
 #      modifiers:
 #        coefficients:
@@ -25,9 +25,9 @@
   description: A hard-boiled private investigator's dark trenchcoat.
   components:
     - type: Sprite
-      sprite: Corvax/Clothing/OuterClothing/Coats/noirdet.rsi
+      sprite: _Corvax/Clothing/OuterClothing/Coats/noirdet.rsi
     - type: Clothing
-      sprite: Corvax/Clothing/OuterClothing/Coats/noirdet.rsi
+      sprite: _Corvax/Clothing/OuterClothing/Coats/noirdet.rsi
 #    - type: Armor
 #      modifiers:
 #        coefficients:
@@ -45,9 +45,9 @@
   description: A navy-blue armored jacket with blue shoulder designations and '/Warden/' stitched into one of the chest pockets.
   components:
     - type: Sprite
-      sprite: Corvax/Clothing/OuterClothing/Coats/warden_alt.rsi
+      sprite: _Corvax/Clothing/OuterClothing/Coats/warden_alt.rsi
     - type: Clothing
-      sprite: Corvax/Clothing/OuterClothing/Coats/warden_alt.rsi
+      sprite: _Corvax/Clothing/OuterClothing/Coats/warden_alt.rsi
 #    - type: Armor
 #      modifiers:
 #        coefficients:
@@ -65,9 +65,9 @@
   description: Lightly armored leather overcoat meant as casual wear for high-ranking officers. Bears the crest of Nanotrasen Security.
   components:
     - type: Sprite
-      sprite: Corvax/Clothing/OuterClothing/Coats/sec_leather.rsi
+      sprite: _Corvax/Clothing/OuterClothing/Coats/sec_leather.rsi
     - type: Clothing
-      sprite: Corvax/Clothing/OuterClothing/Coats/sec_leather.rsi
+      sprite: _Corvax/Clothing/OuterClothing/Coats/sec_leather.rsi
     - type: Armor # Based on /tg/ but slightly compensated to fit the fact that armor stacks in SS14. :x:
       modifiers:
         coefficients: # Erida
@@ -85,9 +85,9 @@
   description: A suit that protects against minor chemical spills.
   components:
     - type: Sprite
-      sprite: Corvax/Clothing/OuterClothing/Coats/labcoat_security_medic.rsi
+      sprite: _Corvax/Clothing/OuterClothing/Coats/labcoat_security_medic.rsi
     - type: Clothing
-      sprite: Corvax/Clothing/OuterClothing/Coats/labcoat_security_medic.rsi
+      sprite: _Corvax/Clothing/OuterClothing/Coats/labcoat_security_medic.rsi
     - type: Armor
       modifiers:
         coefficients: # Erida
@@ -100,9 +100,9 @@
   description: Captain's formal jacket, inlaid with gold.
   components:
   - type: Sprite
-    sprite: Corvax/Clothing/OuterClothing/Coats/captain.rsi
+    sprite: _Corvax/Clothing/OuterClothing/Coats/captain.rsi
   - type: Clothing
-    sprite: Corvax/Clothing/OuterClothing/Coats/captain.rsi
+    sprite: _Corvax/Clothing/OuterClothing/Coats/captain.rsi
   - type: Armor
     modifiers:
       coefficients: # Erida
@@ -120,9 +120,9 @@
   description: Business jacket of the HOP for a professional look.
   components:
   - type: Sprite
-    sprite: Corvax/Clothing/OuterClothing/Coats/hop.rsi
+    sprite: _Corvax/Clothing/OuterClothing/Coats/hop.rsi
   - type: Clothing
-    sprite: Corvax/Clothing/OuterClothing/Coats/hop.rsi
+    sprite: _Corvax/Clothing/OuterClothing/Coats/hop.rsi
   - type: Armor
     modifiers:
       coefficients: # Erida

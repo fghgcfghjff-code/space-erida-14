@@ -5,9 +5,9 @@
   description: Improved security glasses, in blue coloring and with a built-in health scanner.
   components:
   - type: Sprite
-    sprite: Backmen/Clothing/Eyes/Glasses/blueglasses.rsi
+    sprite: _Backmen/Clothing/Eyes/Glasses/blueglasses.rsi
   - type: Clothing
-    sprite: Backmen/Clothing/Eyes/Glasses/blueglasses.rsi
+    sprite: _Backmen/Clothing/Eyes/Glasses/blueglasses.rsi
   - type: FlashImmunity
   - type: EyeProtection
     protectionTime: 5
@@ -36,13 +36,13 @@
   description: Improved security technical visor, in blue coloring and built-in health scanner included.
   components:
   - type: Sprite
-    sprite: Backmen/Clothing/Eyes/Glasses/bluevisor.rsi
+    sprite: _Backmen/Clothing/Eyes/Glasses/bluevisor.rsi
     layers:
     - state: icon
     - state: icon-unshaded
       shader: unshaded
   - type: Clothing
-    sprite: Backmen/Clothing/Eyes/Glasses/bluevisor.rsi
+    sprite: _Backmen/Clothing/Eyes/Glasses/bluevisor.rsi
     clothingVisuals:
       eyes:
       - state: equipped-EYES
@@ -59,13 +59,13 @@
   description: It is a combination of several types of polarized scanners. It shows the status of various borgs and mechs, ID card statuses and provides eye protection from welding. It does not have flash protection.
   components:
   - type: Sprite
-    sprite: Backmen/Clothing/Eyes/Glasses/security-technician-visor.rsi
+    sprite: _Backmen/Clothing/Eyes/Glasses/security-technician-visor.rsi
     layers:
     - state: icon
     - state: icon-unshaded
       shader: unshaded
   - type: Clothing
-    sprite: Backmen/Clothing/Eyes/Glasses/security-technician-visor.rsi
+    sprite: _Backmen/Clothing/Eyes/Glasses/security-technician-visor.rsi
     clothingVisuals:
       eyes:
       - state: equipped-EYES

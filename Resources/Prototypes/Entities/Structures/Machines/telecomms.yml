@@ -201,7 +201,6 @@
       - EncryptionKeySecurity
       - EncryptionKeyService
       - EncryptionKeyCommand
-      - EncryptionKeyLaw
 
 - type: entity
   parent: TelecomServer
@@ -282,4 +281,3 @@
     containers:
       key_slots:
       - EncryptionKeyCommand
-      - EncryptionKeyLaw

@@ -1,7 +1,6 @@
 - type: marking
   id: AugmentsNanotrasenArmRight
   bodyPart: RArm
-  markingCategory: Arms
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/nanotrasen.rsi
@@ -10,7 +9,6 @@
 - type: marking
   id: AugmentsNanotrasenHandRight
   bodyPart: RHand
-  markingCategory: Arms
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/nanotrasen.rsi
@@ -19,7 +17,6 @@
 - type: marking
   id: AugmentsNanotrasenArmLeft
   bodyPart: LArm
-  markingCategory: Arms
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/nanotrasen.rsi
@@ -28,7 +25,6 @@
 - type: marking
   id: AugmentsNanotrasenHandLeft
   bodyPart: LHand
-  markingCategory: Arms
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/nanotrasen.rsi
@@ -37,7 +33,6 @@
 - type: marking
   id: AugmentsNanotrasenTorso
   bodyPart: Chest
-  markingCategory: Chest
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/nanotrasen.rsi
@@ -46,7 +41,6 @@
 - type: marking
   id: AugmentsNanotrasenLegRight
   bodyPart: RLeg
-  markingCategory: Legs
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/nanotrasen.rsi
@@ -55,7 +49,6 @@
 - type: marking
   id: AugmentsNanotrasenFootRight
   bodyPart: RFoot
-  markingCategory: Legs
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/nanotrasen.rsi
@@ -64,7 +57,6 @@
 - type: marking
   id: AugmentsNanotrasenLegLeft
   bodyPart: LLeg
-  markingCategory: Legs
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/nanotrasen.rsi
@@ -73,7 +65,6 @@
 - type: marking
   id: AugmentsNanotrasenFootLeft
   bodyPart: LFoot
-  markingCategory: Legs
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/nanotrasen.rsi

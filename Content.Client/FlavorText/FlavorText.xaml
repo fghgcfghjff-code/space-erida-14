@@ -1,4 +1,4 @@
-<!-- Orion-Edit-Start -->
+﻿<!-- Erida-Edit-Start -->
 <Control Name="CFlavorText" xmlns="https://spacestation14.io" xmlns:graphics="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client" xmlns:customControls="clr-namespace:Content.Client.Administration.UI.CustomControls"
          xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls">
     <TabContainer Name="FlavorTabs" HorizontalExpand="True" VerticalExpand="True">
@@ -241,4 +241,4 @@
         </BoxContainer>
     </TabContainer>
 </Control>
-<!-- Orion-Edit-End -->
+<!-- Erida-Edit-End -->

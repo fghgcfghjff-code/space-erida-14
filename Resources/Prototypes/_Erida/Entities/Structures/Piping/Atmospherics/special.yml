@@ -30,12 +30,10 @@
     maxCharge: 2000
     startingCharge: 2000
     pricePerJoule: 0.05
-  - type: ApcPowerReceiverBattery
-    idleLoad: 45
-    batteryRechargeRate: 200
-    batteryRechargeEfficiency: 0.0 # temporarily no power draw because this was causing potentially SEIZURE inducing light flickering
-  - type: ApcPowerReceiver
-    powerLoad: 45
+  - type: PowerCharge
+    windowTitle: gravity-generator-window-title
+    idlePower: 40
+    activePower: 1000
   - type: ExtensionCableReceiver
   - type: AirtightRequiresPower
   - type: Machine
@@ -106,12 +104,10 @@
     maxCharge: 2000
     startingCharge: 2000
     pricePerJoule: 0.05
-  - type: ApcPowerReceiverBattery
-    idleLoad: 45
-    batteryRechargeRate: 200
-    batteryRechargeEfficiency: 0.0 # temporarily no power draw because this was causing potentially SEIZURE inducing light flickering
-  - type: ApcPowerReceiver
-    powerLoad: 45
+  - type: PowerCharge
+    windowTitle: gravity-generator-window-title # Костыль, но зато какой
+    idlePower: 40
+    activePower: 1000
   - type: ExtensionCableReceiver
   - type: AirtightRequiresPower
   - type: Machine

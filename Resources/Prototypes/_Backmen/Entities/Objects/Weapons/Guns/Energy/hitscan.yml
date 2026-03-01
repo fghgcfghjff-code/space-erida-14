@@ -5,7 +5,7 @@
   description: Nanotrasen's first attempt to remake the Antique Laser Gun. Has more firing modes on offer but lacks the ability to self-recharge.
   components:
   - type: Sprite
-    sprite: Backmen/Objects/Weapons/Guns/Energy/x01.rsi
+    sprite: _Backmen/Objects/Weapons/Guns/Energy/x01.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -13,11 +13,11 @@
       map: ["enum.GunVisualLayers.MagUnshaded"]
       shader: unshaded
   - type: Clothing
-    sprite: Backmen/Objects/Weapons/Guns/Energy/x01.rsi
+    sprite: _Backmen/Objects/Weapons/Guns/Energy/x01.rsi
   - type: Gun
     projectileSpeed: 40
     soundGunshot:
-      path: /Audio/Backmen/Weapons/Energy/Resources_Audio_DeltaV_Weapons_Guns_Gunshots_laser.ogg
+      path: /Audio/_Backmen/Weapons/Energy/Resources_Audio_DeltaV_Weapons_Guns_Gunshots_laser.ogg
       params:
           volume: -2
   - type: Item
@@ -31,7 +31,7 @@
       fireCost: 100
     - proto: BulletDisabler
       fireCost: 75
-  - type: PredictedBattery
+  - type: Battery
     maxCharge: 1200
     startingCharge: 1200
   - type: MagazineVisuals
@@ -49,7 +49,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    sprite: Backmen/Objects/Weapons/Guns/Energy/x01.rsi
+    sprite: _Backmen/Objects/Weapons/Guns/Energy/x01.rsi
     layers:
     - state: redtrac
       shader: unshaded

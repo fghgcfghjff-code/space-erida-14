@@ -1,7 +1,7 @@
 - type: entity
   name: rat king
   id: MobRatKing
-  parent: [ SimpleMobBase, MobCombat ]
+  parent: [ BaseMobRat, SimpleMobBase, MobCombat ]
   description: He's da rat. He make da roolz.
   components:
   - type: CombatMode
@@ -59,9 +59,6 @@
       types:
         Slash: 12
         Piercing: 8
-  - type: Body
-    prototype: Rat
-    requiredLegs: 0 # TODO: Make more than 1 leg, set to 0 to avoid sprint speed being reset by the body system
   - type: Hunger # probably should be prototyped
     thresholds:
       Overfed: 200
@@ -102,6 +99,8 @@
       - CannotSuicide
       - FootstepSound
   - type: NoSlip
+  - type: Insulated
+    coefficient: 0.5 # rat king touches more wires, see?
   - type: Rummager
   - type: RatKing
     # Erida-start
@@ -131,6 +130,13 @@
   - type: Sharp
   - type: TTS # Corvax-TTS
     voice: Monolith2
+  - type: LanguageKnowledge # backmen
+    speaks:
+    - TauCetiBasic
+    - Mouse
+    understands:
+    - TauCetiBasic
+    - Mouse
 
 - type: entity
   id: MobRatKingBuff
@@ -168,11 +174,20 @@
   - type: GuideHelp
     guides:
     - MinorAntagonists
+  - type: TTS # Corvax-TTS
+    voice: Monolith2
+  - type: LanguageKnowledge # backmen
+    speaks:
+    - TauCetiBasic
+    - Mouse
+    understands:
+    - TauCetiBasic
+    - Mouse
 
 - type: entity
   name: rat servant
   id: MobRatServant
-  parent: [ SimpleMobBase, MobCombat ]
+  parent: [ BaseMobRat, SimpleMobBase, MobCombat ]
   description: He's da mini rat. He don't make da roolz.
   categories: [ HideSpawnMenu ] #Must be configured to a King or the AI breaks.
   components:
@@ -249,7 +264,7 @@
       - !type:GibBehavior
         recursive: false
   - type: Stamina
-    critThreshold: 60
+    baseCritThreshold: 60
   - type: MeleeWeapon
     soundHit:
         path: /Audio/Weapons/bladeslice.ogg
@@ -261,9 +276,6 @@
         Slash: 10 # 5
         Piercing: 6 # 3
         # Erida-end
-  - type: Body
-    prototype: Rat
-    requiredLegs: 0 # TODO: Make more than 1 leg, set to 0 to avoid sprint speed being reset by the body system
   - type: Hunger # probably should be prototyped
     thresholds:
       Overfed: 200
@@ -304,6 +316,8 @@
       - CannotSuicide
       - FootstepSound
   - type: NoSlip
+  - type: Insulated
+    coefficient: 0.2 # they don't make da roolz, but they sneaky
   - type: MobPrice
     price: 500 # rat wealth
   - type: MobsterAccent
@@ -316,6 +330,15 @@
   - type: FireVisuals
     sprite: Mobs/Effects/onfire.rsi
     normalState: Mouse_burning
+  - type: TTS # Corvax-TTS
+    voice: Monolith2
+  - type: LanguageKnowledge # backmen
+    speaks:
+    - TauCetiBasic
+    - Mouse
+    understands:
+    - TauCetiBasic
+    - Mouse
 
 - type: entityTable
   id: RatKingLoot
@@ -335,9 +358,7 @@
   description: Spend some hunger to summon an allied rat to help defend you.
   components:
   - type: Action
-    # Erida-start
-    useDelay: 8 # 4
-    # Erida-end
+    useDelay: 4
     icon:
       sprite: Interface/Actions/actions_rat_king.rsi
       state: ratKingArmy
@@ -351,7 +372,9 @@
   description: Spend some hunger to release a cloud of ammonia into the air.
   components:
   - type: Action
-    useDelay: 6
+    # Erida-start
+    useDelay: 8 # 4
+    # Erida-end
     icon:
       sprite: Interface/Actions/actions_rat_king.rsi
       state: ratKingDomain

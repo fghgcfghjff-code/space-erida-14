@@ -53,9 +53,9 @@
   description: Удобная обувь с шнурками.
   components:
   - type: Sprite
-    sprite: Backmen/Clothing/Shoes/Boots/berrci.rsi
+    sprite: _Backmen/Clothing/Shoes/Boots/berrci.rsi
   - type: Clothing
-    sprite: Backmen/Clothing/Shoes/Boots/berrci.rsi
+    sprite: _Backmen/Clothing/Shoes/Boots/berrci.rsi
   - type: FootstepModifier # Corvax-Sounds
     footstepSoundCollection:
       collection: FootstepBoots
@@ -67,7 +67,7 @@
   description: Специальная обувь служащих Центрального командования.
   components:
   - type: Sprite
-    sprite: Backmen/Clothing/Shoes/Boots/centcom_jackboots.rsi
+    sprite: _Backmen/Clothing/Shoes/Boots/centcom_jackboots.rsi
   - type: Clothing
-    sprite: Backmen/Clothing/Shoes/Boots/centcom_jackboots.rsi
+    sprite: _Backmen/Clothing/Shoes/Boots/centcom_jackboots.rsi
   - type: NoSlip

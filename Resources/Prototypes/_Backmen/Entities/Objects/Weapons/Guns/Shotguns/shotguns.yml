@@ -6,11 +6,11 @@
   description: Дробовик Guardian модели U-Type производства "Interdyne", сплав корпуса сделан из передовых материалов, что придает легкость в обращении, .
   components:
   - type: Sprite
-    sprite: Backmen/Objects/Weapons/Gunsx64/Shotguns/guard-17/big.rsi
+    sprite: _Backmen/Objects/Weapons/Gunsx64/Shotguns/guard-17/big.rsi
   - type: Item
-    sprite: Backmen/Objects/Weapons/Gunsx64/Shotguns/guard-17/tiny.rsi
+    sprite: _Backmen/Objects/Weapons/Gunsx64/Shotguns/guard-17/tiny.rsi
   - type: Clothing
-    sprite: Backmen/Objects/Weapons/Gunsx64/Shotguns/guard-17/tiny.rsi
+    sprite: _Backmen/Objects/Weapons/Gunsx64/Shotguns/guard-17/tiny.rsi
   - type: BallisticAmmoProvider
     capacity: 12
   - type: Wieldable

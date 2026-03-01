@@ -73,7 +73,7 @@
   - PillCanister
   - ChemistryEmptyBottle01
   - Syringe
-  - BaseChemistryEmptyVial
+  - ChemistryEmptyVial
   - MiniSyringe
   position: 3,-4
 
@@ -108,3 +108,34 @@
   technologyPrerequisites:
   - Medicine
   position: 5,-5
+
+
+- type: technology
+  id: ChemistryInjector
+  name: research-technology-chemistry-jetinjector
+  icon:
+    sprite: Objects/Specific/Medical/jetinjector.rsi
+    state: jetinjector_base
+  discipline: Medical
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - JetInjector
+  technologyPrerequisites:
+  - Chemistry
+  position: 3,-3
+
+- type: technology
+  id: ChemistryAdvancedInjector
+  name: research-technology-chemistry-advanced-jetinjector
+  icon:
+    sprite: Objects/Specific/Medical/advanced_jetinjector.rsi
+    state: jetinjector_base
+  discipline: Medical
+  tier: 2
+  cost: 5000
+  recipeUnlocks:
+  - AdvancedJetInjector
+  technologyPrerequisites:
+  - ChemistryInjector
+  position: 3,-2

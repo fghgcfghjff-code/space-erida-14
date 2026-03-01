@@ -2,25 +2,31 @@
   id: StreetRebelAccent
   name: trait-street-rebel-name
   description: trait-street-rebel-desc
-  category: SpeechTraits
-  cost: 1
-  components:
-  - type: StreetRebelAccent
+  category: Accents
+  cost: 0
+  effects:
+  - !type:AddCompsEffect
+    components:
+    - type: StreetRebelAccent
 
 - type: trait
   id: Roar
   name: trait-roar-name
   description: trait-roar-desc
-  category: SpeechTraits
-  cost: 1
-  components:
-  - type: RoarAccent
+  category: Accents
+  cost: 0
+  effects:
+  - !type:AddCompsEffect
+    components:
+    - type: RoarAccent
 
 - type: trait
   id: Medieval
   name: trait-medieval-name
   description: trait-medieval-desc
-  category: SpeechTraits
-  cost: 1
-  components:
-  - type: MedievalAccent
+  category: Accents
+  cost: 0
+  effects:
+  - !type:AddCompsEffect
+    components:
+    - type: MedievalAccent

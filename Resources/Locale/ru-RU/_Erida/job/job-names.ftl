@@ -10,6 +10,3 @@ job-name-centcom-engineer = инженер Центком
 job-name-centcom-clerc = клерк Центком
 job-name-militia = ополчение
 JobMilitia = ополчение
-job-name-syndicate-ert-operative = Оперативник ОБР Синдиката
-job-name-syndicate-ert-medical = Медик ОБР Синдиката
-job-name-syndicate-ert-lider = Лидер ОБР Синдиката

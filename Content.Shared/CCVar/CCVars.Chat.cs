@@ -10,7 +10,7 @@ public sealed partial class CCVars
     /// </summary>
     /// <seealso cref="ChatRateLimitCount"/>
     public static readonly CVarDef<float> ChatRateLimitPeriod =
-        CVarDef.Create("chat.rate_limit_period", 2.5f, CVar.SERVERONLY);
+        CVarDef.Create("chat.rate_limit_period", 2f, CVar.SERVERONLY);
 
     /// <summary>
     ///     How many chat messages are allowed in a single rate limit period.

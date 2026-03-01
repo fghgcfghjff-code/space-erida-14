@@ -24,13 +24,6 @@
     Plasma: 220
 
 - type: latheRecipe
-  id: TowelColorSyndicate
-  result: TowelColorSyndicate
-  completetime: 2
-  materials:
-    Plastic: 20
-
-- type: latheRecipe
   id: ExGrenade
   result: ExGrenade
   completetime: 5

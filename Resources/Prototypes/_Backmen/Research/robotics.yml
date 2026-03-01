@@ -133,7 +133,7 @@
   tier: 1
   cost: 10000
   recipeUnlocks:
-  - BorgModuleAdvancedChemical
+  - BorgModuleAdvancedTopical
   technologyPrerequisites:
   - CyborgModules
   position: 7,-2

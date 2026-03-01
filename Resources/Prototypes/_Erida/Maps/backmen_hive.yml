@@ -44,7 +44,6 @@
           #service
             Bartender: [ 2, 2 ]
             Botanist: [ 2, 3 ]
-            Boxer: [ 2, 2 ]
             Chef: [ 2, 3 ]
             Clown: [ 1, 2 ]
             HeadOfPersonnel: [ 1, 1 ]
@@ -86,9 +85,3 @@
           - Bunker
           - XenobiologyRepair
           - VirusologyAmbusol
-        # blob-config-start 
-        - type: StationBlobConfig
-          stageBegin: 25
-          stageCritical: 350
-          stageTheEnd: 700
-        # blob-config-end

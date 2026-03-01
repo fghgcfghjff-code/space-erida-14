@@ -144005,13 +144005,6 @@ entities:
     - type: Transform
       pos: 93.54507,-19.615318
       parent: 2
-- proto: TowelColorNT
-  entities:
-  - uid: 21243
-    components:
-    - type: Transform
-      pos: -22.515173,-56.227436
-      parent: 2
 - proto: ToyFigurineCaptain
   entities:
   - uid: 21244

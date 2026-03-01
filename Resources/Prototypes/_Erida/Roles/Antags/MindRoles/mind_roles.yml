@@ -1,0 +1,10 @@
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRoleInferior
+  name: Inferior
+  components:
+  - type: MindRole
+    antagPrototype: Inferior
+    roleType: Familiar
+    subtype: role-subtype-inferior
+  - type: InferiorRole

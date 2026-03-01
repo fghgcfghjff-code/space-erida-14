@@ -1,7 +1,6 @@
 - type: marking
   id: LizardFrillsAquatic1
   bodyPart: HeadSide
-  markingCategory: HeadSide
 #  speciesRestriction: [Shark]
   sprites:
   - sprite: Mobs/Customization/reptilian_parts.rsi
@@ -10,7 +9,6 @@
 - type: marking
   id: LizardFrillsShort1
   bodyPart: HeadSide
-  markingCategory: HeadSide
 #  speciesRestriction: [Shark]
   sprites:
   - sprite: Mobs/Customization/reptilian_parts.rsi
@@ -19,7 +17,6 @@
 - type: marking
   id: LizardFrillsSimple1
   bodyPart: HeadSide
-  markingCategory: HeadSide
 #  speciesRestriction: [Shark]
   sprites:
   - sprite: Mobs/Customization/reptilian_parts.rsi
@@ -28,7 +25,6 @@
 - type: marking
   id: LizardFrillsDivinity1
   bodyPart: HeadSide
-  markingCategory: HeadSide
 #  speciesRestriction: [Shark]
   sprites:
   - sprite: Mobs/Customization/reptilian_parts.rsi
@@ -37,7 +33,6 @@
 - type: marking
   id: LizardFrillsBig1
   bodyPart: HeadSide
-  markingCategory: HeadSide
 #  speciesRestriction: [Shark]
   sprites:
   - sprite: Mobs/Customization/reptilian_parts.rsi
@@ -46,7 +41,6 @@
 - type: marking
   id: LizardFrillsAxolotl1
   bodyPart: HeadSide
-  markingCategory: HeadSide
 #  speciesRestriction: [Shark]
   sprites:
   - sprite: Mobs/Customization/reptilian_parts.rsi
@@ -55,7 +49,6 @@
 - type: marking
   id: LizardFrillsHood1
   bodyPart: HeadSide
-  markingCategory: HeadSide
 #  speciesRestriction: [Shark]
   sprites:
   - sprite: Mobs/Customization/reptilian_parts.rsi
@@ -66,7 +59,6 @@
 - type: marking
   id: LizardHornsAngler1
   bodyPart: HeadTop
-  markingCategory: HeadTop
 #  speciesRestriction: [Anthropomorph, Shark]
   sprites:
   - sprite: Mobs/Customization/reptilian_parts.rsi
@@ -75,7 +67,6 @@
 - type: marking
   id: LizardHornsCurled1
   bodyPart: HeadTop
-  markingCategory: HeadTop
 #  speciesRestriction: [Anthropomorph, Shark]
   sprites:
   - sprite: Mobs/Customization/reptilian_parts.rsi
@@ -84,7 +75,6 @@
 - type: marking
   id: LizardHornsRam1
   bodyPart: HeadTop
-  markingCategory: HeadTop
 #  speciesRestriction: [Anthropomorph, Shark]
   sprites:
   - sprite: Mobs/Customization/reptilian_parts.rsi
@@ -93,7 +83,6 @@
 - type: marking
   id: LizardHornsShort1
   bodyPart: HeadTop
-  markingCategory: HeadTop
 #  speciesRestriction: [Anthropomorph, Shark]
   sprites:
   - sprite: Mobs/Customization/reptilian_parts.rsi
@@ -102,7 +91,6 @@
 - type: marking
   id: LizardHornsSimple1
   bodyPart: HeadTop
-  markingCategory: HeadTop
 #  speciesRestriction: [Anthropomorph, Shark]
   sprites:
   - sprite: Mobs/Customization/reptilian_parts.rsi
@@ -111,7 +99,6 @@
 - type: marking
   id: LizardHornsDouble1
   bodyPart: HeadTop
-  markingCategory: HeadTop
 #  speciesRestriction: [Anthropomorph, Shark]
   sprites:
   - sprite: Mobs/Customization/reptilian_parts.rsi

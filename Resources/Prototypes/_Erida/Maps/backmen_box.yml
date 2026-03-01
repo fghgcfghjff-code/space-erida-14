@@ -27,7 +27,6 @@
             Librarian: [ 1, 1 ]
             Reporter: [ 1, 1 ]
             ServiceWorker: [ 2, 2 ]
-            Zookeeper: [ 1, 1 ]
             #engineering
             ChiefEngineer: [ 1, 1 ]
             AtmosphericTechnician: [ 3, 3 ]
@@ -61,7 +60,6 @@
             Clown: [ 1, 1 ]
             Mime: [ 1, 1 ]
             Musician: [ 1, 1 ]
-            Boxer: [ 2, 2 ]
             #centcomm
             BlueShieldOfficer: [ 1, 1 ]
             #silicon
@@ -90,9 +88,4 @@
           - Bunker
           - XenobiologyRepair
           - VirusologyAmbusol
-        # blob-config-start
-        - type: StationBlobConfig
-          stageBegin: 40
-          stageCritical: 400
-          stageTheEnd: 800
-        # blob-config-end
+

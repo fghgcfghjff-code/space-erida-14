@@ -28,21 +28,3 @@
   id: BorgModuleArtifact
   result: BorgModuleArtifact
 # medical
-
-- type: latheRecipe
-  parent: BaseBorgModuleRecipe
-  id: BorgModuleAdvancedChemical
-  result: BorgModuleAdvancedChemical
-# service
-
-- type: latheRecipe
-  parent: BaseBorgModuleRecipe
-  id: BorgModuleAdvancedClowning
-  result: BorgModuleAdvancedClowning
-# shaft
-
-- type: latheRecipe
-  parent: BaseBorgModuleRecipe
-  id: BorgModuleAdvancedMining
-  result: BorgModuleAdvancedMining
-

@@ -21,6 +21,7 @@
     - state: closed_unlit
       shader: unshaded
       map: ["enum.DoorVisualLayers.BaseUnlit"]
+      visible: false
     - state: welded
       map: ["enum.WeldableLayers.BaseWelded"]
     - state: bolted_unlit
@@ -78,7 +79,6 @@
     fuel: 10
     time: 10
   - type: Airlock
-    openUnlitVisible: true # Erida
   - type: NavMapDoor
   - type: DoorBolt
   - type: AccessReader
@@ -131,3 +131,5 @@
     tags:
       - HighSecDoor
       # This tag is used to nagivate the Airlock construction graph. It's needed because this construction graph is shared between Airlock, AirlockGlass, and HighSecDoor
+  - type: WeldingSparksAnimation # Goobstation
+    startingOffset: 0, 0.5

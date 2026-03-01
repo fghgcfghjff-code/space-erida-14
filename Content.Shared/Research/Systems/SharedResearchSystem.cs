@@ -9,7 +9,7 @@ using Robust.Shared.Utility;
 
 namespace Content.Shared.Research.Systems;
 
-public abstract partial class SharedResearchSystem : EntitySystem   // Goobstation - made class partial
+public abstract class SharedResearchSystem : EntitySystem
 {
     [Dependency] protected readonly IPrototypeManager PrototypeManager = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
@@ -73,8 +73,8 @@ public abstract partial class SharedResearchSystem : EntitySystem   // Goobstati
         if (!component.SupportedDisciplines.Contains(tech.Discipline))
             return false;
 
-        // if (tech.Tier > disciplineTiers[tech.Discipline])    // Goobstation R&D Console rework - removed main discipline checks
-        //     return false;
+        if (tech.Tier > disciplineTiers[tech.Discipline])
+            return false;
 
         if (component.UnlockedTechnologies.Contains(tech.ID))
             return false;
@@ -304,4 +304,18 @@ public abstract partial class SharedResearchSystem : EntitySystem   // Goobstati
         var ev = new TechnologyDatabaseModifiedEvent(new List<string> { recipe });
         RaiseLocalEvent(uid, ref ev);
     }
+
+    // Goobstation start
+    public int GetTierCompletionPercentage(TechnologyDatabaseComponent component, TechDisciplinePrototype techDiscipline)
+    {
+        var allTech = PrototypeManager.EnumeratePrototypes<TechnologyPrototype>()
+            .Where(p => p.Discipline == techDiscipline.ID && !p.Hidden).ToList();
+
+        var percentage = (float)component.UnlockedTechnologies
+            .Where(x => PrototypeManager.Index<TechnologyPrototype>(x).Discipline == techDiscipline.ID)
+            .Count() / (float)allTech.Count * 100f;
+
+        return (int)Math.Clamp(percentage, 0, 100);
+    }
+    // Goobstation end
 }

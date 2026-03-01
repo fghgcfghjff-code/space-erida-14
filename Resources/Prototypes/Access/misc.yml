@@ -34,7 +34,6 @@
   - Atmospherics
   - GenpopEnter
   - GenpopLeave
-  - SecurityTechnician # pilot
 
 - type: accessGroup
   id: General

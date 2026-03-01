@@ -3,7 +3,6 @@
   id: BaseDildo
   parent: LPPClothingUnderwearBase
   components:
-  - type: Vibrator
   - type: Clothing
     equipDelay: 2
     unequipDelay: 5

@@ -1,0 +1,220 @@
+- type: markingsGroup
+  parent: Undergarments
+  id: Demon
+  limits:
+    enum.HumanoidVisualLayers.Hair:
+      limit: 10
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 10
+      required: false
+    enum.HumanoidVisualLayers.Chest:
+      limit: 10
+      required: false
+    enum.HumanoidVisualLayers.Snout:
+      limit: 10
+      required: false
+    enum.HumanoidVisualLayers.LArm:
+      limit: 10
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 10
+      required: false
+    enum.HumanoidVisualLayers.LHand:
+      limit: 10
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 10
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 10
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 10
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 10
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 10
+      required: false
+    enum.HumanoidVisualLayers.Tail:
+      limit: 10
+      required: true
+      default: [ TailDemon ]
+    enum.HumanoidVisualLayers.Special:
+      limit: 0
+      required: false
+
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceDemon
+  name: Demon appearance
+  components:
+  - type: Inventory
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: jumpsuit-female
+  - type: InitialBody
+    organs:
+      Torso: OrganDemonTorso
+      Head: OrganDemonHead
+      ArmLeft: OrganDemonArmLeft
+      ArmRight: OrganDemonArmRight
+      HandRight: OrganDemonHandRight
+      HandLeft: OrganDemonHandLeft
+      LegLeft: OrganDemonLegLeft
+      LegRight: OrganDemonLegRight
+      FootLeft: OrganDemonFootLeft
+      FootRight: OrganDemonFootRight
+      Brain: OrganDemonBrain
+      Eyes: OrganDemonEyes
+      Tongue: OrganDemonTongue
+      Appendix: OrganDemonAppendix
+      Ears: OrganDemonEars
+      Lungs: OrganDemonLungs
+      Heart: OrganDemonHeart
+      Stomach: OrganDemonStomach
+      Liver: OrganDemonLiver
+      Kidneys: OrganDemonKidneys
+  - type: HumanoidProfile
+    species: Demon
+
+- type: entity
+  parent:
+  - AppearanceDemon
+  - BaseSpeciesMobOrganic
+  id: MobDemon
+  name: Urist McHands
+  components:
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatHuman
+      amount: 5
+
+- type: entity
+  parent: OrganBase
+  id: OrganDemon
+  abstract: true
+  suffix: Demon
+
+- type: entity
+  id: OrganDemonMetabolizer
+  abstract: true
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [ Human ]
+
+- type: entity
+  parent: OrganDemon
+  id: OrganDemonInternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/organs.rsi
+
+- type: entity
+  parent: OrganDemon
+  id: OrganDemonExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Erida/Mobs/Demon/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: _Erida/Mobs/Demon/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Demon
+
+- type: entity
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganDemonExternal ]
+  id: OrganDemonTorso
+
+- type: entity
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganDemonExternal ]
+  id: OrganDemonHead
+  components:
+  - type: VisualOrganMarkings
+    hideableLayers:
+    - enum.HumanoidVisualLayers.Hair
+    - enum.HumanoidVisualLayers.Snout
+
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganDemonExternal ]
+  id: OrganDemonArmLeft
+
+- type: entity
+  parent: [ OrganBaseArmRight, OrganDemonExternal ]
+  id: OrganDemonArmRight
+
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganDemonExternal ]
+  id: OrganDemonHandLeft
+
+- type: entity
+  parent: [ OrganBaseHandRight, OrganDemonExternal ]
+  id: OrganDemonHandRight
+
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganDemonExternal ]
+  id: OrganDemonLegLeft
+
+- type: entity
+  parent: [ OrganBaseLegRight, OrganDemonExternal ]
+  id: OrganDemonLegRight
+
+- type: entity
+  parent: [ OrganBaseFootLeft, OrganDemonExternal ]
+  id: OrganDemonFootLeft
+
+- type: entity
+  parent: [ OrganBaseFootRight, OrganDemonExternal ]
+  id: OrganDemonFootRight
+
+- type: entity
+  parent: [ OrganBaseBrain, OrganDemonInternal ]
+  id: OrganDemonBrain
+
+- type: entity
+  parent: [ OrganBaseEyes, OrganDemonInternal, OrganDemonExternal ]
+  id: OrganDemonEyes
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: Mobs/Customization/eyes.rsi
+
+- type: entity
+  parent: [ OrganBaseTongue, OrganDemonInternal ]
+  id: OrganDemonTongue
+
+- type: entity
+  parent: [ OrganBaseAppendix, OrganDemonInternal ]
+  id: OrganDemonAppendix
+
+- type: entity
+  parent: [ OrganBaseEars, OrganDemonInternal ]
+  id: OrganDemonEars
+
+- type: entity
+  parent: [ OrganBaseLungs, OrganDemonInternal, OrganDemonMetabolizer ]
+  id: OrganDemonLungs
+
+- type: entity
+  parent: [ OrganBaseHeart, OrganDemonInternal, OrganDemonMetabolizer ]
+  id: OrganDemonHeart
+
+- type: entity
+  parent: [ OrganBaseStomach, OrganDemonInternal, OrganDemonMetabolizer ]
+  id: OrganDemonStomach
+
+- type: entity
+  parent: [ OrganBaseLiver, OrganDemonInternal, OrganDemonMetabolizer ]
+  id: OrganDemonLiver
+
+- type: entity
+  parent: [ OrganBaseKidneys, OrganDemonInternal, OrganDemonMetabolizer ]
+  id: OrganDemonKidneys

@@ -16,16 +16,6 @@ public sealed partial class CCVars
     public static readonly CVarDef<int> MaxNameLength =
         CVarDef.Create("ic.name_length", 32, CVar.SERVER | CVar.REPLICATED);
 
-    // Erida-start
-
-    /// <summary>
-    ///      Sets the maximum Custom Species length.
-    /// </summary>
-    public static readonly CVarDef<int> MaxCustomSpeciesLength =
-        CVarDef.Create("ic.custom_species_length", 16, CVar.SERVER | CVar.REPLICATED);
-
-    // Erida-end
-
     /// <summary>
     ///     Sets the maximum name length for a loadout name (e.g. cyborg name).
     /// </summary>
@@ -36,13 +26,13 @@ public sealed partial class CCVars
     ///     Allows flavor text (character descriptions).
     /// </summary>
     public static readonly CVarDef<bool> FlavorText =
-        CVarDef.Create("ic.flavor_text", true, CVar.SERVER | CVar.REPLICATED);
+        CVarDef.Create("ic.flavor_text", true, CVar.SERVER | CVar.REPLICATED); // Erida
 
     /// <summary>
     ///     Sets the maximum length for flavor text (character descriptions).
     /// </summary>
     public static readonly CVarDef<int> MaxFlavorTextLength =
-        CVarDef.Create("ic.flavor_text_length", 5200, CVar.SERVER | CVar.REPLICATED);
+        CVarDef.Create("ic.flavor_text_length", 5200, CVar.SERVER | CVar.REPLICATED); // Erida
 
     /// <summary>
     ///     Sets the maximum character length of a job on an ID.
@@ -76,6 +66,13 @@ public sealed partial class CCVars
         CVarDef.Create("ic.random_species_weights", "SpeciesWeights", CVar.SERVER);
 
     /// <summary>
+    ///     The list of species that will NOT be given to new account joins when they are assigned a random character.
+    ///     This only affects the first time a character is made for an account, nothing else.
+    /// </summary>
+    public static readonly CVarDef<string> ICNewAccountSpeciesBlacklist =
+        CVarDef.Create("ic.blacklist_species_new_account", "Diona,Vulpkanin,Vox,SlimePerson", CVar.SERVER);
+
+    /// <summary>
     ///     Control displaying SSD indicators near players
     /// </summary>
     public static readonly CVarDef<bool> ICShowSSDIndicator =
@@ -93,4 +90,14 @@ public sealed partial class CCVars
     /// </summary>
     public static readonly CVarDef<float> ICSSDSleepTime =
         CVarDef.Create("ic.ssd_sleep_time", 600f, CVar.SERVER);
+
+    // Erida-start
+
+    /// <summary>
+    ///      Sets the maximum Custom Species length.
+    /// </summary>
+    public static readonly CVarDef<int> MaxCustomSpeciesLength =
+        CVarDef.Create("ic.custom_species_length", 16, CVar.SERVER | CVar.REPLICATED);
+
+    // Erida-end
 }

@@ -1,7 +1,6 @@
 - type: marking
   id: AugmentsXionArmRight
   bodyPart: RArm
-  markingCategory: Arms
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/xion.rsi
@@ -10,7 +9,6 @@
 - type: marking
   id: AugmentsXionHandRight
   bodyPart: RHand
-  markingCategory: Arms
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/xion.rsi
@@ -19,7 +17,6 @@
 - type: marking
   id: AugmentsXionArmLeft
   bodyPart: LArm
-  markingCategory: Arms
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/xion.rsi
@@ -28,7 +25,6 @@
 - type: marking
   id: AugmentsXionHandLeft
   bodyPart: LHand
-  markingCategory: Arms
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/xion.rsi
@@ -37,7 +33,6 @@
 - type: marking
   id: AugmentsXionTorso
   bodyPart: Chest
-  markingCategory: Chest
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/xion.rsi
@@ -46,7 +41,6 @@
 - type: marking
   id: AugmentsXionLegRight
   bodyPart: RLeg
-  markingCategory: Legs
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/xion.rsi
@@ -55,7 +49,6 @@
 - type: marking
   id: AugmentsXionFootRight
   bodyPart: RFoot
-  markingCategory: Legs
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/xion.rsi
@@ -64,7 +57,6 @@
 - type: marking
   id: AugmentsXionLegLeft
   bodyPart: LLeg
-  markingCategory: Legs
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/xion.rsi
@@ -73,7 +65,6 @@
 - type: marking
   id: AugmentsXionFootLeft
   bodyPart: LFoot
-  markingCategory: Legs
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/xion.rsi

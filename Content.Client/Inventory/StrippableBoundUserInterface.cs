@@ -46,17 +46,19 @@ namespace Content.Client.Inventory
         [ViewVariables]
         public const string HiddenPocketEntityId = "StrippingHiddenEntity";
 
-        [ViewVariables] // Erida edit
-        public const string BlockedSlotEntityId = "BlockedSlotEntity"; // Erida edit
+        // Erida start
+        [ViewVariables]
+        public const string BlockedSlotEntityId = "BlockedSlotEntity";
+
+        [ViewVariables]
+        private readonly EntityUid _virtualBlockedEntity;
+        // Erida end
 
         [ViewVariables]
         private StrippingMenu? _strippingMenu;
 
         [ViewVariables]
         private readonly EntityUid _virtualHiddenEntity;
-
-        [ViewVariables] // Erida edit
-        private readonly EntityUid _virtualBlockedEntity; // Erida edit
 
         /// <summary>
         /// The current amount of added hand buttons.
@@ -79,7 +81,7 @@ namespace Content.Client.Inventory
             _strippable = EntMan.System<StrippableSystem>();
 
             _virtualHiddenEntity = EntMan.SpawnEntity(HiddenPocketEntityId, MapCoordinates.Nullspace);
-            _virtualBlockedEntity = EntMan.SpawnEntity(BlockedSlotEntityId, MapCoordinates.Nullspace);
+            _virtualBlockedEntity = EntMan.SpawnEntity(BlockedSlotEntityId, MapCoordinates.Nullspace); // Erida edit
         }
 
         protected override void Open()
@@ -122,6 +124,9 @@ namespace Content.Client.Inventory
             {
                 foreach (var slot in inv.Slots)
                 {
+                    if (slot.SlotFlags == SlotFlags.INVISIBLE)
+                        continue;
+
                     AddInventoryButton(Owner, slot.Name, inv);
                 }
             }
@@ -245,37 +250,23 @@ namespace Content.Client.Inventory
             if (entity != null && _strippable.IsStripHidden(slotDef, _player.LocalEntity))
                 entity = _virtualHiddenEntity;
 
+            // Erida start
+            var isBlockIgnored = !_strippable.IsInventoryBlockIgnored(_player.LocalEntity);
+
+            if (_strippable.IsStripForcedHidden(slotDef, _player.LocalEntity) & isBlockIgnored)
+                entity = _virtualHiddenEntity;
+
             var button = new SlotButton(new SlotData(slotDef, container));
             button.Pressed += SlotPressed;
 
-            // Erida edit start
-            bool[] inventoryIgnored = new bool[2]; // [shouldShowBlocked, shouldShowHided]
-            inventoryIgnored = _strippable.IsInventoryIgnored(_player.LocalEntity);
-
-            if (!inventoryIgnored[0])
+            if (_strippable.IsStripBlocked(slotDef, _player.LocalEntity) & isBlockIgnored)
             {
-                foreach (var blockedSlot in inv.BlockList)
-                {
-                    if (blockedSlot == slotDef.SlotFlags)
-                    {
-                        entity = _virtualBlockedEntity;
-                        button.Blocked = true;
-                        break;
-                    }
-                }
+                button.Blocked = true;
+                entity = _virtualBlockedEntity;
             }
-            if (!inventoryIgnored[1])
-            {
-                foreach (var hidedSlot in inv.HideList)
-                {
-                    if (hidedSlot == slotDef.SlotFlags)
-                    {
-                        entity = _virtualBlockedEntity;
-                        break;
-                    }
-                }
-            }
-            // Erida edit end
+            else
+                button.Blocked = false;
+            // Erida end
 
             _strippingMenu!.InventoryContainer.AddChild(button);
 

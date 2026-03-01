@@ -1,9 +1,8 @@
 using System.Diagnostics.CodeAnalysis;
-using Content.Shared._Erida.Ghosts;
-using Content.Shared._Erida.Strip;
 using Content.Shared.Armor;
 using Content.Shared.Clothing.Components;
 using Content.Shared.DoAfter;
+using Content.Shared.Gibbing;
 using Content.Shared.Hands;
 using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
@@ -45,36 +44,14 @@ public abstract partial class InventorySystem
         SubscribeLocalEvent<InventoryComponent, EntRemovedFromContainerMessage>(OnEntRemoved);
 
         SubscribeAllEvent<UseSlotNetworkMessage>(OnUseSlot);
+
+        SubscribeLocalEvent<InventoryComponent, BeingGibbedEvent>(OnBeingGibbed);
     }
 
     private void OnEntRemoved(EntityUid uid, InventoryComponent component, EntRemovedFromContainerMessage args)
     {
         if (!TryGetSlot(uid, args.Container.ID, out var slotDef, inventory: component))
             return;
-
-        // Erida edit start
-        var currentSlotBlockComponent = CompOrNull<SlotBlockComponent>(args.Entity);
-        if (currentSlotBlockComponent != null)
-        {
-            var slotsToUnblock = new HashSet<SlotFlags>(currentSlotBlockComponent.BlockList);
-            var slotsToUnhide = new HashSet<SlotFlags>(currentSlotBlockComponent.HideList);
-
-            foreach (var equipContainer in component.Containers)
-            {
-                if (equipContainer == args.Container) continue;
-
-                var slotBlockComponent = CompOrNull<SlotBlockComponent>(equipContainer.ContainedEntity);
-                if (slotBlockComponent == null) continue;
-
-                slotsToUnblock.ExceptWith(slotBlockComponent.BlockList);
-                slotsToUnhide.ExceptWith(slotBlockComponent.BlockList);
-                slotsToUnhide.ExceptWith(slotBlockComponent.HideList);
-            }
-
-            component.BlockList.ExceptWith(slotsToUnblock);
-            component.HideList.ExceptWith(slotsToUnhide);
-        }
-        // Erida edit end
 
         var unequippedEvent = new DidUnequipEvent(uid, args.Entity, slotDef);
         RaiseLocalEvent(uid, unequippedEvent, true);
@@ -87,18 +64,6 @@ public abstract partial class InventorySystem
     {
         if (!TryGetSlot(uid, args.Container.ID, out var slotDef, inventory: component))
             return;
-
-        // Erida edit start
-        var slotBlockComponent = CompOrNull<SlotBlockComponent>(args.Entity);
-
-        if (slotBlockComponent != null)
-        {
-            slotBlockComponent.BlockList.ExceptWith(slotBlockComponent.HideList);
-
-            component.BlockList.UnionWith(slotBlockComponent.BlockList);
-            component.HideList.UnionWith(slotBlockComponent.HideList);
-        }
-        // Erida edit end
 
         var equippedEvent = new DidEquipEvent(uid, args.Entity, slotDef);
         RaiseLocalEvent(uid, equippedEvent, true);
@@ -206,7 +171,7 @@ public abstract partial class InventorySystem
                 target,
                 itemUid)
             {
-                BreakOnMove = true,
+                BreakOnMove = !clothing.EquipWhileMoving,
                 NeedHand = true,
             };
 
@@ -311,19 +276,6 @@ public abstract partial class InventorySystem
             reason = "interaction-system-user-interaction-cannot-reach";
             return false;
         }
-
-        // Erida edit start
-        var ignoreInventoryBlockComponent = CompOrNull<IgnoreInventoryBlockComponent>(actor);
-        if (ignoreInventoryBlockComponent != null && ignoreInventoryBlockComponent.IgnoreBlock) { }
-        else
-        {
-            if (inventory.BlockList.Contains(slotDefinition.SlotFlags))
-            {
-                reason = "inventory-component-can-equip-blocked-by-other-clothing";
-                return false;
-            }
-        };
-        // Erida edit end
 
         if (_whitelistSystem.IsWhitelistFail(slotDefinition.Whitelist, itemUid) ||
             _whitelistSystem.IsWhitelistPass(slotDefinition.Blacklist, itemUid))
@@ -490,7 +442,7 @@ public abstract partial class InventorySystem
                 target,
                 removedItem.Value)
             {
-                BreakOnMove = true,
+                BreakOnMove = !clothing.EquipWhileMoving,
                 NeedHand = true,
             };
 
@@ -566,19 +518,6 @@ public abstract partial class InventorySystem
             return false;
         }
 
-        // Erida edit start
-        var ignoreInventoryBlockComponent = CompOrNull<IgnoreInventoryBlockComponent>(actor);
-        if (ignoreInventoryBlockComponent != null && ignoreInventoryBlockComponent.IgnoreBlock) { }
-        else
-        {
-            if (inventory.BlockList.Contains(slotDefinition.SlotFlags))
-            {
-                reason = "interaction-system-user-cannot-unequip-blocked-by-other-clothing";
-                return false;
-            }
-        }
-        // Erida edit end
-
         var attemptEvent = new IsUnequippingAttemptEvent(actor, target, itemUid, slotDefinition);
         RaiseLocalEvent(actor, attemptEvent, true);
 
@@ -624,6 +563,17 @@ public abstract partial class InventorySystem
         foreach (var item in _handsSystem.EnumerateHeld(uid))
         {
             _interactionSystem.DoContactInteraction(uid, item);
+        }
+    }
+
+    private void OnBeingGibbed(Entity<InventoryComponent> ent, ref BeingGibbedEvent args)
+    {
+        foreach (var item in GetHandOrInventoryEntities((ent, null, ent)))
+        {
+            // Give me liberty, give me death
+            // TODO: Give me an API that can tell the difference between a virtual item and an electropak being removed.
+            if (!HasComp<AttachedClothingComponent>(item))
+                args.Giblets.Add(item);
         }
     }
 }

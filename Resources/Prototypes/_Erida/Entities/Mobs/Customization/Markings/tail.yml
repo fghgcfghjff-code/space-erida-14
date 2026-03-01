@@ -1,7 +1,6 @@
 - type: marking
   id: HarpyTail
   bodyPart: Tail
-  markingCategory: Tail
   sprites:
     - sprite: _Erida/Mobs/Customization/harpy_tails.rsi
       state: harpy_tail

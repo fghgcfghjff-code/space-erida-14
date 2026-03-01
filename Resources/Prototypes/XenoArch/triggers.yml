@@ -242,9 +242,8 @@
     - Slime
     - AmmoniaBlood
     - ZombieBlood
-    - ShadowkinBlood # Erida
     - Sap
-    - SyntheticBlood # Erida
+    - ShadowkinBlood # Erida-edit
 
 - type: xenoArchTrigger
   id: TriggerThrow

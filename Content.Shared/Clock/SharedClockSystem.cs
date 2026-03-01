@@ -1,5 +1,4 @@
 using System.Linq;
-using Content.Shared._Orion.Time.Components;
 using Content.Shared.Examine;
 using Content.Shared.GameTicking;
 
@@ -39,7 +38,7 @@ public abstract class SharedClockSystem : EntitySystem
 
     private TimeSpan GetGlobalTime()
     {
-        return (EntityQuery<StationTimeManagerComponent>().FirstOrDefault()?.StationTime ?? TimeSpan.Zero) + _ticker.RoundDuration();
+        return (EntityQuery<GlobalTimeManagerComponent>().FirstOrDefault()?.TimeOffset ?? TimeSpan.Zero) + _ticker.RoundDuration();
     }
 
     public TimeSpan GetClockTime(Entity<ClockComponent> ent)

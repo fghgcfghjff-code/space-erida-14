@@ -8733,13 +8733,6 @@ entities:
     - type: Transform
       pos: 10.533063,27.58727
       parent: 1653
-- proto: RPED
-  entities:
-  - uid: 1646
-    components:
-    - type: Transform
-      pos: 32.49994,15.5244
-      parent: 1653
 - proto: SalvageCanisterSpawner
   entities:
   - uid: 493

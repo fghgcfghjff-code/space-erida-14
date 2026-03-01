@@ -1,7 +1,6 @@
 - type: marking
   id: AugmentsZenghuArmRight
   bodyPart: RArm
-  markingCategory: Arms
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/zenghu.rsi
@@ -10,7 +9,6 @@
 - type: marking
   id: AugmentsZenghuHandRight
   bodyPart: RHand
-  markingCategory: Arms
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/zenghu.rsi
@@ -19,7 +17,6 @@
 - type: marking
   id: AugmentsZenghuArmLeft
   bodyPart: LArm
-  markingCategory: Arms
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/zenghu.rsi
@@ -28,7 +25,6 @@
 - type: marking
   id: AugmentsZenghuHandLeft
   bodyPart: LHand
-  markingCategory: Arms
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/zenghu.rsi
@@ -37,7 +33,6 @@
 - type: marking
   id: AugmentsZenghuTorso
   bodyPart: Chest
-  markingCategory: Chest
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/zenghu.rsi
@@ -46,7 +41,6 @@
 - type: marking
   id: AugmentsZenghuLegRight
   bodyPart: RLeg
-  markingCategory: Legs
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/zenghu.rsi
@@ -55,7 +49,6 @@
 - type: marking
   id: AugmentsZenghuFootRight
   bodyPart: RFoot
-  markingCategory: Legs
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/zenghu.rsi
@@ -64,7 +57,6 @@
 - type: marking
   id: AugmentsZenghuLegLeft
   bodyPart: LLeg
-  markingCategory: Legs
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/zenghu.rsi
@@ -73,7 +65,6 @@
 - type: marking
   id: AugmentsZenghuFootLeft
   bodyPart: LFoot
-  markingCategory: Legs
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/zenghu.rsi

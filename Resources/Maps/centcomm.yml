@@ -54709,7 +54709,7 @@ entities:
     - type: Transform
       pos: -9.5,-9.5
       parent: 1668
-- proto: TelecrystalRed5
+- proto: Telecrystal5
   entities:
   - uid: 2919
     components:
@@ -54800,25 +54800,6 @@ entities:
     components:
     - type: Transform
       pos: -30.5,-8.5
-      parent: 1668
-- proto: TowelColorCentcom
-  entities:
-  - uid: 2850
-    components:
-    - type: Transform
-      pos: -17.44774,15.377905
-      parent: 1668
-  - uid: 9594
-    components:
-    - type: Transform
-      pos: -38.281086,9.840634
-      parent: 1668
-- proto: TowelColorNT
-  entities:
-  - uid: 9338
-    components:
-    - type: Transform
-      pos: -9.5,1.5
       parent: 1668
 - proto: ToyAmongPequeno
   entities:

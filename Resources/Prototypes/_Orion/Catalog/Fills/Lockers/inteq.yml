@@ -7,7 +7,6 @@
     contents:
     - id: InteQSecretDocument
     - id: BlueprintInteQ
-    - id: BaseInteQUplinkRadio
     - id: ClothingBackpackChameleonFill
     - id: SecurityTechFabCircuitboard
     - id: AngleGrinder

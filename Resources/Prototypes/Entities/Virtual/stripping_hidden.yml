@@ -11,7 +11,7 @@
     texture: Interface/VerbIcons/information.svg.192dpi.png
     scale: 0.3,0.3
 
-# Erida edit start
+# Erida start
 - type: entity
   id: BlockedSlotEntity
   name: You don`t know if there anything there.
@@ -21,4 +21,4 @@
   - type: Sprite
     texture: Interface/VerbIcons/information.svg.192dpi.png
     scale: 0.3,0.3
-# Erida edit end
+# Erida end

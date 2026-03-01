@@ -76,7 +76,7 @@
     <ui:MenuButton
         Name="LanguageButton"
         Access="Internal"
-        Icon="{xe:Tex '/Textures/Backmen/Interface/language.png'}"
+        Icon="{xe:Tex '/Textures/_Backmen/Interface/language.png'}"
         BoundKey = "{x:Static is:ContentKeyFunctions.OpenLanguageMenu}"
         ToolTip="{Loc 'game-hud-open-language-menu-button-tooltip'}"
         MinSize="42 64"

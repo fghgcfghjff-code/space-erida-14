@@ -16,10 +16,4 @@
   id: names-shadowkin-male-last
   values:
     prefix: names-shadowkin-male-last-
-    count: 61
-
-- type: localizedDataset
-  id: names-shadowkin-female-last
-  values:
-    prefix: names-shadowkin-female-last-
-    count: 66
+    count: 121

@@ -197,6 +197,7 @@ marking-TailShadowkinHookSpirals-hook_spirals = Узор
 marking-TailShadowkinHookTraced = Хвост-хук, Обведённый
 marking-TailShadowkinHookTraced-tail_hook = Хвост
 marking-TailShadowkinHookTraced-hook_traced = Обводка
+marking-TailDemon = Хвост арканы
 
 # Наложение
 marking-BodyShadowkinArrow = Окрас, Стрела

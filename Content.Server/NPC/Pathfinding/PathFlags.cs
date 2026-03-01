@@ -29,6 +29,4 @@ public enum PathFlags : byte
     /// Can we open stuff that requires interaction (e.g. click-open doors).
     /// </summary>
     Interact = 1 << 4,
-
-    Blob = 1 << 5,  // Goobstation - Blob
 }

@@ -5,9 +5,9 @@
   description: An armored overcoat produced for elite Blueshield officers.
   components:
   - type: Sprite
-    sprite: Backmen/Clothing/OuterClothing/Coats/bluecoat.rsi
+    sprite: _Backmen/Clothing/OuterClothing/Coats/bluecoat.rsi
   - type: Clothing
-    sprite: Backmen/Clothing/OuterClothing/Coats/bluecoat.rsi
+    sprite: _Backmen/Clothing/OuterClothing/Coats/bluecoat.rsi
   - type: Armor
     modifiers:
       coefficients:

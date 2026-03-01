@@ -15,7 +15,6 @@ public sealed partial class DirectionalEmoteSystem : EntitySystem
     [Dependency] private readonly IGameTiming _gameTicking = default!;
     [Dependency] private readonly ExamineSystemShared _examineSystem = default!;
     [Dependency] private readonly IAdminLogManager _adminLogger = default!;
-    [Dependency] private readonly ChatBrainRotSystem _chatBrainRotSystem = default!;
 
     public override void Initialize()
     {
@@ -32,18 +31,19 @@ public sealed partial class DirectionalEmoteSystem : EntitySystem
             !TryComp<DirectionalEmoteTargetComponent>(GetEntity(args.Source), out var directEmote)) return;
 
         var curTime = _gameTicking.CurTime;
-        if (directEmote.LastSend + directEmote.Cooldown > curTime) return;
+        if (directEmote.LastSend + directEmote.Cooldown > curTime)
+            return;
 
-        var rangeError = Loc.GetString("directional-emote-range-error");
         if (!_examineSystem.InRangeUnOccluded(source, target, 3))
         {
+            var rangeError = Loc.GetString("directional-emote-range-error");
             _chatManager.ChatMessageToOne(ChatChannel.Emotes, rangeError, rangeError, default, false, sourceActor.PlayerSession.Channel);
             return;
         }
 
-        var lengthError = Loc.GetString("directional-emote-length-error");
         if (args.Text.Length > 10000)
         {
+            var lengthError = Loc.GetString("directional-emote-length-error");
             _chatManager.ChatMessageToOne(ChatChannel.Emotes, lengthError, lengthError, default, false, sourceActor.PlayerSession.Channel);
             return;
         }
@@ -52,7 +52,7 @@ public sealed partial class DirectionalEmoteSystem : EntitySystem
 
         _chatManager.ChatMessageToMany(ChatChannel.Emotes, args.Text, wrappedMessage, source, false, true, [targetActor.PlayerSession.Channel, sourceActor.PlayerSession.Channel]);
         _adminLogger.Add(LogType.Chat, LogImpact.Low, $"{ToPrettyString(source):source} send directional emote to {ToPrettyString(target):target}: {args.Text}");
-        _chatBrainRotSystem.CheckBrainRot(source, args.Text);
+
         directEmote.LastSend = curTime;
     }
 }

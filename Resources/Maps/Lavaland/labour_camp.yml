@@ -2152,13 +2152,6 @@ entities:
     - type: Transform
       pos: -1.5,8.5
       parent: 1
-- proto: TowelColorWhite
-  entities:
-  - uid: 359
-    components:
-    - type: Transform
-      pos: 6.5,-3.5
-      parent: 1
 - proto: ToyFigurinePassenger
   entities:
   - uid: 360

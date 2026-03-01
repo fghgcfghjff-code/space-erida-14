@@ -44,10 +44,6 @@ public sealed class ClientClothingSystem : ClothingSystem
         {"pocket1", "POCKET1"},
         {"pocket2", "POCKET2"},
         {"suitstorage", "SUITSTORAGE"},
-        {"underpants", "UNDERPANTS"}, //backmen:underclothing
-        {"undershirt", "UNDERSHIRT"}, //backmen:underclothing
-        {"socks", "SOCKS"}, //backmen:underclothing
-        {"underwear", "UNDERWEAR"}, // Erida-edit
     };
 
     [Dependency] private readonly IResourceCache _cache = default!;
@@ -275,7 +271,7 @@ public sealed class ClientClothingSystem : ClothingSystem
         // Select displacement maps
         var displacementData = inventory.Displacements.GetValueOrDefault(slot); //Default unsexed map
 
-        var equipeeSex = CompOrNull<HumanoidAppearanceComponent>(equipee)?.Sex;
+        var equipeeSex = CompOrNull<HumanoidProfileComponent>(equipee)?.Sex;
         if (equipeeSex != null)
         {
             switch (equipeeSex)

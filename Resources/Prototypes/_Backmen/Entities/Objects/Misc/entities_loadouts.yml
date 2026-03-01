@@ -5,7 +5,7 @@
   parent: BaseItem
   components:
   - type: Sprite
-    sprite: Corvax/Back/Duffels/military.rsi
+    sprite: _Corvax/Back/Duffels/military.rsi
     state: icon
   - type: Item
     size: Normal
@@ -16,6 +16,7 @@
     # - EG-CSet
     # - EG-SSet
     # - XMLGSet
+
     # - SR127Set
     # - MP5Set
     # - G36Set
@@ -41,7 +42,7 @@
   name: duffel-category-utapmk1-name
   description: duffel-category-utapmk1-description
   sprite:
-    sprite: Backmen/Objects/Weapons/Gunsx64/Rifles/utap-mark1/big.rsi
+    sprite: _Backmen/Objects/Weapons/Gunsx64/Rifles/utap-mark1/big.rsi
     state: icon
   content:
   - Flash
@@ -55,7 +56,7 @@
   name: duffel-category-Guardian-name
   description: duffel-category-Guardian-description
   sprite:
-    sprite: Backmen/Objects/Weapons/Gunsx64/Shotguns/guard-17/big.rsi
+    sprite: _Backmen/Objects/Weapons/Gunsx64/Shotguns/guard-17/big.rsi
     state: icon
   content:
   - WeaponShotgunGuardian

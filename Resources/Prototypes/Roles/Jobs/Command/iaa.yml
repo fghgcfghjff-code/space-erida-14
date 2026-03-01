@@ -35,9 +35,7 @@
     eyes: ClothingEyesGlassesSunglasses
     ears: ClothingHeadsetIAA
     pocket2: BookSpaceLaw
-  inhand:
-    - BriefcaseIAAFilled
-  
+
 - type: chameleonOutfit
   id: IAAChameleonOutfit
   job: IAA

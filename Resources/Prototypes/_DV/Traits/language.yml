@@ -1,0 +1,167 @@
+# Felinid
+- type: trait
+  id: Nekomimetic
+  name: trait-language-nekomimetic-name
+  description: trait-language-nekomimetic-desc
+  category: Language
+  cost: 2
+  effects:
+  - !type:AddCompsEffect
+    components:
+    - type: LanguageOnSpawn
+      languages:
+      - Nekomimetic
+
+# Shadowkin
+- type: trait
+  id: Mar
+  name: trait-language-mar-name
+  description: trait-language-mar-desc
+  category: Language
+  cost: 2
+  effects:
+  - !type:AddCompsEffect
+    components:
+    - type: LanguageOnSpawn
+      languages:
+      - Mar
+
+# Demon
+- type: trait
+  id: Demonic
+  name: trait-language-demonic-name
+  description: trait-language-demonic-desc
+  category: Language
+  cost: 2
+  effects:
+  - !type:AddCompsEffect
+    components:
+    - type: LanguageOnSpawn
+      languages:
+      - Demonic
+
+# Shark
+- type: trait
+  id: Shark
+  name: trait-language-shark-name
+  description: trait-language-shark-desc
+  category: Language
+  cost: 2
+  effects:
+  - !type:AddCompsEffect
+    components:
+    - type: LanguageOnSpawn
+      languages:
+      - Shark
+
+# Antropomorph
+- type: trait
+  id: Canilunzt
+  name: trait-language-canilunzt-name
+  description: trait-language-canilunzt-desc
+  category: Language
+  cost: 2
+  effects:
+  - !type:AddCompsEffect
+    components:
+    - type: LanguageOnSpawn
+      languages:
+      - Canilunzt
+
+# Spider
+- type: trait
+  id: Spider
+  name: trait-language-spider-name
+  description: trait-language-spider-desc
+  category: Language
+  cost: 2
+  effects:
+  - !type:AddCompsEffect
+    components:
+    - type: LanguageOnSpawn
+      languages:
+      - Spider
+
+# Diona
+- type: trait
+  id: RootSpeak
+  name: trait-language-rootspeak-name
+  description: trait-language-rootspeak-desc
+  category: Language
+  cost: 2
+  effects:
+  - !type:AddCompsEffect
+    components:
+    - type: LanguageOnSpawn
+      languages:
+      - RootSpeak
+
+# Dwarven
+- type: trait
+  id: Dwarven
+  name: trait-language-dwarven-name
+  description: trait-language-dwarven-desc
+  category: Language
+  cost: 2
+  effects:
+  - !type:AddCompsEffect
+    components:
+    - type: LanguageOnSpawn
+      languages:
+      - Dwarven
+
+# Moth
+- type: trait
+  id: Moffic
+  name: trait-language-moffic-name
+  description: trait-language-moffic-desc
+  category: Language
+  cost: 2
+  effects:
+  - !type:AddCompsEffect
+    components:
+    - type: LanguageOnSpawn
+      languages:
+      - Moffic
+
+# Reptilian
+- type: trait
+  id: Dragon
+  name: trait-language-dragon-name
+  description: trait-language-dragon-desc
+  category: Language
+  cost: 2
+  effects:
+  - !type:AddCompsEffect
+    components:
+    - type: LanguageOnSpawn
+      languages:
+      - Dragon
+
+# Slime
+- type: trait
+  id: Slime
+  name: trait-language-slime-name
+  description: trait-language-slime-desc
+  category: Language
+  cost: 2
+  effects:
+  - !type:AddCompsEffect
+    components:
+    - type: LanguageOnSpawn
+      languages:
+      - Slime
+
+# Vox
+- type: trait
+  id: Freespeak
+  name: trait-language-freespeak-name
+  description: trait-language-freespeak-desc
+  category: Language
+  cost: 2
+  effects:
+  - !type:AddCompsEffect
+    components:
+    - type: LanguageOnSpawn
+      languages:
+      - Freespeak

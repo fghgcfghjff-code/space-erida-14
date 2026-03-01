@@ -289,7 +289,7 @@ public sealed class PlayTimeSaveCommand : IConsoleCommand
     }
 }
 
-[AdminCommand(AdminFlags.Debug)]
+[AdminCommand(AdminFlags.Host)] // Erida edit
 public sealed class PlayTimeFlushCommand : IConsoleCommand
 {
     [Dependency] private readonly IPlayerManager _playerManager = default!;

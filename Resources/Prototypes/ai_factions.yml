@@ -1,10 +1,6 @@
 - type: npcFaction
   id: Dragon
   hostile:
-  # Orion-Start-Factions
-  - InteQ
-  - InteQHostile
-  # Orion-End-Factions
   - NanoTrasen
   - Syndicate
   - Xeno
@@ -13,15 +9,12 @@
   - Revolutionary
   - AllHostile
   - Wizard
-  - Blob # Goobstation - Blob
   - Xenoborg
 
 - type: npcFaction
   id: NanoTrasen
   hostile:
-  # Orion-Start-Factions
-  - InteQHostile
-  # Orion-End-Factions
+  - InteQ
   - SimpleHostile
   - Syndicate
   - Xeno
@@ -31,7 +24,6 @@
   - AllHostile
   - Wizard
   - Xenoborg
-  - Blob # Goobstation - Blob
 
 - type: npcFaction
   id: Mouse
@@ -48,24 +40,16 @@
   friendly:
   - NanoTrasen
   hostile:
-  # Orion-Start-Factions
-  - InteQHostile
-  # Orion-End-Factions
   - Mouse
   - SimpleHostile
   - Zombie
   - Xeno
   - AllHostile
   - Dragon
-  - Blob # Goobstation - Blob
 
 - type: npcFaction
   id: SimpleHostile
   hostile:
-  # Orion-Start-Factions
-  - InteQ
-  - InteQHostile
-  # Orion-End-Factions
   - NanoTrasen
   - Syndicate
   - Passive
@@ -77,7 +61,6 @@
   - AllHostile
   - Wizard
   - Xenoborg
-  - Blob # Goobstation - Blob
 
 - type: npcFaction
   id: SimpleNeutral
@@ -85,9 +68,7 @@
 - type: npcFaction
   id: Syndicate
   hostile:
-  # Orion-Start-Factions
-  - InteQHostile
-  # Orion-End-Factions
+  - InteQ
   - NanoTrasen
   - SimpleHostile
   - Xeno
@@ -97,15 +78,11 @@
   - AllHostile
   - Wizard
   - Xenoborg
-  - Blob # Goobstation - Blob
 
 - type: npcFaction
   id: Xeno
   hostile:
-  # Orion-Start-Factions
   - InteQ
-  - InteQHostile
-  # Orion-End-Factions
   - NanoTrasen
   - Syndicate
   - Passive
@@ -120,10 +97,6 @@
 - type: npcFaction
   id: Zombie
   hostile:
-  # Orion-Start-Factions
-  - InteQ
-  - InteQHostile
-  # Orion-End-Factions
   - NanoTrasen
   - SimpleNeutral
   - SimpleHostile
@@ -135,15 +108,10 @@
   - Wizard
   - Dragon
   - Xenoborg
-  - Blob # Goobstation - Blob
 
 - type: npcFaction
   id: Revolutionary
   hostile:
-  # Orion-Start-Factions
-  - InteQ
-  - InteQHostile
-  # Orion-End-Factions
   - NanoTrasen
   - Zombie
   - SimpleHostile
@@ -155,10 +123,6 @@
 - type: npcFaction
   id: AllHostile
   hostile:
-  # Orion-Start-Factions
-  - InteQ
-  - InteQHostile
-  # Orion-End-Factions
   - NanoTrasen
   - Dragon
   - Mouse
@@ -172,15 +136,11 @@
   - Revolutionary
   - Wizard
   - Xenoborg
-  - Blob # Goobstation - Blob
+  - InteQ
 
 - type: npcFaction
   id: Wizard
   hostile:
-  # Orion-Start-Factions
-  - InteQ
-  - InteQHostile
-  # Orion-End-Factions
   - NanoTrasen
   - Dragon
   - Mouse
@@ -194,16 +154,11 @@
   - Revolutionary
   - AllHostile
   - Xenoborg
-  - Blob # Goobstation - Blob
 
 - type: npcFaction
   id: Xenoborg
   hostile:
   # they have brains
-  # Orion-Start-Factions
-  - InteQ
-  - InteQHostile
-  # Orion-End-Factions
   - NanoTrasen
   - Syndicate
   - Zombie

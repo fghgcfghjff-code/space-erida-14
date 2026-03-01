@@ -12896,7 +12896,7 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
-- proto: BaseChemistryEmptyVial
+- proto: ChemistryEmptyVial
   entities:
   - uid: 10854
     components:
@@ -80982,7 +80982,7 @@ entities:
     - type: Transform
       pos: -38.5,-52.5
       parent: 2
-- proto: GlowstickBase
+- proto: GlowstickGreen
   entities:
   - uid: 9321
     components:

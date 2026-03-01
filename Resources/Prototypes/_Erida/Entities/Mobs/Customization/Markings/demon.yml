@@ -1,7 +1,6 @@
 - type: marking
   id: DemomTail1
   bodyPart: Tail
-  markingCategory: Tail
 #  speciesRestriction: [Demon]
   sprites:
   - sprite: _Erida/Mobs/Demon/custom.rsi
@@ -10,7 +9,6 @@
 - type: marking
   id: DemomTailLong
   bodyPart: Tail
-  markingCategory: Tail
 #  speciesRestriction: [Demon]
   sprites:
   - sprite: _Erida/Mobs/Demon/custom.rsi
@@ -19,7 +17,6 @@
 - type: marking
   id: DemomTailUp
   bodyPart: Tail
-  markingCategory: Tail
 #  speciesRestriction: [Demon]
   sprites:
   - sprite: _Erida/Mobs/Demon/custom.rsi
@@ -28,7 +25,6 @@
 - type: marking
   id: DemonCowEars
   bodyPart: HeadSide
-  markingCategory: HeadSide
 #  speciesRestriction: [Demon]
   sprites:
   - sprite: _Erida/Mobs/Demon/custom.rsi
@@ -37,7 +33,6 @@
 - type: marking
   id: DemonEars
   bodyPart: HeadSide
-  markingCategory: HeadSide
 #  speciesRestriction: [Demon]
   sprites:
   - sprite: _Erida/Mobs/Demon/custom.rsi
@@ -46,7 +41,6 @@
 - type: marking
   id: DemonCowHorns
   bodyPart: HeadTop
-  markingCategory: HeadTop
 #  speciesRestriction: [Anthropomorph, Demon]
   sprites:
   - sprite: _Erida/Mobs/Demon/custom.rsi
@@ -55,7 +49,6 @@
 - type: marking
   id: DemonHornsDeer
   bodyPart: HeadTop
-  markingCategory: HeadTop
 #  speciesRestriction: [Anthropomorph, Demon]
   sprites:
   - sprite: _Erida/Mobs/Demon/custom.rsi
@@ -64,7 +57,6 @@
 - type: marking
   id: DemonHornsSmall
   bodyPart: HeadTop
-  markingCategory: HeadTop
 #  speciesRestriction: [Anthropomorph, Demon]
   sprites:
   - sprite: _Erida/Mobs/Demon/custom.rsi
@@ -73,7 +65,6 @@
 - type: marking
   id: DemonChestCowSpots
   bodyPart: Chest
-  markingCategory: Chest
 #  speciesRestriction: [Demon]
   sprites:
   - sprite: _Erida/Mobs/Demon/custom.rsi
@@ -82,7 +73,6 @@
 - type: marking
   id: DemonChestGuard
   bodyPart: Chest
-  markingCategory: Chest
 #  speciesRestriction: [Demon]
   sprites:
   - sprite: _Erida/Mobs/Demon/custom.rsi
@@ -91,7 +81,6 @@
 - type: marking
   id: DemonChestLinesEmperos
   bodyPart: Chest
-  markingCategory: Chest
 #  speciesRestriction: [Demon]
   sprites:
   - sprite: _Erida/Mobs/Demon/custom.rsi
@@ -100,7 +89,6 @@
 - type: marking
   id: DemonChestQueenLines
   bodyPart: Chest
-  markingCategory: Chest
 #  speciesRestriction: [Demon]
   sprites:
   - sprite: _Erida/Mobs/Demon/custom.rsi
@@ -109,7 +97,6 @@
 - type: marking
   id: DemonChestTreeLines
   bodyPart: Chest
-  markingCategory: Chest
 #  speciesRestriction: [Demon]
   sprites:
   - sprite: _Erida/Mobs/Demon/custom.rsi
@@ -118,7 +105,6 @@
 - type: marking
   id: DemonChestTrinitySpots
   bodyPart: Chest
-  markingCategory: Chest
 #  speciesRestriction: [Demon]
   sprites:
   - sprite: _Erida/Mobs/Demon/custom.rsi
@@ -127,8 +113,14 @@
 - type: marking
   id: DemonGoatee
   bodyPart: FacialHair
-  markingCategory: FacialHair
 #  speciesRestriction: [Demon]
   sprites:
   - sprite: _Erida/Mobs/Demon/custom.rsi
     state: goatee
+
+- type: marking
+  id: TailDemon
+  bodyPart: Tail
+  sprites:
+    - sprite: _Erida/Mobs/Demon/custom.rsi
+      state: tail

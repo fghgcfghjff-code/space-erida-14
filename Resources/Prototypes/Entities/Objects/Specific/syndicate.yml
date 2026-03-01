@@ -1,7 +1,8 @@
+
 - type: entity
   name: telecrystal
   parent: [BaseItem, BaseSyndicateContraband]
-  id: TelecrystalRed # Erida-edit
+  id: Telecrystal
   suffix: 20 TC
   description: It seems to be pulsing with suspiciously enticing energies.
   components:
@@ -13,84 +14,34 @@
     size: Tiny
   - type: Stack
     count: 20
-    stackType: TelecrystalRed # Erida-edit start
+    stackType: Telecrystal
   - type: StaticPrice
     price: 0
   - type: StackPrice
     price: 200
   - type: Currency
     price:
-      TelecrystalRed: 1 # Erida-edit end
+      Telecrystal: 1
 
-- type: entity # Erida-edit start
-  name: telecrystal
-  parent: [BaseItem, BaseSyndicateContraband]
-  id: TelecrystalOrange
-  suffix: 20 TC
-  description: It seems to be pulsing with suspiciously enticing energies.
-  components:
-  - type: Sprite
-    sprite: _Orion/Objects/Specific/InteQ/telecrystal.rsi
-    state: telecrystal
-  - type: Item
-    sprite: _Orion/Objects/Specific/InteQ/telecrystal.rsi
-    size: Tiny
-  - type: Stack
-    count: 20
-    stackType: TelecrystalOrange # Erida-edit end
-  - type: StaticPrice
-    price: 0
-  - type: StackPrice
-    price: 200
-  - type: Currency
-    price:
-      TelecrystalOrange: 1 # Erida-edit
-
-# Erida-edit start
 - type: entity
-  parent: TelecrystalOrange
-  id: TelecrystalOrange1
+  parent: Telecrystal
+  id: Telecrystal1
   suffix: 1 TC
   components:
   - type: Stack
     count: 1
 
 - type: entity
-  parent: TelecrystalOrange1
-  id: TelecrystalOrange5
+  parent: Telecrystal
+  id: Telecrystal5
   suffix: 5 TC
   components:
   - type: Stack
     count: 5
 
 - type: entity
-  parent: TelecrystalOrange1
-  id: TelecrystalOrange10
-  suffix: 10 TC
-  components:
-  - type: Stack
-    count: 10
-# Erida-edit end
-
-- type: entity
-  parent: TelecrystalRed # Erida-edit start
-  id: TelecrystalRed1 # Erida-edit end
-  suffix: 1 TC
-  components:
-  - type: Stack
-    count: 1
-
-- type: entity
-  parent: TelecrystalRed1 # Erida-edit start
-  id: TelecrystalRed5 # Erida-edit end
-  suffix: 5 TC
-  components:
-  - type: Stack
-    count: 5
-
-- type: entity
-  parent: TelecrystalRed1 # Erida-edit start
-  id: TelecrystalRed10 # Erida-edit end
+  parent: Telecrystal
+  id: Telecrystal10
   suffix: 10 TC
   components:
   - type: Stack
@@ -98,14 +49,14 @@
 
 # Uplinks
 - type: entity
-  parent: [BaseItem, StorePresetUplinkSyndicate, BaseSyndicateContraband] # Erida-edit start
-  id: BaseUplinkRadioSyndicate # Erida-edit end
+  parent: [BaseItem, StorePresetUplink, BaseSyndicateContraband]
+  id: BaseUplinkRadio
   name: syndicate uplink
   description: Suspiciously looking old radio...
   suffix: Empty
   components:
   - type: Sprite
-    sprite: Objects/Devices/communication.rsi # Erida-edit
+    sprite: Objects/Devices/communication.rsi
     layers:
     - state: old-radio
   - type: Item
@@ -119,68 +70,57 @@
     key: enum.StoreUiKey.Key
   - type: Store
     balance:
-      TelecrystalRed: 0 # Erida-edit
-  - type: Tag
-    tags:
-    - SyndicateUplink
+      Telecrystal: 0
 
 - type: entity
-  parent: BaseUplinkRadioSyndicate
-  id: SyndicateUplinkRadio40TC
-  suffix: 40 TC
-  components:
-  - type: Store
-    balance:
-      TelecrystalRed: 40
-
-- type: entity
-  parent: BaseInteQUplinkRadio # Erida-edit
+  parent: BaseUplinkRadio
   id: BaseUplinkRadio20TC
   suffix: 20 TC
   components:
   - type: Store
     balance:
-      TelecrystalOrange: 20 # Erida-edit
+      Telecrystal: 20
 
 - type: entity
-  parent: BaseInteQUplinkRadio # Erida-edit
+  parent: BaseUplinkRadio
   id: BaseUplinkRadio25TC
   suffix: 25 TC
   components:
   - type: Store
     balance:
-      TelecrystalOrange: 25 # Erida-edit
+      Telecrystal: 25
 
 #this uplink MUST be used for nukeops, as it has the tag for filtering the listing.
 - type: entity
-  parent: BaseInteQUplinkRadio # Erida-edit
+  parent: BaseUplinkRadio
   id: BaseUplinkRadio40TC
   suffix: 40 TC, NukeOps
   components:
   - type: Store
     balance:
-      TelecrystalOrange: 40 # Erida-edit
+      Telecrystal: 40
   - type: Tag
     tags:
     - NukeOpsUplink
 
 - type: entity
-  parent: BaseInteQUplinkRadio # Erida-edit
+  parent: BaseUplinkRadio
   id: BaseUplinkRadio60TC
   suffix: 60 TC, LoneOps
   components:
   - type: Store
     balance:
-      TelecrystalOrange: 60 # Erida-edit
+      Telecrystal: 60
   - type: Tag
     tags:
     - NukeOpsUplink
 
 - type: entity
-  parent: BaseInteQUplinkRadio # Erida-edit
+  parent: BaseUplinkRadio
   id: BaseUplinkRadioDebug
   suffix: DEBUG
   components:
   - type: Store
     balance:
-      TelecrystalOrange: 99999 # Erida-edit
+      Telecrystal: 99999
+    expectedFaction: #nulls out the expected faction

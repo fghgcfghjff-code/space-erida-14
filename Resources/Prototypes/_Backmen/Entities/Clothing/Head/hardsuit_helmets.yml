@@ -5,9 +5,9 @@
   description: Модифицированный шлем скафандра разведчиков ОПЗ, специализирован для ведения разведки на дальних расстояниях, оснащен устройством ночного видиния.
   components:
   - type: Sprite
-    sprite: Backmen/Clothing/Head/Hardsuits/bluehardhelmet.rsi
+    sprite: _Backmen/Clothing/Head/Hardsuits/bluehardhelmet.rsi
   - type: Clothing
-    sprite: Backmen/Clothing/Head/Hardsuits/bluehardhelmet.rsi
+    sprite: _Backmen/Clothing/Head/Hardsuits/bluehardhelmet.rsi
   - type: PointLight
     color: '#4ac4ff'
     radius: 6
@@ -20,9 +20,9 @@
   description: Armored hardsuit helmet for security needs.
   components:
   - type: Sprite
-    sprite: Backmen/Clothing/Head/Hardsuits/sec-pilot-hardsuit.rsi
+    sprite: _Backmen/Clothing/Head/Hardsuits/sec-pilot-hardsuit.rsi
   - type: Clothing
-    sprite: Backmen/Clothing/Head/Hardsuits/sec-pilot-hardsuit.rsi
+    sprite: _Backmen/Clothing/Head/Hardsuits/sec-pilot-hardsuit.rsi
   - type: PointLight
     color: blue
     radius: 7

@@ -205,11 +205,10 @@ public sealed class NewsSystem : SharedNewsSystem
             return false;
         }
 
-        var strippedContent = FormattedMessage.RemoveMarkupPermissive(content);
         article = new NewsArticle
         {
             Title = title.Length <= MaxTitleLength ? title : $"{title[..MaxTitleLength]}...",
-            Content = strippedContent.Length <= MaxContentLength ? strippedContent : $"{strippedContent[..MaxContentLength]}...",
+            Content = content.Length <= MaxContentLength ? content : $"{content[..MaxContentLength]}...",
             Author = author,
             ShareTime = _ticker.RoundDuration()
         };

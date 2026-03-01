@@ -6,10 +6,9 @@
     sprite: Objects/Devices/chameleon_projector.rsi
     state: icon
   content:
-  - ClothingBackpackChameleonFill
+  - ClothingBackpackChameleonFillAgent
   - ChameleonProjector
   - FakeMindShieldImplanter
-  - AgentIDCard
 
 - type: thiefBackpackSet
   id: ToolsSet
@@ -57,7 +56,7 @@
   - AccessBreaker
   - Lighter
   - CigPackSyndicate
-  - TelecrystalOrange10 #The thief cannot use them, but it may induce communication with traitors
+  - Telecrystal10 #The thief cannot use them, but it may induce communication with traitors
 
 - type: thiefBackpackSet
   id: SleeperSet
@@ -83,7 +82,7 @@
   - EncryptionKeyStationMaster
   - CyberPen
   - BriefcaseThiefBribingBundleFilled
-  - ClothingMaskGasVoiceChameleon
+  - VoiceMaskImplanter
   #- todo Chameleon Stamp
 
 - type: thiefBackpackSet

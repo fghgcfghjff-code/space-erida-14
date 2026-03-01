@@ -493,10 +493,9 @@
         - !type:NestedSelector
           tableId: GenericTrashItems
           weight: 35
-        - !type:AllSelector
+        - !type:NestedSelector
+          tableId: AllPlushiesTable
           weight: 1
-          children:
-          - id: ToySpawner
 
 - type: entity
   id: XenoArtifactEffectLightFlicker
@@ -739,7 +738,7 @@
       hadOutline: true
     - type: StealthOnMove
       passiveVisibilityRate: -0.10
-      movementVisibilityRate: 0.90 #Erida-Edit
+      movementVisibilityRate: 0.10
 
 - type: entity
   id: XenoArtifactRareMaterialSpawn

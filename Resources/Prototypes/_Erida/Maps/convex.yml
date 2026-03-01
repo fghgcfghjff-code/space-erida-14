@@ -34,7 +34,6 @@
             Librarian: [ 1, 1 ]
             ServiceWorker: [ 3, 3 ]
             Reporter: [ 1, 2 ]
-            Boxer: [2, 2]
             #engineering (8)
             AtmosphericTechnician: [ 3, 3 ]
             StationEngineer: [ 5, 5 ]
@@ -86,9 +85,3 @@
           - Bunker
           - XenobiologyRepair
           - VirusologyAmbusol
-        # blob-config-start
-        - type: StationBlobConfig
-          stageBegin: 50
-          stageCritical: 500
-          stageTheEnd: 800
-        # blob-config-end

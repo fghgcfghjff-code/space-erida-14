@@ -31,15 +31,6 @@
     inherentRadioChannels:
     - Common
     - Binary
-  - type: LanguageSpeaker
-    currentLanguage: TauCetiBasic
-  - type: LanguageKnowledge #backmen: languages
-    speaks:
-    - Binary
-    - TauCetiBasic
-    understands:
-    - Binary
-    - TauCetiBasic
 
 - type: entity
   id: BorgChassisGeneric
@@ -81,7 +72,6 @@
   components:
   - type: BorgSwitchableType
     selectedBorgType: medical
-  - type: TTS # Corvax-TTS
 
 - type: entity
   id: BorgChassisService

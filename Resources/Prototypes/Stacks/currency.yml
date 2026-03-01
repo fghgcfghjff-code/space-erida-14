@@ -1,10 +1,8 @@
-# Erida-start
-# - type: stack
-#   id: Telecrystal
-#   name: stack-telecrystal
-#   icon: { sprite: /Textures/Objects/Specific/Syndicate/telecrystal.rsi, state: telecrystal }
-#   spawn: Telecrystal1
-# Erida-end
+- type: stack
+  id: Telecrystal
+  name: stack-telecrystal
+  icon: { sprite: /Textures/Objects/Specific/Syndicate/telecrystal.rsi, state: telecrystal }
+  spawn: Telecrystal1
 
 - type: stack
   id: Credit

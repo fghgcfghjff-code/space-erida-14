@@ -163,29 +163,29 @@ ghost-role-information-space-ninja-name = Космический ниндзя
 ghost-role-information-space-ninja-description = Используйте хитрость и скрытность, чтобы устроить диверсию на станции.
 ghost-role-information-paradox-clone-name = Парадоксальный клон
 ghost-role-information-paradox-clone-description = Странная пространственно-временная аномалия телепортировала вас в другую реальность! Теперь вам предстоит найти своего двойника, убить и заменить его.
-ghost-role-information-syndicate-reinforcement-name = Агент InteQ
-ghost-role-information-syndicate-reinforcement-description = Кому-то нужно подкрепление. Вы первый, кого InteQ смог найти и послать на помощь.
+ghost-role-information-syndicate-reinforcement-name = Агент Сидниката
+ghost-role-information-syndicate-reinforcement-description = Кому-то нужно подкрепление. Вы первый, кого Сидникат смог найти и послать на помощь.
 ghost-role-information-syndicate-reinforcement-rules = Вы [color={ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color], в команде с агентом, который вас призвал.
-ghost-role-information-syndicate-reinforcement-medic-name = Медик InteQ
+ghost-role-information-syndicate-reinforcement-medic-name = Медик Сидниката
 ghost-role-information-syndicate-reinforcement-medic-description = Кому-то нужно подкрепление. Ваша задача — сохранить жизнь вызвавшему вас агенту.
-ghost-role-information-syndicate-reinforcement-spy-name = Шпион InteQ
+ghost-role-information-syndicate-reinforcement-spy-name = Шпион Сидниката
 ghost-role-information-syndicate-reinforcement-spy-description = Кому-то нужно подкрепление. Ваша специализация — шпионаж, постарайтесь не быть обнаруженными.
-ghost-role-information-syndicate-reinforcement-thief-name = Вор InteQ
+ghost-role-information-syndicate-reinforcement-thief-name = Вор Сидниката
 ghost-role-information-syndicate-reinforcement-thief-description = Кому-то нужно подкрепление. Ваша задача — проникнуть и забрать что-то ценное для своего агента.
 
 ghost-role-information-nukeop-reinforcement-name = Ядерный оперативник
 ghost-role-information-nukeop-reinforcement-description = Ядерным оперативникам нужно подкрепление. Вы, резервный агент, поможете им.
 ghost-role-information-nukeop-reinforcement-rules = Вы [color={ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color], в команде с ядернымы оперативниками, которые призвали вас.
 
-ghost-role-information-syndicate-monkey-reinforcement-name = Агент InteQ-обезьяна
+ghost-role-information-syndicate-monkey-reinforcement-name = Агент Сидниката-обезьяна
 ghost-role-information-syndicate-monkey-reinforcement-description = Кому-то нужно подкрепление. Вы, специально обученная обезьяна, поможете им.
 
-ghost-role-information-syndicate-kobold-reinforcement-name = Агент InteQ-кобольд
+ghost-role-information-syndicate-kobold-reinforcement-name = Агент Сидниката-кобольд
 ghost-role-information-syndicate-kobold-reinforcement-description = Кому-то нужно подкрепление. Вы, специально обученный кобольд, поможете им.
 
-ghost-role-information-syndicate-cyborg-assault-name = Штурмовой киборг InteQ
-ghost-role-information-syndicate-cyborg-saboteur-name = Саботажный киборг InteQ
-ghost-role-information-syndicate-cyborg-description = InteQ запрашивает подкрепление. Вы, холодная кремниевая машина для убийства, поможете им.
+ghost-role-information-syndicate-cyborg-assault-name = Штурмовой киборг Сидниката
+ghost-role-information-syndicate-cyborg-saboteur-name = Саботажный киборг Сидниката
+ghost-role-information-syndicate-cyborg-description = Сидниката запрашивает подкрепление. Вы, холодная кремниевая машина для убийства, поможете им.
 
 ghost-role-information-derelict-engineering-cyborg-name = Заброшенный инженерный киборг
 ghost-role-information-derelict-engineering-cyborg-description = Вы — инженерный киборг, который заблудился в космосе. После долгих лет воздействия ионных бурь вы оказываетесь рядом с космической станцией.
@@ -202,7 +202,7 @@ ghost-role-information-derelict-medical-cyborg-description = Вы — медиц
 ghost-role-information-derelict-mining-cyborg-name = Заброшенный шахтерский киборг
 ghost-role-information-derelict-mining-cyborg-description = Вы — шахтерский киборг, который заблудился в космосе. После долгих лет воздействия ионных бурь вы оказываетесь рядом с космической станцией.
 
-ghost-role-information-derelict-syndicate-assault-cyborg-name = Заброшенный Штурмовой киборг InteQ
+ghost-role-information-derelict-syndicate-assault-cyborg-name = Заброшенный Штурмовой киборг Сидниката
 ghost-role-information-derelict-syndicate-assault-cyborg-description = Вы ранняя модель штурмового киборга, который потерялся в космосе. После долгих лет воздействия ионных бурь вы оказываетесь рядом с космической станцией.
 
 ghost-role-information-security-name = Служба безопасности

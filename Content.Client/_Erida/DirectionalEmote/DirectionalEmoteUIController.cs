@@ -20,17 +20,17 @@ public sealed class DirectionalEmoteUIController : UIController
         _emoteWindow.OpenCentered();
         _emoteWindow.MoveToFront();
 
-        _typingIndicator.ClientChangedWindowStatus(true);
+        _typingIndicator.ClientChangedChatFocus(true);
 
         _emoteWindow.MessageChanged += () =>
         {
             _typingIndicator.ClientChangedChatText();
-            _typingIndicator.ClientChangedWindowStatus(true); ;
+            _typingIndicator.ClientChangedChatFocus(true);
         };
 
         _emoteWindow.AcceptPressed += () =>
         {
-            _typingIndicator.ClientChangedWindowStatus(false);
+            _typingIndicator.ClientChangedChatFocus(false);
             _typingIndicator.ClientSubmittedChatText();
             _directionalEmoteSystem.ShowMessage(_emoteWindow.Source, _emoteWindow.Target, _emoteWindow.Text);
             _emoteWindow.Dispose();
@@ -53,7 +53,7 @@ public sealed class DirectionalEmoteUIController : UIController
 
         if (_emoteWindow.IsOpen)
         {
-            _typingIndicator.ClientChangedWindowStatus(false);
+            _typingIndicator.ClientChangedChatFocus(false);
             _emoteWindow.Dispose();
         }
         else

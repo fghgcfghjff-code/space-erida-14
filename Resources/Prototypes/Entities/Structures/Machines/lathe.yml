@@ -127,7 +127,6 @@
     - AtmosStatic
     - CablesStatic
     - PaperworkStatic
-    - TowelsStatic
     - CargoStatic
     - BasicChemistryStatic
     - RollerBedsStatic
@@ -210,7 +209,6 @@
     - Botany
     - Instruments
     - Equipment
-    - BackmenTranslators # Backmen
     - FauxTiles
 
   - type: EmagLatheRecipes
@@ -259,6 +257,7 @@
     dynamicPacks: # Static > Dynamic | Backmen-EDIT
     - ScienceBoardsStatic
     - ServiceBoardsStatic
+    - Botany
     - CargoBoardsStatic
     - MedicalBoardsStatic
     - EngineeringBoardsStatic
@@ -506,7 +505,6 @@
     idleState: icon
     runningState: building
     staticPacks:
-    - TowelsStatic
     - ClothingCivilian
     - ClothingCargo
     - ClothingCommand

@@ -29,7 +29,7 @@
       drink:
         reagents:
         - ReagentId: Ice
-          Quantity: 100
+          Quantity: 200
   - type: Sprite
     sprite: Objects/Consumable/Drinks/icebucket.rsi
     state: icon
@@ -131,7 +131,7 @@
       Steel: 50
   - type: Shakeable
   - type: ReactionMixer
-    mixOnInteract: false
+    mixerType: None
     reactionTypes:
     - Shake
 

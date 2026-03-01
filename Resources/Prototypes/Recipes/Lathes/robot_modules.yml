@@ -19,9 +19,9 @@
     Plastic: 250
     Gold: 50
 
- # Recipes
+## Recipes
 
- # Generic
+# Generic
 - type: latheRecipe
   parent: BaseBorgModuleRecipe
   id: BorgModuleTool
@@ -48,14 +48,14 @@
   result: BorgModuleArtistry
 
 # Cargo Modules
-#
-#- type: latheRecipe
-#  parent: BaseGoldBorgModuleRecipe
-#  id: BorgModuleAdvancedMining
-#  result: BorgModuleAdvancedMining
-#
-## Engineering Modules
-#
+
+- type: latheRecipe
+  parent: BaseGoldBorgModuleRecipe
+  id: BorgModuleAdvancedMining
+  result: BorgModuleAdvancedMining
+
+# Engineering Modules
+
 - type: latheRecipe
   parent: BaseGoldBorgModuleRecipe
   id: BorgModuleAdvancedTool
@@ -68,13 +68,23 @@
   id: BorgModuleAdvancedCleaning
   result: BorgModuleAdvancedCleaning
 
-## Medical Modules
-#
-#- type: latheRecipe
-#  parent: BaseGoldBorgModuleRecipe
-#  id: BorgModuleAdvancedChemical
-#  result: BorgModuleAdvancedChemical
-#
-## Science Modules
-#
-## Service Modules
+# Medical Modules
+
+- type: latheRecipe
+  parent: BaseGoldBorgModuleRecipe
+  id: BorgModuleAdvancedTopical
+  result: BorgModuleAdvancedTopical
+
+# Science Modules
+
+# Service Modules
+
+- type: latheRecipe
+  parent: BaseGoldBorgModuleRecipe
+  id: BorgModuleAdvancedClowning
+  result: BorgModuleAdvancedClowning
+  materials:
+    Steel: 500
+    Glass: 500
+    Plastic: 250
+    Bananium: 375

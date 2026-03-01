@@ -24,8 +24,6 @@
   - type: Damageable
     damageContainer: ManifestedSpirit
     damageModifierSet: ManifestedSpirit
-  - type: TTS # Corvax-TTS
-    voice: Monolith2
   - type: NoSlip
   - type: Eye
     drawFov: false

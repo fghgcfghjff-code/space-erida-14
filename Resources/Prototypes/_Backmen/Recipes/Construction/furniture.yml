@@ -34,16 +34,3 @@
   conditions:
   - !type:TileNotBlocked
 
-#bathroom
-- type: construction
-  id: Shower
-  graph: Shower
-  startNode: start
-  targetNode: shower
-  category: construction-category-furniture
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canRotate: true
-  canBuildInImpassable: false
-  conditions:
-  - !type:TileNotBlocked

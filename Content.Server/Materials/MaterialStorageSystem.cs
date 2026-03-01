@@ -12,7 +12,7 @@ using JetBrains.Annotations;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
-using Content.Shared._NF.Storage.Components;
+using Content.Shared._Erida.Storage.Components;
 
 namespace Content.Server.Materials;
 

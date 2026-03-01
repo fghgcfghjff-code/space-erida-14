@@ -74,7 +74,7 @@
 
 - type: latheRecipe
   id: HandheldHealthAnalyzer
-  result: HandheldHealthAnalyzerEmpty
+  result: HandheldHealthAnalyzer
   categories:
   - Tools
   completetime: 4
@@ -178,6 +178,13 @@
   name: lathe-recipe-MedkitCombat-name
 
 - type: latheRecipe
+  parent: BaseToolRecipe
+  id: HandLabeler
+  result: HandLabeler
+  materials:
+    Plastic: 100
+
+- type: latheRecipe
   id: Jug
   result: Jug
   completetime: 4
@@ -245,3 +252,27 @@
     Glass: 100
     Plastic: 100
 
+- type: latheRecipe
+  id: JetInjector
+  result: JetInjector
+  categories:
+  - Tools
+  completetime: 5
+  materials:
+    Steel: 500
+    Glass: 500
+    Plastic: 250
+    Silver: 250
+
+- type: latheRecipe
+  id: AdvancedJetInjector
+  result: AdvancedJetInjector
+  categories:
+  - Tools
+  completetime: 5
+  materials:
+    Steel: 500
+    Glass: 500
+    Plastic: 250
+    Silver: 400
+    Gold: 50 # A bit of gold for the gold ornaments on it!

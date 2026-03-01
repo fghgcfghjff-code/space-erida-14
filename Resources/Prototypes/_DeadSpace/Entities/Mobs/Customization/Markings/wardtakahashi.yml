@@ -1,7 +1,6 @@
 - type: marking
   id: AugmentsWardtakahashiArmRight
   bodyPart: RArm
-  markingCategory: Arms
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/wardtakahashi.rsi
@@ -10,7 +9,6 @@
 - type: marking
   id: AugmentsWardtakahashiHandRight
   bodyPart: RHand
-  markingCategory: Arms
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/wardtakahashi.rsi
@@ -19,7 +17,6 @@
 - type: marking
   id: AugmentsWardtakahashiArmLeft
   bodyPart: LArm
-  markingCategory: Arms
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/wardtakahashi.rsi
@@ -28,7 +25,6 @@
 - type: marking
   id: AugmentsWardtakahashiHandLeft
   bodyPart: LHand
-  markingCategory: Arms
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/wardtakahashi.rsi
@@ -37,7 +33,6 @@
 - type: marking
   id: AugmentsWardtakahashiTorsoMale
   bodyPart: Chest
-  markingCategory: Chest
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/wardtakahashi.rsi
@@ -46,7 +41,6 @@
 - type: marking
   id: AugmentsWardtakahashiTorsoFemale
   bodyPart: Chest
-  markingCategory: Chest
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/wardtakahashi.rsi
@@ -55,7 +49,6 @@
 - type: marking
   id: AugmentsWardtakahashiLegRight
   bodyPart: RLeg
-  markingCategory: Legs
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/wardtakahashi.rsi
@@ -64,7 +57,6 @@
 - type: marking
   id: AugmentsWardtakahashiFootRight
   bodyPart: RFoot
-  markingCategory: Legs
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/wardtakahashi.rsi
@@ -73,7 +65,6 @@
 - type: marking
   id: AugmentsWardtakahashiLegLeft
   bodyPart: LLeg
-  markingCategory: Legs
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/wardtakahashi.rsi
@@ -82,7 +73,6 @@
 - type: marking
   id: AugmentsWardtakahashiFootLeft
   bodyPart: LFoot
-  markingCategory: Legs
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/wardtakahashi.rsi

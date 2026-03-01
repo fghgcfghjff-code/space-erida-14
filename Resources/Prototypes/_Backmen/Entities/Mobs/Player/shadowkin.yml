@@ -1,5 +1,0 @@
-﻿- type: entity
-  save: false
-  name: Urist McFloof
-  parent: [MobShadowkinBase, BaseMob]
-  id: MobShadowkin

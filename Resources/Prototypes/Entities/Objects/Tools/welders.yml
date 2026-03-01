@@ -4,7 +4,7 @@
   id: Welder
   description: "Melts anything as long as it's fueled, don't forget your eye protection!"
   components:
-  # handling sounds edit start
+    # handling sounds edit start
   - type: EmitSoundOnPickup
     sound:
       path: /Audio/_Erida/Items/handling/weldingtool_pickup.ogg
@@ -113,6 +113,7 @@
     price: 40
   - type: IgnitionSource
     temperature: 700
+  - type: WeldingSparks # Goobstation
 
 - type: entity
   name: industrial welding tool
@@ -181,6 +182,9 @@
         Quantity: 1
   - type: RequiresEyeProtection
     statusEffectTime: 5 # less harmful; sunglasses can block it
+  - type: WeldingSparks # Goobstation
+    effect: EffectWeldingSparksExp
+
 
 - type: entity
   name: emergency welding tool

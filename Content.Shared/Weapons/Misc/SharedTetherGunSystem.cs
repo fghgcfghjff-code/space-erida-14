@@ -17,7 +17,6 @@ using Robust.Shared.Physics;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Systems;
 using Robust.Shared.Serialization;
-using Robust.Shared.Toolshed.Commands.Values;
 
 namespace Content.Shared.Weapons.Misc;
 
@@ -25,6 +24,7 @@ public abstract partial class SharedTetherGunSystem : EntitySystem
 {
     [Dependency] private readonly INetManager _netManager = default!;
     [Dependency] private readonly ActionBlockerSystem _blocker = default!;
+    [Dependency] private readonly SharedHandsSystem _hands = default!;
     [Dependency] private readonly MobStateSystem _mob = default!;
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
@@ -34,7 +34,6 @@ public abstract partial class SharedTetherGunSystem : EntitySystem
     [Dependency] protected readonly SharedTransformSystem TransformSystem = default!;
     [Dependency] private readonly ThrowingSystem _throwing = default!;
     [Dependency] private readonly ThrownItemSystem _thrown = default!;
-    [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
 
     private const string TetherJoint = "tether";
 
@@ -142,17 +141,15 @@ public abstract partial class SharedTetherGunSystem : EntitySystem
         gunUid = null;
         gun = null;
 
-        if (!TryComp<HandsComponent>(user, out var hands) ||
-            !TryComp(_handsSystem.GetActiveItem(user), out gun) ||
+        if (!_hands.TryGetActiveItem(user, out var activeItem) ||
+            !TryComp(activeItem, out gun) ||
             _container.IsEntityInContainer(user))
         {
             return false;
         }
 
-        gunUid = _handsSystem.GetActiveItem((user, hands));
-        if (gunUid != null)
-            return true;
-        return false;
+        gunUid = activeItem.Value;
+        return true;
     }
 
     private void OnTetherActivate(EntityUid uid, TetherGunComponent component, ActivateInWorldEvent args)

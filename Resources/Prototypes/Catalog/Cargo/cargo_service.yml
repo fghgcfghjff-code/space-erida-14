@@ -1,7 +1,7 @@
 - type: cargoProduct
   id: ServiceJanitorial
   icon:
-    sprite: Objects/Specific/Janitorial/janitorial.rsi
+    sprite: Objects/Specific/Janitorial/spray_bottle.rsi
     state: cleaner
   product: CrateServiceJanitorialSupplies
   cost: 560
@@ -174,7 +174,7 @@
     sprite: Clothing/Head/Hoods/Bio/janitor.rsi
     state: icon
   product: CrateJanitorBiosuit
-  cost: 850
+  cost: 800
   category: cargoproduct-category-name-service
   group: market
 
@@ -237,17 +237,3 @@
   cost: 500
   category: cargoproduct-category-name-service
   group: market
-
-# DS14-start
-
-- type: cargoProduct
-  id: ServicePhotocopierToners
-  icon:
-    sprite: _DeadSpace/Objects/Misc/tonercartridge.rsi
-    state: icon
-  product: CrateServicePhotocopierToners
-  cost: 1000
-  category: cargoproduct-category-name-service
-  group: market
-
-# DS14-end

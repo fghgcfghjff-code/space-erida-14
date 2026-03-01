@@ -36,7 +36,7 @@ public sealed partial class RadioChannelPrototype : IPrototype
     /// </summary>
     [DataField("longRange"), ViewVariables]
     public bool LongRange = false;
-	
+
     // radio channels sounds edit start
     /// <summary>
     /// Звук передачи сообщений в рации

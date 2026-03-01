@@ -5,9 +5,9 @@
   description: A mantle specially tailored for Blueshield officers. On the inside of the cloak you can see a tag with the worn inscription “SecInstuct”.
   components:
   - type: Sprite
-    sprite: Backmen/Clothing/Neck/Mantle/blueshield.rsi
+    sprite: _Backmen/Clothing/Neck/Mantle/blueshield.rsi
   - type: Clothing
-    sprite: Backmen/Clothing/Neck/Mantle/blueshield.rsi
+    sprite: _Backmen/Clothing/Neck/Mantle/blueshield.rsi
   - type: Item
     size: Normal
   - type: Storage

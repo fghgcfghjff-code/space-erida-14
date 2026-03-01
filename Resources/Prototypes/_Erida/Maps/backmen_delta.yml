@@ -36,7 +36,6 @@
             Librarian: [ 1, 1 ]
             ServiceWorker: [ 3, 3 ]
             Reporter: [ 2, 2 ]
-            #Boxer: [ 2, 2 ]
             #Zookeeper: [ 1, 1 ]
             # command
             HeadOfSecurity: [ 1, 1 ]
@@ -87,9 +86,3 @@
           - Bunker
           - XenobiologyRepair
           - VirusologyAmbusol
-        # blob-config-start
-        - type: StationBlobConfig
-          stageBegin: 50
-          stageCritical: 400
-          stageTheEnd: 800
-        # blob-config-end

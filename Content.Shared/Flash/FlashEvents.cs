@@ -19,3 +19,25 @@ public record struct FlashAttemptEvent(EntityUid Target, EntityUid? User, Entity
 /// </summary>
 [ByRefEvent]
 public record struct AfterFlashedEvent(EntityUid Target, EntityUid? User, EntityUid? Used, bool Melee);
+
+/// <summary>
+/// Goob edit
+/// </summary>
+public sealed class FlashDurationMultiplierEvent : EntityEventArgs, IInventoryRelayEvent
+{
+    public float Multiplier = 1f;
+
+    public SlotFlags TargetSlots => SlotFlags.EYES | SlotFlags.HEAD | SlotFlags.MASK;
+}
+
+/// <summary>
+/// Goob edit
+/// </summary>
+public sealed class AreaFlashEvent(float range, float distance, EntityUid target) : EntityEventArgs
+{
+    public float Range = range;
+
+    public float Distance = distance;
+
+    public EntityUid Target = target;
+}

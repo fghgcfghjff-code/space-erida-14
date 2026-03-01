@@ -35,8 +35,7 @@
     - TrackingImplant
     - StorageImplant
     - FreedomImplant
-    - UplinkImplantInteQ
-    - UplinkImplantSyndicate
+    - UplinkImplant
     - EmpImplant
     - ScramImplant
     - DnaScramblerImplant
@@ -48,6 +47,8 @@
     - FakeMindShieldImplant
     - RadioImplant
     - ChameleonControllerImplant
+    - VoiceMaskImplant
+    - InferiorImplant # Erida-edit
     deimplantFailureDamage:
       types:
         Cellular: 50
@@ -218,12 +219,12 @@
     implant: RadioImplant
 
 - type: entity
-  id: UplinkImplanterSyndicate
+  id: UplinkImplanter
   name: uplink implanter
   parent: BaseImplantOnlyImplanterSyndi
   components:
   - type: Implanter
-    implant: UplinkImplantSyndicate
+    implant: UplinkImplant
 
 - type: entity
   id: EmpImplanter
@@ -256,6 +257,14 @@
   components:
   - type: Implanter
     implant: ChameleonControllerImplant
+
+- type: entity
+  id: VoiceMaskImplanter
+  name: identity mask implanter
+  parent: BaseImplantOnlyImplanterSyndi
+  components:
+  - type: Implanter
+    implant: VoiceMaskImplant
 
 #Nuclear Operative/Special implanters
 

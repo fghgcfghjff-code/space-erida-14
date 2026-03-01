@@ -116,37 +116,7 @@
             "name": "MedicalIntern"
         },
         {
-            "name": "TechnicalAssistant"
-        },
-        {
-            "name": "ServiceWorker"
-        },
-        {
-            "name": "SecurityCadet"
-        },
-        {
             "name": "IAA"
-        },
-        {
-            "name": "Zombie"
-        },
-        {
-            "name": "Zookeeper"
-        },
-        {
-            "name": "SeniorEngineer"
-        },
-        {
-            "name": "SeniorResearcher"
-        },
-        {
-            "name": "SeniorPhysician"
-        },
-        {
-            "name": "SeniorOfficer"
-        },
-        {
-            "name": "Revolutionary"
         },
         {
             "name": "Mime"
@@ -167,6 +137,9 @@
             "name": "Nanotrasen"
         },
         {
+            "name": "Ninja"
+        },
+        {
             "name": "NoId"
         },
         {
@@ -177,6 +150,9 @@
         },
         {
             "name": "Passenger"
+        },
+        {
+            "name": "Pirate"
         },
         {
             "name": "Prisoner"
@@ -197,13 +173,34 @@
             "name": "ResearchDirector"
         },
         {
+            "name": "Revolutionary"
+        },
+        {
             "name": "Roboticist"
         },
         {
             "name": "Scientist"
         },
         {
+            "name": "SecurityCadet"
+        },
+        {
             "name": "SecurityOfficer"
+        },
+        {
+            "name": "SeniorEngineer"
+        },
+        {
+            "name": "SeniorOfficer"
+        },
+        {
+            "name": "SeniorPhysician"
+        },
+        {
+            "name": "SeniorResearcher"
+        },
+        {
+            "name": "ServiceWorker"
         },
         {
             "name": "ShaftMiner"
@@ -227,6 +224,9 @@
             "name": "SyndicateOperative"
         },
         {
+            "name": "TechnicalAssistant"
+        },
+        {
             "name": "Unknown"
         },
         {
@@ -240,6 +240,12 @@
         },
         {
             "name": "Wizard"
+        },
+        {
+            "name": "Zookeeper"
+        },
+        {
+            "name": "Zombie"
         }
     ]
 }

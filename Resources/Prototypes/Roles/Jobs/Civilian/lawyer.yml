@@ -27,7 +27,6 @@
     back:
     - RubberStampLawyer
     - BookSpaceLaw
-    - EncryptionKeyLaw
 
 - type: chameleonOutfit
   id: LawyerChameleonOutfit

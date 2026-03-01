@@ -9,7 +9,7 @@
       layers:
         - map: ["enum.DamageStateVisualLayers.Base"]
           state: crawling
-          sprite: Corvax/Mobs/Pets/largo.rsi
+          sprite: _Corvax/Mobs/Pets/largo.rsi
     - type: Physics
     - type: Fixtures
       fixtures:
@@ -34,8 +34,6 @@
           amount: 4
         - id: ClothingHeadHatCargosoft
           amount: 1
-    - type: Bloodstream
-      bloodMaxVolume: 300
     - type: Puller
       needsHands: false
     - type: InteractionPopup

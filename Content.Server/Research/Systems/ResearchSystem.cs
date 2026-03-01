@@ -30,7 +30,6 @@ namespace Content.Server.Research.Systems
             InitializeConsole();
             InitializeSource();
             InitializeServer();
-            InitializeBkm(); // backmen change
 
             SubscribeLocalEvent<TechnologyDatabaseComponent, ResearchRegistrationChangedEvent>(OnDatabaseRegistrationChanged);
         }
@@ -98,7 +97,7 @@ namespace Content.Server.Research.Systems
                     continue;
                 server.NextUpdateTime = _timing.CurTime + server.ResearchConsoleUpdateTime;
 
-                UpdateServer(uid, (int)server.ResearchConsoleUpdateTime.TotalSeconds, server);
+                UpdateServer(uid, (int) server.ResearchConsoleUpdateTime.TotalSeconds, server);
             }
         }
     }

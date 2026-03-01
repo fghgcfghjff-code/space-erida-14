@@ -4,7 +4,7 @@
   id: BaseMagazineBoxAntiMateriel
   name: ammunition box (.60 anti-materiel)
   components:
-  # handling sounds edit start
+    # handling sounds edit start
   - type: EmitSoundOnPickup
     sound:
       path: /Audio/_Erida/Items/handling/ammobox_pickup.ogg
@@ -40,6 +40,7 @@
   parent: BaseMagazineBoxAntiMateriel
   id: MagazineBoxAntiMateriel
   name: ammunition box (.60 anti-materiel)
+  description: A cardboard box of .60 anti-materiel rounds.
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeAntiMateriel

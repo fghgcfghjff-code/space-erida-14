@@ -66,6 +66,10 @@
         {
             "name": "up",
             "directions": 4
+        },
+        {
+            "name": "tail",
+            "directions": 4
         }
     ]
 }

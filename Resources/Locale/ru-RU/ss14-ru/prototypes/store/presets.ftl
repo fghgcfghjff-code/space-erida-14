@@ -1,6 +1,6 @@
 ent-StorePresetUplinkInteQ = { "" }
     .desc = { "" }
-ent-StorePresetUplinkSyndicate = { "" }
+ent-StorePresetUplink = { "" }
     .desc = { "" }
 ent-StorePresetSpellbook = { "" }
     .desc = { "" }

@@ -16,9 +16,6 @@
   # traits
   - BlackAndWhiteOverlay
   - Clumsy
-  - LanguageKnowledge # Erida
-  - Masochist # Erida
-  - Hemophilia
   - ImpairedMobility
   # - LegsParalyzed (you get healed)
   - LightweightDrunk
@@ -57,7 +54,10 @@
   - SouthernAccent
   - SpanishAccent
   - StutteringAccent
-  - TTS # Corvax-TTS
+  # Begin DeltaV Additions
+  - Addicted
+  - ChronicPain
+  # End DeltaV Addition
 
 # for job-specific traits etc.
 - type: cloningSettings
@@ -85,7 +85,7 @@
   blacklist:
     components:
     - AttachedClothing # helmets, which are part of the suit
-    - HumanoidAppearance # will cause problems for downstream felinids getting cloned as Urists
+    - HumanoidProfile # will cause problems for downstream felinids getting cloned as Urists
     - Implanter # they will spawn full again, but you already get the implant. And we can't do item slot copying yet
     - VirtualItem
 

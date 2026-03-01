@@ -48,8 +48,6 @@
   - type: SpawnItemsOnUse
     items:
       - id: PresentTrash
-      - id: AnnaOrlovaPlushie #Erida-sponsor
-        orGroup: GiftPool #Erida-sponsor
       - id: Bucket
         orGroup: GiftPool
       - id: JetpackMiniFilled
@@ -362,7 +360,7 @@
         orGroup: GiftPool
       - id: Bola
         orGroup: GiftPool
-      - id: GlowstickBase
+      - id: GlowstickGreen
         orGroup: GiftPool
       - id: GlowstickBlue
         orGroup: GiftPool

@@ -1,3 +1,0 @@
-ent-EnergyDomeWiredTest = static Dome
-    .desc = Test energy barrier powered by station wiring. I don't know how the hell to balance it.....
-    .suffix = DEBUG

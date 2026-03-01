@@ -146,7 +146,7 @@
 
 - type: entity
   parent: BaseAction
-  id: ActionOpenUplinkImplantSyndicate
+  id: ActionOpenUplinkImplant
   name: Open Uplink
   description: Opens the syndicate uplink embedded under your skin
   components:
@@ -156,21 +156,6 @@
     icon:
       sprite: Objects/Devices/communication.rsi
       state: old-radio
-  - type: InstantAction
-    event: !type:OpenUplinkImplantEvent
-
-- type: entity
-  parent: BaseAction
-  id: ActionOpenUplinkImplantInteQ
-  name: Open Uplink
-  description: Opens the InteQ uplink embedded under your skin
-  components:
-  - type: Action
-    itemIconStyle: BigAction
-    priority: -20
-    icon:
-      sprite: _Orion/Objects/Devices/inteq_uplink.rsi
-      state: inteq-uplink
   - type: InstantAction
     event: !type:OpenUplinkImplantEvent
 
@@ -503,3 +488,11 @@
     icon: Interface/Actions/shop.png
   - type: InstantAction
     event: !type:IntrinsicStoreActionEvent
+
+- type: entity
+  parent: ActionChangeVoiceMask
+  id: ActionChangeVoiceMaskImplant
+  components:
+  - type: Action
+    icon: { sprite: Interface/Actions/voice-mask.rsi, state: icon }
+    itemIconStyle: BigAction

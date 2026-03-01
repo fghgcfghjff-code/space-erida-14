@@ -6,12 +6,10 @@
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 1h
-        # Erida-start
-    # - !type:DepartmentTimeRequirement
-    #   department: Engineering
-    #   time: 18000 #5 hrs
-    #   inverted: true # stop playing intern if you're good at engineering!
-        # Erida-end
+    - !type:DepartmentTimeRequirement
+      department: Engineering
+      time: 10h
+      inverted: true # stop playing intern if you're good at engineering!
   startingGear: TechnicalAssistantGear
   icon: "JobIconTechnicalAssistant"
   supervisors: job-supervisors-engineering

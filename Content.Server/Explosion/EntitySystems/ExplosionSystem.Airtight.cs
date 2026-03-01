@@ -5,7 +5,6 @@ using Content.Server.Explosion.Components;
 using Content.Shared.Atmos;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Explosion;
-using Content.Shared.Explosion.EntitySystems;
 using Content.Shared.FixedPoint;
 using Robust.Shared.Collections;
 using Robust.Shared.Map.Components;
@@ -15,7 +14,7 @@ using static Content.Server.Explosion.Components.ExplosionAirtightGridComponent;
 
 namespace Content.Server.Explosion.EntitySystems;
 
-public sealed partial class ExplosionSystem : SharedExplosionSystem // Erida-Edit
+public sealed partial class ExplosionSystem
 {
     // We keep track of which tiles are airtight, and how much damage from explosions those airtight blockers can take.
     // This is quite complicated, as the data effectively needs to be tracked *per tile*, *per explosion type*.

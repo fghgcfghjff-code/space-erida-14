@@ -6,9 +6,9 @@
   description: The cap of the security service pilot... Contains signs of communism...
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Head/Hats/secpilotcap.rsi
+      sprite: _Backmen/Clothing/Head/Hats/secpilotcap.rsi
     - type: Clothing
-      sprite: Backmen/Clothing/Head/Hats/secpilotcap.rsi
+      sprite: _Backmen/Clothing/Head/Hats/secpilotcap.rsi
 
 - type: entity
   parent: ClothingHeadBase
@@ -17,9 +17,9 @@
   description: The surgeon's black headdress also has a small mirror.
   components:
   - type: Sprite
-    sprite: Backmen/Clothing/Head/Hats/surgeon_hat.rsi
+    sprite: _Backmen/Clothing/Head/Hats/surgeon_hat.rsi
   - type: Clothing
-    sprite: Backmen/Clothing/Head/Hats/surgeon_hat.rsi
+    sprite: _Backmen/Clothing/Head/Hats/surgeon_hat.rsi
 
 #centcom
 - type: entity
@@ -29,9 +29,9 @@
   description: Стильный чёрный берет с зелёным значком показывает кто тут следит запорядком.
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Head/Hats/cchos_beret.rsi
+      sprite: _Backmen/Clothing/Head/Hats/cchos_beret.rsi
     - type: Clothing
-      sprite: Backmen/Clothing/Head/Hats/cchos_beret.rsi
+      sprite: _Backmen/Clothing/Head/Hats/cchos_beret.rsi
 
 - type: entity
   parent: ClothingHeadBase
@@ -40,9 +40,9 @@
   description: The officers' “Blueshield” black beret, instills a sense of tighter security.
   components:
   - type: Sprite
-    sprite: Backmen/Clothing/Head/Hats/blueberet.rsi
+    sprite: _Backmen/Clothing/Head/Hats/blueberet.rsi
   - type: Clothing
-    sprite: Backmen/Clothing/Head/Hats/blueberet.rsi
+    sprite: _Backmen/Clothing/Head/Hats/blueberet.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -57,9 +57,9 @@
   description: The officers' “Blueshield” light beret, nice and beautiful.
   components:
   - type: Sprite
-    sprite: Backmen/Clothing/Head/Hats/lightblueberet.rsi
+    sprite: _Backmen/Clothing/Head/Hats/lightblueberet.rsi
   - type: Clothing
-    sprite: Backmen/Clothing/Head/Hats/lightblueberet.rsi
+    sprite: _Backmen/Clothing/Head/Hats/lightblueberet.rsi
 
 - type: entity
   parent: ClothingHeadBase
@@ -68,9 +68,9 @@
   description: The quintessential head armor of the kendo practitioner.
   components:
   - type: Sprite
-    sprite: Backmen/Clothing/Head/Helmets/men.rsi
+    sprite: _Backmen/Clothing/Head/Helmets/men.rsi
   - type: Clothing
-    sprite: Backmen/Clothing/Head/Helmets/men.rsi
+    sprite: _Backmen/Clothing/Head/Helmets/men.rsi
   - type: Armor
     modifiers:
       coefficients:

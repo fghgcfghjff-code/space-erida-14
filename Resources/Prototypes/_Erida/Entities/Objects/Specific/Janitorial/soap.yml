@@ -40,6 +40,11 @@
     sprite: _Erida/Objects/Janitorial/soap.rsi
     layers:
     - state: inteq-4
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    fillBaseName: inteq-
+  - type: Item
+    heldPrefix: inteq
   - type: ScatteringGrenade
     fillPrototype: SoapletSyndie
     capacity: 30

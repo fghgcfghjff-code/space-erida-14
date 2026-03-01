@@ -889,13 +889,6 @@ entities:
     - type: Transform
       pos: 3.5,-3.5
       parent: 1
-- proto: BedsheetInteq
-  entities:
-  - uid: 27
-    components:
-    - type: Transform
-      pos: 3.5,-3.5
-      parent: 1
 - proto: BorgCharger
   entities:
   - uid: 28

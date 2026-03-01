@@ -1,4 +1,4 @@
-/* // Orion-Remove | Replaced
+/* // Erida-Remove | Replaced
 using Content.Shared.Examine;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Verbs;

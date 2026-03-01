@@ -351,7 +351,7 @@ public abstract class SharedStrippableSystem : EntitySystem
 
         RaiseLocalEvent(item, new DroppedEvent(user), true); // Gas tank internals etc.
 
-        _handsSystem.PickupOrDrop(user, item, animateUser: stealth, animate: !stealth, dropNear: true);
+        _handsSystem.PickupOrDrop(user, item, animateUser: stealth, animate: !stealth);
         _adminLogger.Add(LogType.Stripping, LogImpact.High, $"{ToPrettyString(user):actor} has stripped the item {ToPrettyString(item):item} from {ToPrettyString(target):target}'s {slot} slot");
     }
 
@@ -565,7 +565,7 @@ public abstract class SharedStrippableSystem : EntitySystem
             return;
 
         _handsSystem.TryDrop(target, item, checkActionBlocker: false);
-        _handsSystem.PickupOrDrop(user, item, animateUser: stealth, animate: !stealth, handsComp: user.Comp, dropNear: true);
+        _handsSystem.PickupOrDrop(user, item, animateUser: stealth, animate: !stealth, handsComp: user.Comp);
         _adminLogger.Add(LogType.Stripping, LogImpact.High, $"{ToPrettyString(user):actor} has stripped the item {ToPrettyString(item):item} from {ToPrettyString(target):target}'s hands");
 
         // Hand update will trigger strippable update.
@@ -701,15 +701,37 @@ public abstract class SharedStrippableSystem : EntitySystem
         return !HasComp<BypassInteractionChecksComponent>(viewer);
     }
 
-    // Erida edit start
-    public bool[] IsInventoryIgnored(EntityUid? viewer) // [shouldShowBlocked, shouldShowHided]
+    // Erida start
+    public bool IsStripBlocked(SlotDefinition definition, EntityUid? viewer)
     {
-        var ignoreInventoryBlockComponent = CompOrNull<IgnoreInventoryBlockComponent>(viewer);
-        if (ignoreInventoryBlockComponent == null) { return [false, false]; }
-        else
-        {
-            return [ignoreInventoryBlockComponent.IgnoreBlock, ignoreInventoryBlockComponent.ShowAllItems];
-        }
+        if (!definition.StripBlocked)
+            return false;
+
+        if (viewer == null)
+            return true;
+
+        return !HasComp<BypassInteractionChecksComponent>(viewer);
     }
-    // Erida edit end
+
+    public bool IsStripForcedHidden(SlotDefinition definition, EntityUid? viewer)
+    {
+        if (!definition.StripHiddenForce)
+            return false;
+
+        if (viewer == null)
+            return true;
+
+        return !HasComp<BypassInteractionChecksComponent>(viewer);
+    }
+
+    // Erida edit start
+    public bool IsInventoryBlockIgnored(EntityUid? viewer)
+    {
+        if (TryComp<IgnoreInventoryBlockComponent>(viewer, out var comp))
+            return true;
+        else
+            return false;
+
+    }
+    // Erida end
 }

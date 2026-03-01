@@ -1,2 +1,2 @@
-ent-MobShadowkin = Урист Шадовкин
+ent-MobShadowkin = Урист Шэдоукин
     .desc = { ent-MobFelinidBase.desc }

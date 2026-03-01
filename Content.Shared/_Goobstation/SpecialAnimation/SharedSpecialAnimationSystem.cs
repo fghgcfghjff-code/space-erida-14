@@ -1,0 +1,28 @@
+using Robust.Shared.Player;
+using Robust.Shared.Prototypes;
+
+namespace Content.Shared._Goobstation.SpecialAnimation;
+
+/// <summary>
+/// Works only on server-side, has methods to access special animations API.
+/// </summary>
+public abstract class SharedSpecialAnimationSystem : EntitySystem
+{
+    public abstract void PlayAnimationForEntity(
+        EntityUid sprite,
+        EntityUid player,
+        SpecialAnimationData? animationData = null,
+        string? overrideText = null);
+
+    public abstract void PlayAnimationFiltered(
+        EntityUid sprite,
+        Filter filter,
+        SpecialAnimationData? animationData = null,
+        string? overrideText = null);
+
+    public abstract void PlayAnimationFiltered(
+        EntityUid sprite,
+        Filter filter,
+        ProtoId<SpecialAnimationPrototype>? animationData = null,
+        string? overrideText = null);
+}

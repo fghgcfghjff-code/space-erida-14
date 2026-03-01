@@ -72,6 +72,12 @@ public sealed partial class StealthComponent : Component
     /// </summary>
     [DataField("examinedDesc")]
     public string ExaminedDesc = "stealth-visual-effect";
+
+    /// <summary>
+    /// Is detectable by thermals?
+    /// </summary>
+    [DataField]
+    public bool ThermalsImmune = false; // Goobstation - Stealth change
 }
 
 [Serializable, NetSerializable]

@@ -3,13 +3,11 @@
   name: job-name-intern
   description: job-description-intern
   playTimeTracker: JobMedicalIntern
-      # Erida-start
-  # requirements:
-  #   - !type:DepartmentTimeRequirement
-  #     department: Medical
-  #     time: 5h
-  #     inverted: true # stop playing intern if you're good at med!
-      # Erida-end
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 10h
+      inverted: true # stop playing intern if you're good at med!
   startingGear: MedicalInternGear
   icon: "JobIconMedicalIntern"
   supervisors: job-supervisors-medicine
@@ -24,11 +22,7 @@
     shoes: ClothingShoesColorWhite
     id: MedicalInternPDA
     ears: ClothingHeadsetMedical
-    belt: ClothingBeltMedicalFilled
     pocket2: BookMedicalReferenceBook
-  #storage:
-    #back:
-    #- Stuff
 
 - type: chameleonOutfit
   id: MedicalInternChameleonOutfit

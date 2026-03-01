@@ -8,11 +8,10 @@
     - Wallmount
   components:
     - type: Sprite
-      sprite: Backmen/Structures/Furniture/shower.rsi
+      sprite: _Backmen/Structures/Furniture/shower.rsi
       drawdepth: WallMountedItems
       layers:
       - state: shower
-        map: ["enabled", "enum.ShowerVisualState.Off" ]
     - type: Appearance
     - type: Rotatable
     - type: Transform

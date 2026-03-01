@@ -1,7 +1,6 @@
 ﻿- type: marking
   id: ADTAllsuccubus
   bodyPart: Chest
-  markingCategory: Chest
 #  speciesRestriction: [Human, Dwarf, SlimePerson, Anthropomorph, Demon]
   sprites:
     - sprite: _Erida/Customization/Markings/horns/tale.rsi

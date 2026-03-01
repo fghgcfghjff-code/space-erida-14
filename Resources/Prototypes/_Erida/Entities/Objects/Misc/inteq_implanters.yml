@@ -31,27 +31,6 @@
       tags: []
 
 - type: entity
-  parent: [ BaseSubdermalImplant, StorePresetUplinkInteQ ]
-  id: UplinkImplantInteQ
-  name: uplink implant
-  description: This implant lets the user access a hidden InteQ uplink at will.
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: SubdermalImplant
-    implantAction: ActionOpenUplinkImplantInteQ
-    whitelist:
-      components:
-      - Hands # prevent mouse buying grenade penguin since its not telepathic
-  - type: Store
-    balance:
-      TelecrystalOrange: 0
-  - type: UserInterface
-    interfaces:
-      enum.StoreUiKey.Key:
-        type: StoreBoundUserInterface
-
-
-- type: entity
   id: StorageImplanterInteQ
   name: storage implanter
   parent: BaseImplantOnlyImplanterInteQ
@@ -74,14 +53,6 @@
   components:
   - type: Implanter
     implant: RadioImplantInteQ
-
-- type: entity
-  id: UplinkImplanterInteQ
-  name: uplink implanter
-  parent: BaseImplantOnlyImplanterInteQ
-  components:
-  - type: Implanter
-    implant: UplinkImplantInteQ
 
 - type: entity
   id: EmpImplanterInteQ

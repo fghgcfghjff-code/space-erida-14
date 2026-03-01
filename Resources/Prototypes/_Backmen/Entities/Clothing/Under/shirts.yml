@@ -36,10 +36,10 @@
   description: "A babydoll shirt, perfect for feeling flirty and fabulous."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: babydoll-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: babydoll
@@ -51,10 +51,10 @@
   description: "A cool band shirt, ready for concerts or just jamming out at home."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: band-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: band
@@ -66,10 +66,10 @@
   description: "A bee-themed shirt, buzzing with style."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: bee_shirt-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: bee_shirt
@@ -81,10 +81,10 @@
   description: "A sporty blue shirt, ideal for working out or lounging."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: blueshirtsport-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: blueshirtsport
@@ -96,10 +96,10 @@
   description: "A red bowling shirt, ready to knock down those pins in style."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: bowling-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: bowling
@@ -111,10 +111,10 @@
   description: "A navy bowling shirt, making a statement on the lanes."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: bowlinga-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: bowlinga
@@ -126,10 +126,10 @@
   description: "A pink bowling shirt, showing off your playful side."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: bowlingp-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: bowlingp
@@ -141,10 +141,10 @@
   description: "A white bowling shirt, keeping it simple and stylish."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: bowlingw-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: bowlingw
@@ -156,10 +156,10 @@
   description: "A basic bra, providing comfort and support for everyday wear."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: bra_alt-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: bra_alt
@@ -173,10 +173,10 @@
   description: "An American flag bra, perfect for patriotic occasions."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: bra_assblastusa-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: bra_assblastusa
@@ -190,10 +190,10 @@
   description: "A bra with a little sting-er."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: bra_bee-kini-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: bra_bee-kini
@@ -207,10 +207,10 @@
   description: "A bra for keeping your chest in check."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: bra_binder_strapless-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: bra_binder_strapless
@@ -224,10 +224,10 @@
   description: "A strapless bra, for those who like to keep it simple."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: bra_binder-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: bra_binder
@@ -241,10 +241,10 @@
   description: "A bra for the socialist in all of us."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: bra_commie-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: bra_commie
@@ -257,10 +257,10 @@
 #   name: kinky bra
 #   components:
 #     - type: Sprite
-#       sprite: Backmen/Clothing/Under/undershirts.rsi
+#       sprite: _Backmen/Clothing/Under/undershirts.rsi
 #       state: bra_kinky-ICON
 #     - type: Clothing
-#       sprite: Backmen/Clothing/Under/undershirts.rsi
+#       sprite: _Backmen/Clothing/Under/undershirts.rsi
 #       clothingVisuals:
 #         undershirt:
 #           - state: bra_kinky
@@ -272,10 +272,10 @@
   description: "A cat-themed bra, for the cat-lovers out there."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: bra_neko-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: bra_neko
@@ -289,10 +289,10 @@
   description: "A strapless bra, for the daring and bold."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: bra_strapless_alt-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: bra_strapless_alt
@@ -306,10 +306,10 @@
   description: "A strapless bra, for the daring and bold."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: bra_strapless-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: bra_strapless
@@ -323,10 +323,10 @@
   description: "A comfortable bra, perfect for pool-parties."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: bra_swimming_alt-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: bra_swimming_alt
@@ -340,10 +340,10 @@
   description: "A serious swimwear bra, for those who take their swimwear seriously."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: bra_swimming-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: bra_swimming
@@ -356,10 +356,10 @@
 #   name: thin bra
 #   components:
 #     - type: Sprite
-#       sprite: Backmen/Clothing/Under/undershirts.rsi
+#       sprite: _Backmen/Clothing/Under/undershirts.rsi
 #       state: bra_thin-ICON
 #     - type: Clothing
-#       sprite: Backmen/Clothing/Under/undershirts.rsi
+#       sprite: _Backmen/Clothing/Under/undershirts.rsi
 #       clothingVisuals:
 #         undershirt:
 #           - state: bra_thin
@@ -371,10 +371,10 @@
   description: "A patriotic and royalist-themed bra."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: bra_uk-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: bra_uk
@@ -388,10 +388,10 @@
   description: "A bra providing a little lift."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: bra-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: bra
@@ -405,10 +405,10 @@
   description: "A navy cowboy shirt, perfect for looking like a true cowboy."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: cowboyshirt_navy-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: cowboyshirt_navy
@@ -420,10 +420,10 @@
   description: "A casual navy cowboy t-shirt, ready for a rodeo."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: cowboyshirt_navys-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: cowboyshirt_navys
@@ -435,10 +435,10 @@
   description: "A bold red cowboy shirt, standing out from the crowd."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: cowboyshirt_red-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: cowboyshirt_red
@@ -450,10 +450,10 @@
   description: "A red cowboy t-shirt, ready to ride off into the sunset in style."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: cowboyshirt_reds-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: cowboyshirt_reds
@@ -465,10 +465,10 @@
   description: "A spicy cowboy t-shirt, ready to yeehaw!"
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: cowboyshirt_s-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: cowboyshirt_s
@@ -480,10 +480,10 @@
   description: "A white cowboy shirt, ideal for looking sharp and professional."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: cowboyshirt_white-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: cowboyshirt_white
@@ -495,10 +495,10 @@
   description: "A white cowboy t-shirt, perfect for a day on the ranch or a night on the town."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: cowboyshirt_whites-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: cowboyshirt_whites
@@ -510,10 +510,10 @@
   description: "A classic cowboy shirt, ideal for rounding up cattle or friends."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: cowboyshirt-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: cowboyshirt
@@ -524,10 +524,10 @@
 #   name: fishnet body
 #   components:
 #     - type: Sprite
-#       sprite: Backmen/Clothing/Under/undershirts.rsi
+#       sprite: _Backmen/Clothing/Under/undershirts.rsi
 #       state: fishnet_body-ICON
 #     - type: Clothing
-#       sprite: Backmen/Clothing/Under/undershirts.rsi
+#       sprite: _Backmen/Clothing/Under/undershirts.rsi
 #       clothingVisuals:
 #         undershirt:
 #           - state: fishnet_body
@@ -538,10 +538,10 @@
 #   name: fishnet gloves
 #   components:
 #     - type: Sprite
-#       sprite: Backmen/Clothing/Under/undershirts.rsi
+#       sprite: _Backmen/Clothing/Under/undershirts.rsi
 #       state: fishnet_gloves-ICON
 #     - type: Clothing
-#       sprite: Backmen/Clothing/Under/undershirts.rsi
+#       sprite: _Backmen/Clothing/Under/undershirts.rsi
 #       clothingVisuals:
 #         undershirt:
 #           - state: fishnet_gloves
@@ -552,10 +552,10 @@
 #   name: fishnet sleeves
 #   components:
 #     - type: Sprite
-#       sprite: Backmen/Clothing/Under/undershirts.rsi
+#       sprite: _Backmen/Clothing/Under/undershirts.rsi
 #       state: fishnet_sleeves-ICON
 #     - type: Clothing
-#       sprite: Backmen/Clothing/Under/undershirts.rsi
+#       sprite: _Backmen/Clothing/Under/undershirts.rsi
 #       clothingVisuals:
 #         undershirt:
 #           - state: fishnet_sleeves
@@ -567,10 +567,10 @@
   description: "A sporty green shirt, ready for the gym or trails."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: greenshirtsport-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: greenshirtsport
@@ -582,10 +582,10 @@
   description: "A daring halterneck bra, perfect for parties."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: halterneck_bra-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: halterneck_bra
@@ -599,10 +599,10 @@
   description: "An Ian shirt, ready to look dapper for any occasion."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: ian-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: ian
@@ -614,10 +614,10 @@
   description: "A Nanotrasen-themed shirt, showing off your love for the company."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: ilovent-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: ilovent
@@ -629,10 +629,10 @@
   description: "A Long John shirt, perfect for staying cozy in the cold."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: ljont-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: ljont
@@ -646,10 +646,10 @@
   description: "A runway-inspired shirt, making you feel like you're always walking the runway."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: longstripe_blue-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: longstripe_blue
@@ -661,10 +661,10 @@
   description: "A bold stripe undershirt, perfect for making a fashion statement."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: longstripe-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: longstripe
@@ -676,10 +676,10 @@
   description: "A sweet and sentimental undershirt, perfect for wearing your heart on your chest."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: lover-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: lover
@@ -691,10 +691,10 @@
   description: "A quirky and unique undershirt in the shape of a Russian doll."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: matroska-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: matroska
@@ -706,10 +706,10 @@
   description: "An eye-catching undershirt with a peaceful message."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: peace-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: peace
@@ -721,10 +721,10 @@
   description: "A wild and funky undershirt, ready for any party."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: pogoman-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: pogoman
@@ -736,10 +736,10 @@
   description: "A stylish polo shirt, perfect for golfing or a Little League game."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: polo-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: polo
@@ -751,10 +751,10 @@
   description: "A sporty red shirt, ready for the gym or couch time."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: redshirtsport-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: redshirtsport
@@ -765,10 +765,10 @@
 #   name: shibari sleeves
 #   components:
 #     - type: Sprite
-#       sprite: Backmen/Clothing/Under/undershirts.rsi
+#       sprite: _Backmen/Clothing/Under/undershirts.rsi
 #       state: shibari_sleeves-ICON
 #     - type: Clothing
-#       sprite: Backmen/Clothing/Under/undershirts.rsi
+#       sprite: _Backmen/Clothing/Under/undershirts.rsi
 #       clothingVisuals:
 #         undershirt:
 #           - state: shibari_sleeves
@@ -779,10 +779,10 @@
 #   name: shibari
 #   components:
 #     - type: Sprite
-#       sprite: Backmen/Clothing/Under/undershirts.rsi
+#       sprite: _Backmen/Clothing/Under/undershirts.rsi
 #       state: shibari-ICON
 #     - type: Clothing
-#       sprite: Backmen/Clothing/Under/undershirts.rsi
+#       sprite: _Backmen/Clothing/Under/undershirts.rsi
 #       clothingVisuals:
 #         undershirt:
 #           - state: shibari
@@ -794,10 +794,10 @@
   description: "An out-of-this-world shirt for your love of extraterrestrial beings."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: shirt_alien-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: shirt_alien
@@ -809,10 +809,10 @@
   description: "A patriotic shirt, showing off your love for your country."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: shirt_assblastusa-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: shirt_assblastusa
@@ -824,10 +824,10 @@
   description: "A blue jersey, making you feel like a sports star."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: shirt_bluejersey-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: shirt_bluejersey
@@ -839,10 +839,10 @@
   description: "A clown shirt, ready to make everyone laugh."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: shirt_clown-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: shirt_clown
@@ -854,10 +854,10 @@
   description: "A commie shirt, making a political statement."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: shirt_commie-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: shirt_commie
@@ -869,10 +869,10 @@
   description: "A shirt perfect for the meat and potatoes kind of person."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: shirt_meat-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: shirt_meat
@@ -884,10 +884,10 @@
   description: "A sleek and cool shirt, perfect for hacking or looking cool."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: shirt_nano-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: shirt_nano
@@ -899,10 +899,10 @@
   description: "A shirt with more questions than answers."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: shirt_question-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: shirt_question
@@ -914,10 +914,10 @@
   description: "A stylish red jersey, perfect for scoring style points."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: shirt_redjersey-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: shirt_redjersey
@@ -929,10 +929,10 @@
   description: "A shirt making a bold statement about mortality."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: shirt_skull-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: shirt_skull
@@ -944,10 +944,10 @@
   description: "A shirt representing your favorite space-themed game."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: shirt_ss13-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: shirt_ss13
@@ -959,10 +959,10 @@
   description: "A striped shirt, perfect for getting in touch with your inner sailor."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: shirt_stripes-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: shirt_stripes
@@ -974,10 +974,10 @@
   description: "A colorful and bold tie-dye shirt, making a statement."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: shirt_tiedye-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: shirt_tiedye
@@ -989,10 +989,10 @@
   description: "A classic and casual shirt for everyday wear."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: shortsleeve-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: shortsleeve
@@ -1004,10 +1004,10 @@
   description: "A shirt suitable for high-intensity activities."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: sports_bra_alt-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: sports_bra_alt
@@ -1021,10 +1021,10 @@
   description: "An undershirt for staying cool and dry during a workout."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: sports_bra-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: sports_bra
@@ -1038,10 +1038,10 @@
   description: "A sleek and stylish undergarment."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: striped_bra-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: striped_bra
@@ -1055,10 +1055,10 @@
   description: "A swimsuit for a sleek and stylish swim."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: swimming_black-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: swimming_black
@@ -1072,10 +1072,10 @@
   description: "A swimsuit for a refreshing swim with a pop of color."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: swimming_blue-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: swimming_blue
@@ -1089,10 +1089,10 @@
   description: "A swimsuit for a bold and daring swim."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: swimming_red-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: swimming_red
@@ -1106,10 +1106,10 @@
   description: "A swimsuit for bringing the heat."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: tank_fire-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: tank_fire
@@ -1123,10 +1123,10 @@
   description: "A swimsuit for showing off your summer tan."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: tank_midriff_alt-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: tank_midriff_alt
@@ -1140,10 +1140,10 @@
   description: "A swimsuit for a flirty and fun summer look."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: tank_midriff-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: tank_midriff
@@ -1157,10 +1157,10 @@
   description: "A tank top for spreading positivity and good vibes."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: tank_rainbow-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: tank_rainbow
@@ -1174,10 +1174,10 @@
   description: "A fashionable tank top with heads and stripes alike."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: tank_stripes-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: tank_stripes
@@ -1191,10 +1191,10 @@
   description: "A sunny tank top, shining bright like a sun."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: tank_sun-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: tank_sun
@@ -1208,10 +1208,10 @@
   description: "A classic and stylish tank top."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: tanktop_alt-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: tanktop_alt
@@ -1225,10 +1225,10 @@
   description: "A comfortable and classic tank top."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: tanktop-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: tanktop
@@ -1242,10 +1242,10 @@
   description: "A trendy and flirty tubetop, ready to make waves."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: tubetop-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: tubetop
@@ -1259,10 +1259,10 @@
   description: "A patriotic undershirt, ready to wave the flag of style."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: uk-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: uk
@@ -1274,10 +1274,10 @@
   description: "A basic undershirt for staying cozy and covered."
   components:
     - type: Sprite
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       state: undershirt-ICON
     - type: Clothing
-      sprite: Backmen/Clothing/Under/undershirts.rsi
+      sprite: _Backmen/Clothing/Under/undershirts.rsi
       clothingVisuals:
         undershirt:
           - state: undershirt

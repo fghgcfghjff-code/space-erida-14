@@ -89,12 +89,7 @@
     color: orange
   - type: ItemTogglePointLight
   - type: PhysicalComposition
-  # Erida-start
-  - type: Tag
-    tags: 
-    - Lighter
-  # Erida-end
-  
+
 - type: entity
   name: cheap lighter
   parent: Lighter
@@ -123,7 +118,7 @@
         - ReagentId: WeldingFuel
           Quantity: 4
         maxVol: 4 #uses less fuel than a welder, so this isnt as bad as it looks
-  
+
 - type: entity
   name: flippo lighter
   parent: BaseItem
@@ -216,11 +211,6 @@
   - type: UseDelay
   - type: IgnitionSource
     ignited: false
-  # Erida-start
-  - type: Tag
-    tags: 
-    - Lighter
-  # Erida-end
 
 - type: entity
   name: flippo engraved lighter
@@ -320,11 +310,6 @@
   - type: UseDelay
   - type: IgnitionSource
     ignited: false
-  # Erida-start
-  - type: Tag
-    tags: 
-    - Lighter
-  # Erida-end
 
 - type: entity
   parent: [BaseBrandedLighter, BaseSyndicateContraband]
@@ -571,7 +556,7 @@
     sprite: Objects/Tools/Lighters/honkco.rsi
   - type: Item
     sprite: Objects/Tools/Lighters/honkco.rsi
-  - type: ComponentToggler
+  - type: ComponentToggler # This is super cursed and ends up deleting the fixtures when toggled off
     components:
     - type: Slippery
     - type: StepTrigger

@@ -112758,17 +112758,6 @@ entities:
     - type: Transform
       pos: 22.5,-0.5
       parent: 2
-- proto: HeadReptilian
-  entities:
-  - uid: 16968
-    components:
-    - type: MetaData
-      desc: Ящер что был сражен в бою за святую гиперборею.
-      name: Голова ящера
-    - type: Transform
-      rot: -6.283185307179586 rad
-      pos: -37.59959,-35.389484
-      parent: 2
 - proto: HeatExchanger
   entities:
   - uid: 16969

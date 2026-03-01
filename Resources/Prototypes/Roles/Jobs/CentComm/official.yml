@@ -1,10 +1,10 @@
 - type: job
   id: CentralCommandOfficial
-  name: job-name-centcomoff
-  description: job-description-centcomoff
+  name: job-name-centcommoff
+  description: job-description-centcommoff
   playTimeTracker: JobCentralCommandOfficial
   setPreference: false
-  startingGear: CentcomGear
+  startingGear: CentcommGear
   icon: "JobIconNanotrasen"
   supervisors: job-supervisors-hos
   canBeAntag: false
@@ -17,24 +17,20 @@
     implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
 
 - type: startingGear
-  id: CentcomGear
+  id: CentcommGear
   equipment:
-  # CentComm ivent roles start
-    jumpsuit: ClothingUniformJumpsuitCentcomDeputy
-    mask: ClothingMaskGasCentcom
-    shoes: ClothingShoesBootsLaceup
-    head: ClothingHeadHatCentcomcap
-    eyes: ClothingEyesGlassesCentcom
-    gloves: ClothingHandsGlovesCombat
-    outerClothing: ClothingOuterArmorCentcomDeputyCarapace
-  # CentComm ivent roles end
+    jumpsuit: ClothingUniformJumpsuitCentcomOfficial
+    shoes: ClothingShoesBootsCombatFilled
+    head: ClothingHeadHatCentcom
+    eyes: ClothingEyesGlassesCommand
+    gloves: ClothingHandsGlovesColorBlack
+    outerClothing: ClothingOuterArmorCentcommCarapace
     id: CentcomPDA
     ears: ClothingHeadsetAltCentCom
-  # CentComm ivent roles start
-    belt: ClothingBeltSheathFilled
-    pocket1: ClothingNeckCentcomCloak
-    pocket2: BoxFolderCentComClipboard
-  # CentComm ivent roles end
+    belt: WeaponPistolN1984
+    pocket1: BoxFolderCentComClipboardThreePapers
+    pocket2: PenCentcom
+
 
 - type: chameleonOutfit
   id: CentralCommandOfficialOutfit

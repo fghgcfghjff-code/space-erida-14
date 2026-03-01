@@ -30,7 +30,6 @@ public sealed partial class JukeboxMenu : FancyWindow
     public event Action? OnStopPressed;
     public event Action<ProtoId<JukeboxPrototype>>? OnSongSelected;
     public event Action<float>? SetTime;
-    public event Action<float>? SetVolume; // Europa
 
     private EntityUid? _audio;
 
@@ -62,9 +61,6 @@ public sealed partial class JukeboxMenu : FancyWindow
             OnStopPressed?.Invoke();
         };
         PlaybackSlider.OnReleased += PlaybackSliderKeyUp;
-        VolumeSlider.OnReleased += VolumeSliderKeyUp; /// Europa
-
-        VolumeSlider.MaxValue = 100f; /// Europa
 
         SetPlayPauseButton(_audioSystem.IsPlaying(_audio), force: true);
     }
@@ -85,14 +81,6 @@ public sealed partial class JukeboxMenu : FancyWindow
         _lockTimer = 0.5f;
     }
 
-    // Europa-Start
-    private void VolumeSliderKeyUp(Slider args)
-    {
-        SetVolume?.Invoke(VolumeSlider.Value);
-        _lockTimer = 0.5f;
-    }
-    // Europa-End
-
     /// <summary>
     /// Re-populates the list of jukebox prototypes available.
     /// </summary>
@@ -104,7 +92,6 @@ public sealed partial class JukeboxMenu : FancyWindow
         {
             MusicList.AddItem(entry.Name, metadata: entry.ID);
         }
-        MusicList.SortItemsByText(); // Europa
     }
 
     public void SetPlayPauseButton(bool playing, bool force = false)
@@ -130,13 +117,6 @@ public sealed partial class JukeboxMenu : FancyWindow
         PlaybackSlider.SetValueWithoutEvent(0);
     }
 
-    // Europa-Start
-    public void SetVolumeSlider(float volume)
-    {
-        VolumeSlider.Value = volume;
-    }
-    // Europa-End
-
     protected override void FrameUpdate(FrameEventArgs args)
     {
         base.FrameUpdate(args);
@@ -147,7 +127,6 @@ public sealed partial class JukeboxMenu : FancyWindow
         }
 
         PlaybackSlider.Disabled = _lockTimer > 0f;
-        VolumeSlider.Disabled = _lockTimer > 0f; // Europa
 
         if (_entManager.TryGetComponent(_audio, out AudioComponent? audio))
         {
@@ -158,12 +137,7 @@ public sealed partial class JukeboxMenu : FancyWindow
             DurationLabel.Text = $"00:00 / 00:00";
         }
 
-        VolumeNumberLabel.Text = $"{VolumeSlider.Value.ToString("0.##")} %"; // Europa
-
         if (PlaybackSlider.Grabbed)
-            return;
-
-        if (VolumeSlider.Grabbed) // Europa
             return;
 
         if (audio != null || _entManager.TryGetComponent(_audio, out audio))

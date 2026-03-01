@@ -1,6 +1,6 @@
 ﻿- type: entity
   id: Airlock
-  parent: [BaseStructure, BaseDeltaPressureBasic] # Erida
+  parent: BaseStructure
   name: airlock
   description: It opens, it closes, and maybe crushes you.
   components:
@@ -24,6 +24,7 @@
     - state: closed_unlit
       shader: unshaded
       map: ["enum.DoorVisualLayers.BaseUnlit"]
+      visible: false
     - state: welded
       map: ["enum.WeldableLayers.BaseWelded"]
     - state: bolted_unlit
@@ -178,6 +179,8 @@
       # This tag is used to nagivate the Airlock construction graph. It's needed because the construction graph is shared between Airlock, AirlockGlass, and HighSecDoor
   - type: PryUnpowered
   - type: BlockWeather
+  - type: WeldingSparksAnimation # Goobstation
+    startingOffset: 0, 0.5
   - type: GuideHelp
     guides:
     - Airlocks

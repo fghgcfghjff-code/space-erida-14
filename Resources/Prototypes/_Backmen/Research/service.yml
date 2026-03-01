@@ -127,12 +127,16 @@
   - FauxTileAstroGrass
   - FauxTileMowedAstroGrass
   - FauxTileJungleAstroGrass
+  - FauxTileDarkAstroGrass
+  - FauxTileLightAstroGrass
   - FauxTileAstroIce
   - FauxTileAstroSnow
   - FauxTileAstroAsteroidSand
   - FauxTileDarkAstroGrass
   - FauxTileLightAstroGrass
   - FauxTileDesertAstroSand
+  - FauxTileAstroIronsand
+  - FauxTileAstroIronsandBorderless
   technologyPrerequisites:
   - Entertainment
   position: 2,10
@@ -154,7 +158,6 @@
    - Holoprojector
    - WetFloorSign
    - ClothingHeadHatCone
-   - TowelColorWhite
   technologyPrerequisites:
   - ServiceMachines
   position: 4,6
@@ -205,90 +208,3 @@
   technologyPrerequisites:
   - Spray
   position: 5,7
-
-- type: technology
-  id: TranslationDevice
-  name: research-technology-translation-device
-  icon:
-    sprite: Backmen/Objects/Devices/translator.rsi
-    state: icon
-  discipline: Service
-  tier: 1
-  cost: 10000
-  recipeUnlocks:
-  - CanilunztTranslator
-  - BubblishTranslator
-  - NekomimeticTranslator
-  - DraconicTranslator
-  - SolCommonTranslator
-  - RootSpeakTranslator
-  - MofficTranslator
-  - ElvishTranslator
-  - DwarvenTranslator
-  - MarTranslator
-  - ValyrianStandardTranslator
-  - EvePishtuTranslator
-  - CarshnilTranslator
-  - WawaTranslator
-  position: 7,6
-
-- type: technology
-  id: TranslationImplanter
-  name: research-technology-translation-implanter
-  icon:
-    sprite: Objects/Specific/Medical/implanter.rsi
-    state: implanter0
-  discipline: Service
-  tier: 1
-  cost: 7500
-  recipeUnlocks:
-  - BasicGalaticCommonTranslatorImplanter
-  technologyPrerequisites:
-  - TranslationDevice
-  position: 8,6
-
-- type: technology
-  id: TranslationDeviceAdvanced
-  name: research-technology-translation-device-advanced
-  icon:
-    sprite: Backmen/Objects/Devices/translator.rsi
-    state: icon
-  discipline: Service
-  tier: 1
-  cost: 12000
-  recipeUnlocks:
-  - XenoTranslator
-  - AnimalTranslator
-  technologyPrerequisites:
-  - TranslationDevice
-  position: 7,7
-
-- type: technology
-  id: TranslationImplanterAdvanced
-  name: research-technology-translation-implanter-advanced
-  icon:
-    sprite: Objects/Specific/Medical/implanter.rsi
-    state: implanter0
-  discipline: Service
-  tier: 1
-  cost: 15000
-  recipeUnlocks:
-  - AdvancedGalaticCommonTranslatorImplanter
-  - BubblishTranslatorImplanter
-  - NekomimeticTranslatorImplanter
-  - DraconicTranslatorImplanter
-  - CanilunztTranslatorImplanter
-  - SolCommonTranslatorImplanter
-  - RootSpeakTranslatorImplanter
-  - MofficTranslatorImplanter
-  - ElvishStandardTranslatorImplanter
-  - DwarvenStandardTranslatorImplanter
-  - MarStandardTranslatorImplanter
-  - ValyrianStandardTranslatorImplanter
-  - CarshnilTranslatorImplanter
-  - EvePishtuTranslatorImplanter
-  - WawaStandardTranslatorImplanter
-  technologyPrerequisites:
-  - TranslationImplanter
-  - TranslationDeviceAdvanced
-  position: 8,7

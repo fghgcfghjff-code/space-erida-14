@@ -1,6 +1,6 @@
 ﻿- type: entity
   id: BlastDoor
-  parent: [BaseShutter, BaseDeltaPressureReinforced] # Erida edit
+  parent: BaseShutter
   name: blast door
   description: This one says 'BLAST DONGER'.
   components:
@@ -50,6 +50,8 @@
     messagePerceivedByOthers: comp-window-knock
     interactSuccessSound:
       path: /Audio/Effects/glass_knock.ogg
+  - type: WeldingSparksAnimation # Goobstation
+    startingOffset: 0, 0.5
 
 - type: entity
   id: BlastDoorOpen

@@ -24516,7 +24516,7 @@ entities:
     - type: Transform
       pos: -118.34879,31.563398
       parent: 2
-- proto: BaseChemistryEmptyVial
+- proto: ChemistryEmptyVial
   entities:
   - uid: 2329
     components:
@@ -24560,7 +24560,7 @@ entities:
     - type: Transform
       pos: -82.5,-7.5
       parent: 2
-- proto: BaseInteQUplinkRadio
+- proto: BaseUplinkRadio
   entities:
   - uid: 2337
     components:
@@ -151454,43 +151454,6 @@ entities:
     components:
     - type: Transform
       pos: -35.631615,-5.6210203
-      parent: 2
-- proto: TowelColorWhite
-  entities:
-  - uid: 22728
-    components:
-    - type: Transform
-      pos: -74.512314,-21.449978
-      parent: 2
-  - uid: 22729
-    components:
-    - type: Transform
-      pos: -59.5,-38.5
-      parent: 2
-  - uid: 22730
-    components:
-    - type: Transform
-      pos: -59.5,-38.5
-      parent: 2
-  - uid: 22731
-    components:
-    - type: Transform
-      pos: -59.5,-38.5
-      parent: 2
-  - uid: 22732
-    components:
-    - type: Transform
-      pos: -65.5,-59.5
-      parent: 2
-  - uid: 22733
-    components:
-    - type: Transform
-      pos: -65.5,-59.5
-      parent: 2
-  - uid: 22734
-    components:
-    - type: Transform
-      pos: -65.5,-59.5
       parent: 2
 - proto: ToyAi
   entities:

@@ -1,0 +1,40 @@
+- type: traitCategory
+  id: Disabilities
+  name: trait-category-disabilities
+  priority: 0
+  accentColor: "#64748b"  # Slate / muted gray
+
+- type: traitCategory
+  id: Mental
+  name: trait-category-mental
+  priority: 20
+  accentColor: "#a855f7"  # Purple
+
+- type: traitCategory
+  id: Accents
+  name: trait-category-accents
+  priority: 30
+  maxTraits: 3
+  maxPoints: 2
+  accentColor: "#38bdf8"  # Light blue
+
+- type: traitCategory
+  id: Medical
+  name: trait-category-medical
+  priority: 40
+  accentColor: "#ef4444"  # Red
+
+- type: traitCategory
+  id: Species
+  name: trait-category-species
+  priority: 50
+  accentColor: "#f28213"  # orange
+  maxTraits: 1
+
+- type: traitCategory
+  id: Language
+  name: trait-category-language
+  priority: 25
+  accentColor: "#1356f2"  # blue
+  maxTraits: 2
+  maxPoints: 3

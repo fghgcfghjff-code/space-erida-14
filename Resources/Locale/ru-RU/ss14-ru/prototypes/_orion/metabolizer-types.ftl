@@ -1,2 +1,2 @@
 metabolizer-type-anthropomorph-animal = Гуманоидное животное
-metabolizer-type-shadowkin = Шадовкин
+metabolizer-type-shadowkin = Шэдоукин

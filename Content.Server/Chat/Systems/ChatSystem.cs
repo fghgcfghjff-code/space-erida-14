@@ -3,9 +3,9 @@ using System.Linq;
 using System.Text;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
-using Content.Server.Backmen.Language;
+using Content.Server._Erida.Language;
 using Content.Server.Chat.Managers;
-using Content.Server.Corvax.TTS;
+using Content.Server._Erida.TTS;
 using Content.Server.GameTicking;
 using Content.Server.Players;
 using Content.Server.Popups;
@@ -17,7 +17,7 @@ using Content.Server.Station.Components;
 using Content.Server.Station.Systems;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Administration;
-using Content.Shared.Backmen.Language;
+using Content.Shared._Erida.Language;
 using Content.Shared.CCVar;
 using Content.Shared.Chat;
 using Content.Shared.Database;
@@ -31,7 +31,6 @@ using Content.Shared.Players.RateLimiting;
 using Content.Shared.Radio;
 using Content.Shared.Speech;
 using Content.Shared.Whitelist;
-using Content.Server._Orion.ServerProtection.Chat;
 using Robust.Server.Player;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
@@ -46,7 +45,8 @@ using Robust.Shared.Replays;
 using Robust.Shared.Utility;
 using Content.Server.Speech.EntitySystems;
 using Content.Shared.Station.Components;
-using Content.Shared.Corvax.TTS;
+using Content.Shared._Erida.TTS;
+using Content.Shared.Speech.Hushing;
 
 namespace Content.Server.Chat.Systems;
 
@@ -73,16 +73,14 @@ public sealed partial class ChatSystem : SharedChatSystem
     [Dependency] private readonly ReplacementAccentSystem _wordreplacement = default!;
     [Dependency] private readonly ExamineSystemShared _examineSystem = default!;
     [Dependency] private readonly LanguageSystem _language = default!;
-    [Dependency] private readonly ChatProtectionSystem _chatProtection = default!; // Orion
-    [Dependency] private readonly ChatBrainRotSystem _brainRotSystem = default!; // Erida
 
     // Corvax-TTS-Start: Moved from Server to Shared
     // public const int VoiceRange = 10; // how far voice goes in world units
     // public const int WhisperClearRange = 2; // how far whisper goes while still being understandable, in world units
     // public const int WhisperMuffledRange = 5; // how far whisper goes at all, in world units
     // Corvax-TTS-End
-    public SoundSpecifier DefaultAnnouncementSound = new SoundPathSpecifier("/Audio/Corvax/Announcements/announce.ogg"); // Corvax-Announcements
-    public SoundSpecifier CentComAnnouncementSound = new SoundPathSpecifier("/Audio/Corvax/Announcements/centcomm.ogg"); // Corvax-Announcements
+    public SoundSpecifier DefaultAnnouncementSound = new SoundPathSpecifier("/Audio/_Corvax/Announcements/announce.ogg"); // Corvax-Announcements
+    public SoundSpecifier CentComAnnouncementSound = new SoundPathSpecifier("/Audio/_Corvax/Announcements/centcomm.ogg"); // Corvax-Announcements
     //start-backmen: languages
     public const float DefaultObfuscationFactor = 0.2f; // Percentage of symbols in a whispered message that can be seen even by "far" listeners
     public readonly Color DefaultSpeakColor = Color.White;
@@ -190,13 +188,6 @@ public sealed partial class ChatSystem : SharedChatSystem
         if (player != null && _chatManager.HandleRateLimit(player) != RateLimitStatus.Allowed)
             return;
 
-        // Orion-Start
-        if (_chatProtection.CheckICMessage(message, source))
-            return;
-        // Orion-End
-
-        _brainRotSystem.CheckBrainRot(source, message); // Erida-change
-
         // Sus
         if (player?.AttachedEntity is { Valid: true } entity && source != entity)
         {
@@ -227,6 +218,15 @@ public sealed partial class ChatSystem : SharedChatSystem
             checkRadioPrefix = false;
             message = message[1..];
         }
+
+        // DeltaV - Hushed trait logic
+        // This needs to happen after prefix removal to avoid bug
+        if (desiredType == InGameICChatType.Speak && HasComp<HushedComponent>(source))
+        {
+            // hushed players cannot speak on local chat so will be sent as whisper instead
+            desiredType = InGameICChatType.Whisper;
+        }
+        // DeltaV - End hushed trait logic
 
         var language = languageOverride ?? _language.GetLanguage(source);
 
@@ -298,12 +298,8 @@ public sealed partial class ChatSystem : SharedChatSystem
         if (player?.AttachedEntity is not { Valid: true } entity || source != entity)
             return;
 
-        // Orion-Start
-        if (_chatProtection.CheckOOCMessage(message, player))
-            return;
-        // Orion-End
 
-        message = SanitizeInGameOOCMessage(message, player); // Orion-Edit | player
+        message = SanitizeInGameOOCMessage(message, player); // Erida-Edit | player
 
         var sendType = type;
         // If dead player LOOC is disabled, unless you are an admin with Moderator perms, send dead messages to dead chat
@@ -409,15 +405,6 @@ public sealed partial class ChatSystem : SharedChatSystem
 
         if (!EntityManager.TryGetComponent<StationDataComponent>(station, out var stationDataComp)) return;
 
-        // Orion-Start
-        if (_chatProtection.CheckICMessage(message, source))
-            return;
-        // Orion-End
-
-        // Erida-start
-        if (user != null)
-            _brainRotSystem.CheckBrainRot(user.Value, message);
-
         string voice = "Announcer";
         if (TryComp<TTSComponent>(user, out var ttsComp) && ttsComp.VoicePrototypeId != null)
             voice = ttsComp.VoicePrototypeId;
@@ -458,11 +445,6 @@ public sealed partial class ChatSystem : SharedChatSystem
 
         if (message.Length == 0)
             return;
-
-        // Orion-Start
-        if (_chatProtection.CheckICMessage(message, source))
-            return;
-        // Orion-End
 
         var speech = GetSpeechVerb(source, message);
 
@@ -537,11 +519,6 @@ private void SendEntityWhisper(
             return;
 
         var obfuscatedMessage = ObfuscateMessageReadability(message, 0.2f);
-
-        // Orion-Start
-        if (_chatProtection.CheckICMessage(message, source))
-            return;
-        // Orion-End
 
         // get the entity's name by visual identity (if no override provided).
         string nameIdentity = FormattedMessage.EscapeText(nameOverride ?? Identity.Name(source, EntityManager));
@@ -722,11 +699,6 @@ private void SendEntityWhisper(
         if (!_critLoocEnabled && _mobStateSystem.IsCritical(source))
             return;
 
-        // Orion-Start
-        if (_chatProtection.CheckOOCMessage(message, player)) // Not IC because can use OOC words.
-            return;
-        // Orion-End
-
         var wrappedMessage = Loc.GetString("chat-manager-entity-looc-wrap-message",
             ("entityName", name),
             ("message", FormattedMessage.EscapeText(message)));
@@ -746,12 +718,6 @@ private void SendEntityWhisper(
         var clients = GetDeadChatClients();
         var playerName = Name(source);
         string wrappedMessage;
-
-        // Orion-Start
-        if (_chatProtection.CheckOOCMessage(message, player)) // Not IC because can use OOC words.
-            return;
-        // Orion-End
-
         if (_adminManager.IsAdmin(player))
         {
             wrappedMessage = Loc.GetString("chat-manager-send-admin-dead-chat-wrap-message",
@@ -938,15 +904,9 @@ private void SendEntityWhisper(
         return prefix + newMessage;
     }
 
-    private string SanitizeInGameOOCMessage(string message, ICommonSession? session) // Orion-Edit | ICommonSession
+    private string SanitizeInGameOOCMessage(string message, ICommonSession? session) // Erida-Edit | ICommonSession
     {
         var newMessage = message.Trim();
-
-        // Orion-Start
-        if (_chatProtection.CheckOOCMessage(newMessage, session!))
-            return string.Empty;
-        // Orion-End
-
         newMessage = FormattedMessage.EscapeText(newMessage);
 
         return newMessage;

@@ -1,7 +1,6 @@
 - type: marking
   id: AugmentsEinsteinArmRight
   bodyPart: RArm
-  markingCategory: Arms
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
   - sprite: _DeadSpace/Mobs/Customization/augments/einstein.rsi
@@ -10,7 +9,6 @@
 - type: marking
   id: AugmentsEinsteinHandRight
   bodyPart: RHand
-  markingCategory: Arms
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
   - sprite: _DeadSpace/Mobs/Customization/augments/einstein.rsi
@@ -19,7 +17,6 @@
 - type: marking
   id: AugmentsEinsteinArmLeft
   bodyPart: LArm
-  markingCategory: Arms
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
   - sprite: _DeadSpace/Mobs/Customization/augments/einstein.rsi
@@ -28,7 +25,6 @@
 - type: marking
   id: AugmentsEinsteinHandLeft
   bodyPart: LHand
-  markingCategory: Arms
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
   - sprite: _DeadSpace/Mobs/Customization/augments/einstein.rsi
@@ -37,7 +33,6 @@
 - type: marking
   id: AugmentsEinsteinTorso
   bodyPart: Chest
-  markingCategory: Chest
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
   - sprite: _DeadSpace/Mobs/Customization/augments/einstein.rsi
@@ -46,7 +41,6 @@
 - type: marking
   id: AugmentsEinsteinLegRight
   bodyPart: RLeg
-  markingCategory: Legs
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
   - sprite: _DeadSpace/Mobs/Customization/augments/einstein.rsi
@@ -55,7 +49,6 @@
 - type: marking
   id: AugmentsEinsteinFootRight
   bodyPart: RFoot
-  markingCategory: Legs
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
   - sprite: _DeadSpace/Mobs/Customization/augments/einstein.rsi
@@ -64,7 +57,6 @@
 - type: marking
   id: AugmentsEinsteinLegLeft
   bodyPart: LLeg
-  markingCategory: Legs
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
   - sprite: _DeadSpace/Mobs/Customization/augments/einstein.rsi
@@ -73,7 +65,6 @@
 - type: marking
   id: AugmentsEinsteinFootLeft
   bodyPart: LFoot
-  markingCategory: Legs
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
   - sprite: _DeadSpace/Mobs/Customization/augments/einstein.rsi

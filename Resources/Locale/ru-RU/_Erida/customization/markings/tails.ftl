@@ -1,1 +1,0 @@
-marking-HarpyTail = Крылья гарпии

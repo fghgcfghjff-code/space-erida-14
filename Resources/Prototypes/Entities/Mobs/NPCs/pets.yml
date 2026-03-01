@@ -348,16 +348,8 @@
     spawned:
     - id: FoodMeat
       amount: 2
-#  - type: ReplacementAccent
-#    accent: dog
-  - type: LanguageSpeaker
-    currentLanguage: TauCetiBasic
-  - type: LanguageKnowledge #backmen: languages
-    speaks:
-    - Dog
-    understands:
-    - Dog
-    - TauCetiBasic
+  - type: ReplacementAccent
+    accent: dog
   - type: InteractionPopup
     successChance: 0.5
     interactSuccessString: petting-success-dog
@@ -453,16 +445,8 @@
     spawned:
     - id: FoodMeat
       amount: 3
-#  - type: ReplacementAccent
-#    accent: dog
-  - type: LanguageSpeaker
-    currentLanguage: TauCetiBasic
-  - type: LanguageKnowledge #backmen: languages
-    speaks:
-    - Dog
-    understands:
-    - Dog
-    - TauCetiBasic
+  - type: ReplacementAccent
+    accent: dog
   - type: InteractionPopup
     successChance: 0.7
     interactSuccessString: petting-success-dog
@@ -612,8 +596,7 @@
     spawned:
     - id: FoodMeat
       amount: 3
-    - id: TelecrystalOrange5 # Erida-edit
-      amount: 1
+
   - type: Grammar
     attributes:
       proper: true
@@ -849,6 +832,7 @@
         Bloodloss:
           -0.8
   - type: Temperature
+  - type: TemperatureDamage
     heatDamageThreshold: 800
     coldDamageThreshold: 0
   - type: MeleeWeapon
@@ -871,8 +855,6 @@
     attributes:
       proper: true
       gender: female
-  - type: TTS # Corvax-TTS
-    voice: Aidar
 
 - type: entity
   name: Pun Pun
@@ -952,12 +934,4 @@
       gender: male
   - type: Loadout
     prototypes: [ MobPollyGear ]
-    # Erida-start
-  - type: LanguageSpeaker
-    currentLanguage: TauCetiBasic
-  - type: LanguageKnowledge
-    speaks:
-    - TauCetiBasic
-    understands:
-    - TauCetiBasic
-    # Erida-end
+

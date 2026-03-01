@@ -3,7 +3,6 @@ using System.Numerics;
 using Content.Server.Explosion.Components;
 using Content.Shared.Administration;
 using Content.Shared.Explosion.Components;
-using Content.Shared.Explosion.EntitySystems; //Erida-Edit
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Physics.Components;
@@ -14,7 +13,7 @@ namespace Content.Server.Explosion.EntitySystems;
 // This partial part of the explosion system has all of the functions used to create the actual explosion map.
 // I.e, to get the sets of tiles & intensity values that describe an explosion.
 
-public sealed partial class ExplosionSystem : SharedExplosionSystem //Erida-Edit
+public sealed partial class ExplosionSystem
 {
     /// <summary>
     /// A list of grids to be reused by <see cref="GetLocalGrids"/> to avoid allocating twice for each call.

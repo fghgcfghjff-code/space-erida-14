@@ -97,7 +97,7 @@
   id: PhotocopierSyndicate
   name: копировальный аппарат InteQ
   description: Скорее всего он был украден со станции NanoTrasen.
-  suffix: InteQ
+  suffix: Syndicate
   components:
   - type: Photocopier
     paperSlot:

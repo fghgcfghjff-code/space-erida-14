@@ -8,12 +8,8 @@
   abstract: true
   components:
   # Custom names
-  - type: LanguageKnowledge #backmen: languages
-    speaks:
-    - Wawa
-    understands:
-    - TauCetiBasic
-    - Wawa
+  - type: ReplacementAccent
+    accent: scurret
   - type: Sprite
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
@@ -40,10 +36,11 @@
       60: Critical
       125: Dead
   - type: Temperature
-    heatDamageThreshold: 360
-    coldDamageThreshold: 285
     currentTemperature: 310.15
     specificHeat: 42
+  - type: TemperatureDamage
+    heatDamageThreshold: 360
+    coldDamageThreshold: 285
   # Good eatin', you monster.
   - type: Butcherable
     butcheringType: Spike

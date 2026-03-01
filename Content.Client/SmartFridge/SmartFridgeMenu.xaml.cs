@@ -17,6 +17,7 @@ public sealed partial class SmartFridgeMenu : FancyWindow
     [Dependency] private readonly IEntityManager _entityManager = default!;
 
     public event Action<GUIBoundKeyEventArgs, ListData>? OnItemSelected;
+    public event Action<SmartFridgeListData>? OnRemoveButtonPressed;
 
     private readonly StyleBoxFlat _styleBox = new() { BackgroundColor = new Color(70, 73, 102) };
 
@@ -48,8 +49,10 @@ public sealed partial class SmartFridgeMenu : FancyWindow
             return;
 
         var label = Loc.GetString("smart-fridge-list-item", ("item", entry.Entry.Name), ("amount", entry.Amount));
-        button.AddChild(new SmartFridgeItem(entry.Representative, label));
+        var item = new SmartFridgeItem(entry.Representative, label);
+        item.RemoveButtonPressed += () => OnRemoveButtonPressed?.Invoke(entry);
 
+        button.AddChild(item);
         button.ToolTip = label;
         button.StyleBoxOverride = _styleBox;
     }
@@ -60,7 +63,11 @@ public sealed partial class SmartFridgeMenu : FancyWindow
 
         foreach (var item in ent.Comp.Entries)
         {
-            if (ent.Comp.ContainedEntries.TryGetValue(item, out var items) && items.Count > 0)
+            if (!ent.Comp.ContainedEntries.TryGetValue(item, out var items) || items.Count == 0)
+            {
+                listData.Add(new SmartFridgeListData(EntityUid.Invalid, item, 0));
+            }
+            else
             {
                 var representative = _entityManager.GetEntity(items.First());
                 listData.Add(new SmartFridgeListData(representative, item, items.Count));

@@ -1,6 +1,5 @@
 using Content.Server.Administration.Logs;
 using Content.Server.Chat.Systems;
-using Content.Server._Orion.ServerProtection.Chat;
 using Content.Server.Power.Components;
 using Content.Shared.Chat;
 using Content.Shared.Database;
@@ -14,8 +13,8 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Replays;
 using Robust.Shared.Utility;
-using Content.Shared.Backmen.Language;
-using Content.Server.Backmen.Language;
+using Content.Shared._Erida.Language;
+using Content.Server._Erida.Language;
 
 namespace Content.Server.Radio.EntitySystems;
 
@@ -30,7 +29,6 @@ public sealed class RadioSystem : EntitySystem
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly ChatSystem _chat = default!;
-    [Dependency] private readonly ChatProtectionSystem _chatProtection = default!; // Orion
     [Dependency] private readonly LanguageSystem _language = default!; // Backmen
 
     // set used to prevent radio feedback loops.
@@ -108,11 +106,6 @@ public sealed class RadioSystem : EntitySystem
     /// <param name="radioSource">Entity that picked up the message and will send it, e.g. headset</param>
     public void SendRadioMessage(EntityUid messageSource, string message, RadioChannelPrototype channel, EntityUid radioSource, bool escapeMarkup = true, LanguagePrototype? language = null)
     {
-        // Orion-Start
-        if (_chatProtection.CheckICMessage(message, messageSource))
-            return;
-        // Orion-End
-
         // TODO if radios ever garble / modify messages, feedback-prevention needs to be handled better than this.
         if (!_messages.Add(message))
             return;

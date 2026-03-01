@@ -90654,13 +90654,6 @@ entities:
     - type: Transform
       pos: 36.482082,-14.5012665
       parent: 2
-- proto: TowelColorOrange
-  entities:
-  - uid: 13167
-    components:
-    - type: Transform
-      pos: 39.307285,22.41729
-      parent: 2
 - proto: TowercapSeeds
   entities:
   - uid: 2601

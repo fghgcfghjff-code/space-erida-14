@@ -14,16 +14,22 @@ public sealed partial class BasicStationEventSchedulerComponent : Component
     public float MinimumTimeUntilFirstEvent = 200;
 
     /// <summary>
+    /// How much additional time it may take for a GameRule to first start.
+    /// </summary>
+    [DataField]
+    public float MaximumSpanUntilFirstEvent = 120;
+
+    /// <summary>
     /// The minimum and maximum time between rule starts in seconds.
     /// </summary>
     [DataField]
-    public MinMax MinMaxEventTiming = new(5 * 60, 15 * 60);
+    public MinMax MinMaxEventTiming = new(3 * 60, 10 * 60);
 
     /// <summary>
     /// How long until the next check for an event runs, is initially set based on MinimumTimeUntilFirstEvent & MinMaxEventTiming.
     /// </summary>
     [DataField]
-    public TimeSpan TimeUntilNextEvent = TimeSpan.MinValue;
+    public float TimeUntilNextEvent;
 
     /// <summary>
     /// The gamerules that the scheduler can choose from

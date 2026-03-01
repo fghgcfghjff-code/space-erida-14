@@ -5,7 +5,7 @@
   description: He took a bullet and was unharmed.
   components:
     - type: Sprite
-      sprite: Backmen/Objects/Devices/pda.rsi
+      sprite: _Backmen/Objects/Devices/pda.rsi
       layers:
       - map: [ "enum.PdaVisualLayers.Base" ]
         state: "pda-blue"
@@ -33,5 +33,5 @@
           tags:
           - Write
     - type: Icon
-      sprite: Backmen/Objects/Devices/pda.rsi
+      sprite: _Backmen/Objects/Devices/pda.rsi
       state: pda-blue

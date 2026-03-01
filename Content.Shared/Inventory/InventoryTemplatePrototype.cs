@@ -46,6 +46,12 @@ public sealed partial class SlotDefinition
     /// </summary>
     [DataField("stripHidden")] public bool StripHidden { get; private set; }
 
+    // Erida start
+    [DataField] public bool StripHiddenForce { get; set; }
+
+    [DataField] public bool StripBlocked { get; set; }
+    // Erida end
+
     /// <summary>
     ///     Offset for the clothing sprites.
     /// </summary>
@@ -60,4 +66,8 @@ public sealed partial class SlotDefinition
     ///     Entity blacklist for CanEquip checks.
     /// </summary>
     [DataField("blacklist")] public EntityWhitelist? Blacklist = null;
+
+    // Erida start
+    [DataField("secondInventorySlots")] public List<string> SecondInventorySlots = [];
+    // Erida end
 }

@@ -1,7 +1,6 @@
 - type: marking
   id: AugmentsCyberveinsArmRight
   bodyPart: RArm
-  markingCategory: Arms
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
   - sprite: _DeadSpace/Mobs/Customization/augments/cyberveins.rsi
@@ -10,7 +9,6 @@
 - type: marking
   id: AugmentsCyberveinsArmLeft
   bodyPart: LArm
-  markingCategory: Arms
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
   - sprite: _DeadSpace/Mobs/Customization/augments/cyberveins.rsi
@@ -19,7 +17,6 @@
 - type: marking
   id: AugmentsCyberveinsTorso
   bodyPart: Chest
-  markingCategory: Chest
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
   - sprite: _DeadSpace/Mobs/Customization/augments/cyberveins.rsi
@@ -28,7 +25,6 @@
 - type: marking
   id: AugmentsCyberveinsLegLeft
   bodyPart: LLeg
-  markingCategory: Legs
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
   - sprite: _DeadSpace/Mobs/Customization/augments/cyberveins.rsi
@@ -37,7 +33,6 @@
 - type: marking
   id: AugmentsCyberveinsHead
   bodyPart: Head
-  markingCategory: Head
   sprites:
   - sprite: _DeadSpace/Mobs/Customization/augments/cyberveins.rsi
     state: head
@@ -45,7 +40,6 @@
 - type: marking
   id: AugmentsCyberveinsLegRight
   bodyPart: RLeg
-  markingCategory: Legs
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
   - sprite: _DeadSpace/Mobs/Customization/augments/cyberveins.rsi

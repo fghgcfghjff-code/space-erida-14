@@ -2,7 +2,6 @@
 - type: marking
   id: WesternDragonTail
   bodyPart: Tail
-  markingCategory: Tail
 #  speciesRestriction: [ Reptilian, Anthropomorph ] # Erida-Edit | Anthropomorph
   sprites:
     - sprite: _Orion/Mobs/Customization/reptilian_64x32.rsi
@@ -13,7 +12,6 @@
 - type: marking
   id: KangarooTail
   bodyPart: Tail
-  markingCategory: Tail
 #  speciesRestriction: [ Reptilian, Anthropomorph ] # Erida-Edit | Anthropomorph
   sprites:
     - sprite: _Orion/Mobs/Customization/reptilian_64x32.rsi
@@ -22,7 +20,6 @@
 - type: marking
   id: TailSnake
   bodyPart: Tail
-  markingCategory: Tail
 #  speciesRestriction: [ Reptilian, SlimePerson, Anthropomorph ] # Erida-Edit | Anthropomorph
   sprites:
     - sprite: _Orion/Mobs/Customization/tails32x32.rsi
@@ -31,7 +28,6 @@
 - type: marking
   id: TailSnakeAnimated
   bodyPart: Tail
-  markingCategory: Tail
 #  speciesRestriction: []
   sprites:
     - sprite: _Orion/Mobs/Customization/tails32x32.rsi
@@ -40,7 +36,6 @@
 - type: marking
   id: TailSnakeStripe
   bodyPart: Tail
-  markingCategory: Tail
 #  speciesRestriction: [ Reptilian, SlimePerson, Anthropomorph ] # Erida-Edit | Anthropomorph
   sprites:
     - sprite: _Orion/Mobs/Customization/tails32x32.rsi
@@ -51,7 +46,6 @@
 - type: marking
   id: TailSnakeStripeAnimated
   bodyPart: Tail
-  markingCategory: Tail
 #  speciesRestriction: []
   sprites:
     - sprite: _Orion/Mobs/Customization/tails32x32.rsi
@@ -62,7 +56,6 @@
 - type: marking
   id: TailSnakeStripeAlt
   bodyPart: Tail
-  markingCategory: Tail
 #  speciesRestriction: [ Reptilian, SlimePerson, Anthropomorph ] # Erida-Edit | Anthropomorph
   sprites:
     - sprite: _Orion/Mobs/Customization/tails32x32.rsi
@@ -73,7 +66,6 @@
 - type: marking
   id: TailSnakeStripeAltAnimated
   bodyPart: Tail
-  markingCategory: Tail
 #  speciesRestriction: []
   sprites:
     - sprite: _Orion/Mobs/Customization/tails32x32.rsi
@@ -84,7 +76,6 @@
 - type: marking
   id: TailSnakeDual
   bodyPart: Tail
-  markingCategory: Tail
 #  speciesRestriction: [ Reptilian, SlimePerson, Anthropomorph ] # Erida-Edit | Anthropomorph
   sprites:
     - sprite: _Orion/Mobs/Customization/tails32x32.rsi
@@ -95,7 +86,6 @@
 - type: marking
   id: TailSnakeDualAnimated
   bodyPart: Tail
-  markingCategory: Tail
 #  speciesRestriction: []
   sprites:
     - sprite: _Orion/Mobs/Customization/tails32x32.rsi
@@ -106,7 +96,6 @@
 - type: marking
   id: TailSnakeUnder
   bodyPart: Tail
-  markingCategory: Tail
 #  speciesRestriction: [ Reptilian, SlimePerson, Anthropomorph ] # Erida-Edit | Anthropomorph
   sprites:
     - sprite: _Orion/Mobs/Customization/tails32x32.rsi
@@ -117,7 +106,6 @@
 - type: marking
   id: TailSnakeUnderAnimated
   bodyPart: Tail
-  markingCategory: Tail
 #  speciesRestriction: []
   sprites:
     - sprite: _Orion/Mobs/Customization/tails32x32.rsi

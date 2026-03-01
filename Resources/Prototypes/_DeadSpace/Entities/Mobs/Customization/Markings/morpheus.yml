@@ -1,7 +1,6 @@
 - type: marking
   id: AugmentsMorpheusArmRight
   bodyPart: RArm
-  markingCategory: Arms
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/morpheus.rsi
@@ -10,7 +9,6 @@
 - type: marking
   id: AugmentsMorpheusHandRight
   bodyPart: RHand
-  markingCategory: Arms
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/morpheus.rsi
@@ -19,7 +17,6 @@
 - type: marking
   id: AugmentsMorpheusArmLeft
   bodyPart: LArm
-  markingCategory: Arms
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/morpheus.rsi
@@ -28,7 +25,6 @@
 - type: marking
   id: AugmentsMorpheusHandLeft
   bodyPart: LHand
-  markingCategory: Arms
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/morpheus.rsi
@@ -37,7 +33,6 @@
 - type: marking
   id: AugmentsMorpheusTorso
   bodyPart: Chest
-  markingCategory: Chest
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/morpheus.rsi
@@ -46,7 +41,6 @@
 - type: marking
   id: AugmentsMorpheusLegRight
   bodyPart: RLeg
-  markingCategory: Legs
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/morpheus.rsi
@@ -55,7 +49,6 @@
 - type: marking
   id: AugmentsMorpheusFootRight
   bodyPart: RFoot
-  markingCategory: Legs
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/morpheus.rsi
@@ -64,7 +57,6 @@
 - type: marking
   id: AugmentsMorpheusLegLeft
   bodyPart: LLeg
-  markingCategory: Legs
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/morpheus.rsi
@@ -73,7 +65,6 @@
 - type: marking
   id: AugmentsMorpheusFootLeft
   bodyPart: LFoot
-  markingCategory: Legs
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/morpheus.rsi

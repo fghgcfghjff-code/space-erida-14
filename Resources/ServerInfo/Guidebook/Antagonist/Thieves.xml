@@ -43,12 +43,12 @@
     <GuideEntityEmbed Entity="Implanter" Caption="Anatomy"/>
     <GuideEntityEmbed Entity="C4" Caption="Breacher"/>
     <GuideEntityEmbed Entity="ChameleonProjector" Caption="Chameleon"/>
-    <GuideEntityEmbed Entity="BaseInteQUplinkRadio" Caption="Communicator"/>
+    <GuideEntityEmbed Entity="BaseUplinkRadio" Caption="Communicator"/>
   </Box>
   <Box>
     <GuideEntityEmbed Entity="NitrousOxideTank" Caption="Sleeper"/>
     <GuideEntityEmbed Entity="Fulton" Caption="Smuggler"/>
-    <GuideEntityEmbed Entity="TelecrystalOrange" Caption="InteQ"/>
+    <GuideEntityEmbed Entity="Telecrystal" Caption="Syndie"/>
   </Box>
 
   ## Centerpiece of the Collection

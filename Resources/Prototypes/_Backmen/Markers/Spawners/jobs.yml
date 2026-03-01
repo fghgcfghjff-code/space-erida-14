@@ -6,7 +6,7 @@
   - type: SpawnPoint
     job_id: BlueShieldOfficer
   - type: Sprite
-    sprite: Backmen/Markers/jobs.rsi
+    sprite: _Backmen/Markers/jobs.rsi
     layers:
       - state: green
       - state: blueshield

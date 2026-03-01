@@ -18366,7 +18366,7 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
-- proto: BaseChemistryEmptyVial
+- proto: ChemistryEmptyVial
   entities:
   - uid: 881
     components:
@@ -18416,7 +18416,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 28.5,-41.5
       parent: 2
-- proto: BaseInteQUplinkRadio
+- proto: BaseUplinkRadio
   entities:
   - uid: 889
     components:
@@ -105056,20 +105056,6 @@ entities:
     components:
     - type: Transform
       pos: 43.536335,-6.2626333
-      parent: 2
-- proto: TowelColorNT
-  entities:
-  - uid: 14852
-    components:
-    - type: Transform
-      pos: -42.691574,-36.72419
-      parent: 2
-- proto: TowelColorWhite
-  entities:
-  - uid: 14853
-    components:
-    - type: Transform
-      pos: -4.015352,-46.35106
       parent: 2
 - proto: ToyAi
   entities:

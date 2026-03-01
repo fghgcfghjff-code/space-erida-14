@@ -108041,7 +108041,7 @@ entities:
     - type: Transform
       pos: 9.5,-15.5
       parent: 2
-- proto: GlowstickBase
+- proto: GlowstickGreen
   entities:
   - uid: 15933
     components:
@@ -150552,35 +150552,6 @@ entities:
     components:
     - type: Transform
       pos: -51.398685,-43.676937
-      parent: 2
-- proto: TowelColorBrown
-  entities:
-  - uid: 22766
-    components:
-    - type: Transform
-      pos: 5.4411097,-42.417496
-      parent: 2
-- proto: TowelColorWhite
-  entities:
-  - uid: 22767
-    components:
-    - type: Transform
-      pos: 8.576527,-38.543274
-      parent: 2
-  - uid: 22768
-    components:
-    - type: Transform
-      pos: 8.545277,-38.20971
-      parent: 2
-  - uid: 22769
-    components:
-    - type: Transform
-      pos: 6.4515266,-38.251404
-      parent: 2
-  - uid: 22770
-    components:
-    - type: Transform
-      pos: 6.524443,-38.50158
       parent: 2
 - proto: ToyFigurineChaplain
   entities:

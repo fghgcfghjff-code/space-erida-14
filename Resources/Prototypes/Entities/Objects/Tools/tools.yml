@@ -62,9 +62,6 @@
   - type: EmitSoundOnPickup
     sound:
       path: /Audio/_Erida/Items/handling/screwdriver_pickup.ogg
-  - type: EmitSoundOnDrop
-    sound:
-      path: /Audio/Items/screwdriver_drop.ogg
   # handling sounds edit end
   - type: EmitSoundOnLand
     sound:

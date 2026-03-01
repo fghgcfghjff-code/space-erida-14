@@ -26,7 +26,7 @@
   - type: Sprite
     sprite: Structures/Power/Generation/Singularity/emitter.rsi
     layers:
-    - state: emitter
+    - state: emitter2
     - state: beam
       shader: unshaded
       visible: false
@@ -36,6 +36,7 @@
       visible: false
       map: ["enum.LockVisualLayers.Lock"]
   - type: Emitter
+    alertRadio: true
   - type: Gun
     showExamineText: false
     fireRate: 10 #just has to be fast enough to keep up with upgrades
@@ -55,6 +56,9 @@
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallicStrong
+  - type: ActiveRadio
+    channels:
+    - Engineering
   - type: Destructible
     thresholds:
       - trigger:

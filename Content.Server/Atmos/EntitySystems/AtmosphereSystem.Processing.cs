@@ -265,6 +265,7 @@ namespace Content.Server.Atmos.EntitySystems
                 tile.ArchivedCycle = 0;
                 tile.LastShare = 0f;
                 tile.Hotspot = new Hotspot();
+                NotifyDeviceTileChanged((ent.Owner, ent.Comp1, ent.Comp3), tile.GridIndices);
                 return;
             }
 
@@ -275,6 +276,10 @@ namespace Content.Server.Atmos.EntitySystems
 
             if (data.FixVacuum)
                 GridFixTileVacuum(tile);
+
+            // Since we assigned the tile a new GasMixture we need to tell any devices
+            // on this tile that the reference has changed.
+            NotifyDeviceTileChanged((ent.Owner, ent.Comp1, ent.Comp3), tile.GridIndices);
         }
 
         private void QueueRunTiles(
@@ -466,66 +471,6 @@ namespace Content.Server.Atmos.EntitySystems
             return true;
         }
 
-        /// <summary>
-        /// Processes all entities with a <see cref="DeltaPressureComponent"/>, doing damage to them
-        /// depending on certain pressure differential conditions.
-        /// </summary>
-        /// <returns>True if we've finished processing all entities that required processing this run,
-        /// otherwise, false.</returns>
-        private bool ProcessDeltaPressure(Entity<GridAtmosphereComponent, GasTileOverlayComponent, MapGridComponent, TransformComponent> ent)
-        {
-            var atmosphere = ent.Comp1;
-            var count = atmosphere.DeltaPressureEntities.Count;
-            if (!atmosphere.ProcessingPaused)
-            {
-                atmosphere.DeltaPressureCursor = 0;
-                atmosphere.DeltaPressureDamageResults.Clear();
-            }
-
-            var remaining = count - atmosphere.DeltaPressureCursor;
-            var batchSize = Math.Max(50, DeltaPressureParallelProcessPerIteration);
-            var toProcess = Math.Min(batchSize, remaining);
-
-            var timeCheck1 = 0;
-            while (atmosphere.DeltaPressureCursor < count)
-            {
-                var job = new DeltaPressureParallelJob(this,
-                    atmosphere,
-                    atmosphere.DeltaPressureCursor,
-                    DeltaPressureParallelBatchSize);
-                _parallel.ProcessNow(job, toProcess);
-
-                atmosphere.DeltaPressureCursor += toProcess;
-
-                if (timeCheck1++ < LagCheckIterations)
-                    continue;
-
-                timeCheck1 = 0;
-                if (_simulationStopwatch.Elapsed.TotalMilliseconds >= AtmosMaxProcessTime)
-                    return false;
-            }
-
-            var timeCheck2 = 0;
-            while (atmosphere.DeltaPressureDamageResults.TryDequeue(out var result))
-            {
-                PerformDamage(result.Ent,
-                    result.Pressure,
-                    result.DeltaPressure);
-
-                if (timeCheck2++ < LagCheckIterations)
-                    continue;
-
-                timeCheck2 = 0;
-                // Process the rest next time.
-                if (_simulationStopwatch.Elapsed.TotalMilliseconds >= AtmosMaxProcessTime)
-                {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
         private bool ProcessPipeNets(GridAtmosphereComponent atmosphere)
         {
             if (!atmosphere.ProcessingPaused)
@@ -568,8 +513,6 @@ namespace Content.Server.Atmos.EntitySystems
             if (!MonstermosEqualization)
                 num--;
             if (!ExcitedGroups)
-                num--;
-            if (!DeltaPressureDamage)
                 num--;
             if (!Superconduction)
                 num--;
@@ -748,18 +691,6 @@ namespace Content.Server.Atmos.EntitySystems
                     }
 
                     atmosphere.ProcessingPaused = false;
-                    atmosphere.State = DeltaPressureDamage
-                        ? AtmosphereProcessingState.DeltaPressure
-                        : AtmosphereProcessingState.Hotspots;
-                    return AtmosphereProcessingCompletionState.Continue;
-                case AtmosphereProcessingState.DeltaPressure:
-                    if (!ProcessDeltaPressure(ent))
-                    {
-                        atmosphere.ProcessingPaused = true;
-                        return AtmosphereProcessingCompletionState.Return;
-                    }
-
-                    atmosphere.ProcessingPaused = false;
                     atmosphere.State = AtmosphereProcessingState.Hotspots;
                     return AtmosphereProcessingCompletionState.Continue;
                 case AtmosphereProcessingState.Hotspots:
@@ -847,7 +778,6 @@ namespace Content.Server.Atmos.EntitySystems
         ActiveTiles,
         ExcitedGroups,
         HighPressureDelta,
-        DeltaPressure,
         Hotspots,
         Superconductivity,
         PipeNet,

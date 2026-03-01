@@ -9,7 +9,6 @@
     - MeteorSwarmScheduler
     - RampingStationEventScheduler
     - SpaceTrafficControlEventScheduler
-    - SpaceTrafficControlFriendlyEventScheduler
     - BasicRoundstartVariation
 
 - type: gamePreset
@@ -69,7 +68,6 @@
     - MeteorSwarmScheduler
     - RampingStationEventScheduler
     - SpaceTrafficControlEventScheduler
-    - SpaceTrafficControlFriendlyEventScheduler
     - BasicRoundstartVariation
 
 - type: gamePreset
@@ -78,9 +76,10 @@
   - extended
   - shittersafari
   name: extended-title
-  showInVote: false # Erida
+  showInVote: false #2boring2vote
   description: extended-description
   rules:
+  - BasicStationEventScheduler
   - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation
@@ -94,7 +93,6 @@
   showInVote: false #4boring4vote
   description: greenshift-description
   rules:
-  - SpaceTrafficControlFriendlyEventScheduler
   - BasicRoundstartVariation
 
 - type: gamePreset
@@ -161,7 +159,7 @@
   name: death-match-title
   description: death-match-description
   maxPlayers: 15
-  showInVote: false
+  showInVote: true
   supportedMaps: DeathMatchMapPool
   rules:
     - DeathMatch31

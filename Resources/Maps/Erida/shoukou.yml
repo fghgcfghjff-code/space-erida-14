@@ -37417,18 +37417,6 @@ entities:
     - type: Transform
       pos: -58.522484,-9.854996
       parent: 2
-- proto: DrinkTokkuri
-  entities:
-  - uid: 5798
-    components:
-    - type: Transform
-      pos: 0.72288465,-5.330594
-      parent: 2
-  - uid: 5799
-    components:
-    - type: Transform
-      pos: -56.271152,-11.152639
-      parent: 2
 - proto: DrinkVacuumFlask
   entities:
   - uid: 5800

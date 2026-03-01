@@ -300,12 +300,16 @@ public partial class AtmosphereSystem
 
     /// <summary>
     /// Checks if a tile on a grid is air-blocked in the specified directions.
+    /// This only checks for if the current tile, and only the current tile, is blocking
+    /// air.
     /// </summary>
     /// <param name="gridUid">The grid to check.</param>
     /// <param name="tile">The tile on the grid to check.</param>
     /// <param name="directions">The directions to check for air-blockage.</param>
     /// <param name="mapGridComp">Optional map grid component associated with the grid.</param>
     /// <returns>True if the tile is air-blocked in the specified directions, false otherwise.</returns>
+    /// <remarks>This rebuilds airtight data on-the-fly. You should only use this if you've just
+    /// invalidated airtight data, and you cannot wait one atmostick to revalidate it.</remarks>
     [PublicAPI]
     public bool IsTileAirBlocked(EntityUid gridUid,
         Vector2i tile,
@@ -315,9 +319,58 @@ public partial class AtmosphereSystem
         if (!Resolve(gridUid, ref mapGridComp, false))
             return false;
 
-        // TODO ATMOS: This reconstructs the data instead of getting the cached version. Might want to include a method to get the cached version later.
         var data = GetAirtightData(gridUid, mapGridComp, tile);
         return data.BlockedDirections.IsFlagSet(directions);
+    }
+
+    /// <summary>
+    /// Checks if a tile on a grid is air-blocked in the specified directions, using cached data.
+    /// This only checks for if the current tile, and only the current tile, is blocking
+    /// air.
+    /// </summary>
+    /// <param name="grid">The grid to check.</param>
+    /// <param name="tile">The tile on the grid to check.</param>
+    /// <param name="directions">The directions to check for air-blockage.</param>
+    /// <returns>True if the tile is air-blocked in the specified directions, false otherwise.</returns>
+    /// <remarks>Returns data that is currently cached by Atmospherics.
+    /// You should always use this method over <see cref="IsTileAirBlocked"/> as it's more performant.
+    /// If you need to get up-to-date data because you've just invalidated airtight data,
+    /// use <see cref="IsTileAirBlocked"/>.</remarks>
+    [PublicAPI]
+    public bool IsTileAirBlockedCached(Entity<GridAtmosphereComponent?> grid,
+        Vector2i tile,
+        AtmosDirection directions = AtmosDirection.All)
+    {
+        if (!_atmosQuery.Resolve(grid, ref grid.Comp, false))
+            return false;
+
+        if (!grid.Comp.Tiles.TryGetValue(tile, out var atmosTile))
+            return false;
+
+        return atmosTile.AirtightData.BlockedDirections.IsFlagSet(directions);
+    }
+
+    /// <summary>
+    /// Returns the <see cref="TileAtmosphere.AdjacentBits"/> for a tile on a grid.
+    /// This represents the directions that the air can currently flow to.
+    /// </summary>
+    /// <param name="grid">The grid entity that the tile belongs to.</param>
+    /// <param name="tile">The <see cref="Vector2i"/> coordinates to check.</param>
+    /// <returns>The <see cref="TileAtmosphere.AdjacentBits"/> of the tile,
+    /// <see cref="AtmosDirection.Invalid"/> if the grid or tile couldn't be found.</returns>
+    /// <remarks>Note that this data is cached and is updated at the beginning of every atmostick.
+    /// As such, any airtight changes that were made may not be reflected in this value until
+    /// the cache is refreshed in the next processing tick.</remarks>
+    [PublicAPI]
+    public AtmosDirection GetAirflowDirections(Entity<GridAtmosphereComponent?> grid, Vector2i tile)
+    {
+        if (!_atmosQuery.Resolve(grid, ref grid.Comp, false))
+            return AtmosDirection.Invalid;
+
+        if (!grid.Comp.Tiles.TryGetValue(tile, out var atmosTile))
+            return AtmosDirection.Invalid;
+
+        return atmosTile.AdjacentBits;
     }
 
     /// <summary>
@@ -555,103 +608,6 @@ public partial class AtmosphereSystem
 
         device.Comp.JoinedGrid = null;
         return true;
-    }
-
-    /// <summary>
-    /// Adds an entity with a DeltaPressureComponent to the DeltaPressure processing list.
-    /// Also fills in important information on the component itself.
-    /// </summary>
-    /// <param name="grid">The grid to add the entity to.</param>
-    /// <param name="ent">The entity to add.</param>
-    /// <returns>True if the entity was added to the list, false if it could not be added or
-    /// if the entity was already present in the list.</returns>
-    [PublicAPI]
-    public bool TryAddDeltaPressureEntity(Entity<GridAtmosphereComponent?> grid, Entity<DeltaPressureComponent> ent)
-    {
-        // The entity needs to be part of a grid, and it should be the right one :)
-        var xform = Transform(ent);
-
-        // The entity is not on a grid, so it cannot possibly have an atmosphere that affects it.
-        if (xform.GridUid == null)
-        {
-            return false;
-        }
-
-        // Entity should be on the grid it's being added to.
-        Debug.Assert(xform.GridUid == grid.Owner);
-
-        if (!_atmosQuery.Resolve(grid, ref grid.Comp, false))
-            return false;
-
-        if (grid.Comp.DeltaPressureEntityLookup.ContainsKey(ent.Owner))
-        {
-            return false;
-        }
-
-        grid.Comp.DeltaPressureEntityLookup[ent.Owner] = grid.Comp.DeltaPressureEntities.Count;
-        grid.Comp.DeltaPressureEntities.Add(ent);
-
-        ent.Comp.GridUid = grid.Owner;
-        ent.Comp.InProcessingList = true;
-
-        return true;
-    }
-
-    /// <summary>
-    /// Removes an entity with a DeltaPressureComponent from the DeltaPressure processing list.
-    /// </summary>
-    /// <param name="grid">The grid to remove the entity from.</param>
-    /// <param name="ent">The entity to remove.</param>
-    /// <returns>True if the entity was removed from the list, false if it could not be removed or
-    /// if the entity was not present in the list.</returns>
-    [PublicAPI]
-    public bool TryRemoveDeltaPressureEntity(Entity<GridAtmosphereComponent?> grid, Entity<DeltaPressureComponent> ent)
-    {
-        if (!_atmosQuery.Resolve(grid, ref grid.Comp, false))
-            return false;
-
-        if (!grid.Comp.DeltaPressureEntityLookup.TryGetValue(ent.Owner, out var index))
-            return false;
-
-        var lastIndex = grid.Comp.DeltaPressureEntities.Count - 1;
-        if (lastIndex < 0)
-            return false;
-
-        if (index != lastIndex)
-        {
-            var lastEnt = grid.Comp.DeltaPressureEntities[lastIndex];
-            grid.Comp.DeltaPressureEntities[index] = lastEnt;
-            grid.Comp.DeltaPressureEntityLookup[lastEnt.Owner] = index;
-        }
-
-        grid.Comp.DeltaPressureEntities.RemoveAt(lastIndex);
-        grid.Comp.DeltaPressureEntityLookup.Remove(ent.Owner);
-
-        if (grid.Comp.DeltaPressureCursor > grid.Comp.DeltaPressureEntities.Count)
-            grid.Comp.DeltaPressureCursor = grid.Comp.DeltaPressureEntities.Count;
-
-        ent.Comp.InProcessingList = false;
-        ent.Comp.GridUid = null;
-        return true;
-    }
-
-    /// <summary>
-    /// Checks if a DeltaPressureComponent is currently considered for processing on a grid.
-    /// </summary>
-    /// <param name="grid">The grid that the entity may belong to.</param>
-    /// <param name="ent">The entity to check.</param>
-    /// <returns>True if the entity is part of the processing list, false otherwise.</returns>
-    [PublicAPI]
-    public bool IsDeltaPressureEntityInList(Entity<GridAtmosphereComponent?> grid, Entity<DeltaPressureComponent> ent)
-    {
-        // Dict and list must be in sync - deep-fried if we aren't.
-        if (!_atmosQuery.Resolve(grid, ref grid.Comp, false))
-            return false;
-
-        var contains = grid.Comp.DeltaPressureEntityLookup.ContainsKey(ent.Owner);
-        Debug.Assert(contains == grid.Comp.DeltaPressureEntities.Contains(ent));
-
-        return contains;
     }
 
     [ByRefEvent]

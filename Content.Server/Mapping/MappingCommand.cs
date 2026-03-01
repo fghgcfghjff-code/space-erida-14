@@ -12,7 +12,7 @@ using Robust.Shared.Utility;
 
 namespace Content.Server.Mapping
 {
-    [AdminCommand(AdminFlags.Mapping)] // Erida
+    [AdminCommand(AdminFlags.Server | AdminFlags.Mapping)]
     public sealed class MappingCommand : LocalizedEntityCommands
     {
         [Dependency] private readonly IResourceManager _resourceMgr = default!;

@@ -17,8 +17,14 @@
     solution: hypospray
   - type: ExaminableSolution
     solution: hypospray
-  - type: Hypospray
-    onlyAffectsMobs: false
+    heldOnly: true # Allow examination only when held in hand.
+    exactVolume: true
+  - type: Injector
+    solutionName: hypospray
+    activeModeProtoId: HypopenDynamicMode
+    allowedModes:
+    - HyposprayInjectMode
+    - HypopenDynamicMode
   - type: UseDelay
     delay: 2.5
   - type: StaticPrice

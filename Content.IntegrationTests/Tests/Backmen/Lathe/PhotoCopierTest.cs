@@ -5,7 +5,7 @@ using Content.Shared.Research.Prototypes;
 using Robust.Shared.ContentPack;
 using Robust.Shared.Utility;
 
-namespace Content.IntegrationTests.Tests.Backmen.Lathe;
+namespace Content.IntegrationTests.Tests._Erida.Lathe;
 
 [TestFixture]
 public sealed class PhotoCopierTest
