@@ -574,7 +574,7 @@
   - MedicalEyewear
   - SurvivalMedical
   - Trinkets
-  - ChiefMedicalOfficerJobTrinkets
+  # - ChiefMedicalOfficerJobTrinkets
   - GroupSpeciesBreathToolMedical
 
 - type: roleLoadout
@@ -595,7 +595,7 @@
   - MedicalEyewear
   - SurvivalMedical
   - Trinkets
-  - MedicalDoctorJobTrinkets
+  # - MedicalDoctorJobTrinkets
   - GroupSpeciesBreathToolMedical
 
 - type: roleLoadout
@@ -610,7 +610,7 @@
   - MedicalEyewear
   - SurvivalMedical
   - Trinkets
-  - MedicalInternJobTrinkets
+  # - MedicalInternJobTrinkets
   - GroupSpeciesBreathToolMedical
 
 - type: roleLoadout
@@ -628,7 +628,7 @@
   - MedicalShoes
   - SurvivalMedical
   - Trinkets
-  - ChemistJobTrinkets
+  # - ChemistJobTrinkets
   - GroupSpeciesBreathToolMedical
 
 - type: roleLoadout
@@ -648,7 +648,7 @@
   - MedicalEyewear
   - SurvivalMedical
   - Trinkets
-  - ParamedicJobTrinkets
+  # - ParamedicJobTrinkets
   - GroupSpeciesBreathToolMedical
 
 # Wildcards
