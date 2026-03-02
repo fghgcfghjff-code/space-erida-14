@@ -21,6 +21,9 @@
     # Underwear & clothing
     - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
     - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
+    - map: [ "socks" ] # Backmen
+    - map: [ "underpants" ] # Backmen
+    - map: [ "undershirt" ] # Backmen
     - map: ["jumpsuit"]
 
     # Extremities
@@ -37,9 +40,9 @@
     - map: [ "shoes" ]
     - map: [ "ears" ]
     - map: [ "eyes" ]
-    - map: [ "belt" ]
     - map: [ "id" ]
     - map: [ "outerClothing" ]
+    - map: [ "belt" ] # Erida edit
     - map: [ "back" ]
     - map: [ "neck" ]
     - map: [ "suitstorage" ]
